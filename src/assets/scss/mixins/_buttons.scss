@@ -1,0 +1,27 @@
+// @mixin button {
+//   @include text-body;
+
+//   font-weight: $font-weight-semibold;
+//   background-color: $color-white;
+//   color: $color-text;
+//   border-radius: unit(4);
+//   text-align: center;
+//   padding: unit(2) unit(4);
+//   text-decoration: none;
+//   border: 1px solid $color-brand;
+//   display: inline-block;
+//   transition: transform $timings-fast ease-in-out;
+
+//   @include media-hover {
+//     &:hover {
+//       transform: scale(1.1);
+//     }
+//   }
+
+//   @include breakpoint-above-tablet {
+//     @include text-subtitle;
+
+//     border-radius: unit(6);
+//     padding: unit(3) unit(6);
+//   }
+// }

@@ -1,0 +1,5 @@
+dist
+node_modules
+src/static_assets/css
+src/static_assets/javascript
+.DS_Store

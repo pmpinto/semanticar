@@ -1,0 +1,72 @@
+@use 'sass:math';
+
+// Caption
+@mixin text-caption() {
+  font-size: $font-size-caption;
+  font-weight: $font-weight-regular;
+  line-height: 1.5;
+}
+
+// Body
+@mixin text-body() {
+  font-size: $font-size-body;
+  font-weight: $font-weight-regular;
+  line-height: 1.5;
+}
+
+// Subtitle
+@mixin text-subtitle() {
+  font-size: $font-size-subtitle;
+  font-weight: $font-weight-semibold;
+  line-height: 1.333;
+  margin: 0;
+}
+
+// Title
+@mixin text-title() {
+  font-size: $font-size-title;
+  font-weight: $font-weight-extrabold;
+  line-height: 1.125;
+  margin: 0;
+}
+
+// Jumbo
+@mixin text-jumbo() {
+  font-size: $font-size-jumbo;
+  font-weight: $font-weight-extrabold;
+  line-height: 1.333;
+  margin: 0;
+}
+
+// Link
+@mixin text-link() {
+  color: $color-brand;
+  text-decoration: none;
+  border-bottom: rem(1px) solid $color-detail;
+  transition: color $timings-fast ease-in-out,
+    border-color $timings-fast ease-in-out;
+
+  &:hover {
+    color: $color-action;
+    border-color: fade-out($color: $color-red-dark, $amount: $alpha-8);
+  }
+}
+
+// Markdown
+@mixin text-markdown() {
+  p {
+    margin: 0;
+
+    + p {
+      margin-top: unit(2);
+    }
+  }
+
+  strong {
+    font-weight: $font-weight-semibold;
+  }
+
+  a {
+    @include text-link();
+  }
+}

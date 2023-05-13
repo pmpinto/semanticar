@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% if title %}
+      {% set pageTitle %}
+        {{ title }} •
+      {% endset %}
+    {% endif %}
+    <title>{{ pageTitle if title else '' }}{{ site.title }}</title>
+
+    <link rel="stylesheet" href="/static_assets/css/styles.css">
+    {% if pageCss %}
+      <link rel="stylesheet" href="/static_assets/css/pages/{{ pageCss }}.css">
+    {% endif %}
+  </head>
+  <body class="{{ bodyClass }}">
+    {# {% include "_navigation.njk" %} #}
+
+    <main class="{{ bodyClass }}__main">
+      {{ content | safe }}
+    </main>
+
+    <script async src="/static_assets/javascript/bundle.js"></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+@use 'sass:math';
+
+$alpha-1: math.div($unit-base, ($unit-base * 6)); // 0.16
+$alpha-2: math.div($unit-base, ($unit-base * 4)); // 0.25
+$alpha-3: math.div($unit-base, ($unit-base * 3)); // 0.33
+$alpha-4: math.div($unit-base, ($unit-base * 2)); // 0.5
+
+$alpha-5: $alpha-4 + $alpha-1; // 0.66
+$alpha-6: $alpha-4 + $alpha-2; // 0.75
+$alpha-7: $alpha-4 + $alpha-3; // 0.83
+$alpha-8: $alpha-4 + $alpha-4; // 1
+

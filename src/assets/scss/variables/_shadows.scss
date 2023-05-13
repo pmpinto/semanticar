@@ -1,0 +1,50 @@
+$shadow-floating: 0 1px 2px
+    fade-out(
+      $color: $color-black,
+      $amount: 0.8,
+    ),
+  0 2px 8px
+    fade-out(
+      $color: $color-black,
+      $amount: 0.88,
+    ),
+  0 4px 32px
+    fade-out(
+      $color: $color-black,
+      $amount: 0.96,
+    );
+$shadow-floating-high: 0 1px 4px
+    fade-out(
+      $color: $color-black,
+      $amount: 0.8,
+    ),
+  0 2px 12px
+    fade-out(
+      $color: $color-black,
+      $amount: 0.8,
+    ),
+  0 4px 64px
+    fade-out(
+      $color: $color-black,
+      $amount: 0.88,
+    );
+$shadow-inner: inset 0 1px 2px
+    fade-out(
+      $color: $color-black,
+      $amount: 0.8,
+    ),
+  inset 0 2px 8px
+    fade-out(
+      $color: $color-black,
+      $amount: 0.8,
+    );
+$shadow-inner-deep: inset 0 2px 4px
+    fade-out(
+      $color: $color-black,
+      $amount: 0.8,
+    ),
+  inset 0 4px 16px
+    fade-out(
+      $color: $color-black,
+      $amount: 0.8,
+    );

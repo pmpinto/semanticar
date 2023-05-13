@@ -1,0 +1,12 @@
+$color-white: #f8f8f8;
+$color-lavender: #d8d8d8;
+$color-gold: #f3a405;
+$color-sinopia: #bf4e30;
+$color-purple: #4b0f7a;
+$color-black: #201a24;
+$color-detail: $color-lavender;
+$color-brand: $color-purple;
+$color-text: $color-black;
+$color-muted: fade-out($color-black, $alpha-3);
+$color-action: $color-brand;
+$color-action-hover: lighten($color-action, 5%);

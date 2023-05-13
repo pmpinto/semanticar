@@ -1,0 +1,17 @@
+@mixin grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  row-gap: $grid-gutter;
+
+  @include breakpoint-above-tablet {
+    grid-template-rows: 1fr;
+    row-gap: unit(0);
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: $grid-gutter;
+  }
+
+  @include breakpoint-above-desktop-small {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}

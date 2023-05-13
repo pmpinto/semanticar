@@ -1,0 +1,45 @@
+{
+  "extends": ["stylelint-config-recommended", "stylelint-config-standard-scss"],
+  "plugins": ["stylelint-scss"],
+  "ignoreFiles": ["**/*.js", "**/*.md"],
+  "overrides": [
+    {
+      "files": [".scss"]
+    }
+  ],
+  "rules": {
+    "at-rule-allowed-list": [
+      "charset",
+      "counter-style",
+      "each",
+      "else",
+      "else",
+      "font-face",
+      "for",
+      "function",
+      "if",
+      "import",
+      "include",
+      "keyframes",
+      "media",
+      "mixin",
+      "namespace",
+      "page",
+      "return",
+      "supports",
+      "use",
+      "while"
+    ],
+    "at-rule-no-unknown": null,
+    "declaration-block-no-duplicate-properties": true,
+    "declaration-no-important": true,
+    "property-no-vendor-prefix": true,
+    "scss/dollar-variable-colon-space-after": "always",
+    "scss/dollar-variable-colon-space-before": "never",
+    "scss/dollar-variable-empty-line-before": null,
+    "selector-max-id": 0,
+    "shorthand-property-no-redundant-values": true,
+    "string-quotes": "single",
+    "selector-class-pattern": null
+  }
+}
