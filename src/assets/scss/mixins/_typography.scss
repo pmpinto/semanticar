@@ -7,11 +7,31 @@
   line-height: 1.5;
 }
 
+// Label
+@mixin text-label() {
+  font-size: $font-size-caption;
+  font-weight: $font-weight-bold;
+  letter-spacing: 1.44px;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 // Body
 @mixin text-body() {
   font-size: $font-size-body;
   font-weight: $font-weight-regular;
   line-height: 1.5;
+}
+
+// Lead
+@mixin text-lead() {
+  font-size: $font-size-lead;
+  font-weight: $font-weight-regular;
+  line-height: 1.429;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 // Subtitle
@@ -58,7 +78,7 @@
     margin: 0;
 
     + p {
-      margin-top: unit(2);
+      margin-top: units(2);
     }
   }
 
@@ -67,6 +87,6 @@
   }
 
   a {
-    @include text-link();
+    @include text-link;
   }
 }

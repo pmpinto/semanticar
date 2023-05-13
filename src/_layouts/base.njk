@@ -17,7 +17,7 @@
     {% endif %}
   </head>
   <body class="{{ bodyClass }}">
-    {# {% include "_navigation.njk" %} #}
+    {% include "_navigation.njk" %}
 
     <main class="{{ bodyClass }}__main">
       {{ content | safe }}

@@ -1,5 +1,10 @@
+$timings-faster: 75ms;
 $timings-fast: 150ms;
 $timings-normal: 250ms;
 $timings-slow: 350ms;
+$timings-slower: 550ms;
+$timings-slowest: 1050ms;
 
 $timings-spinner: 550ms;
+
+$ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);

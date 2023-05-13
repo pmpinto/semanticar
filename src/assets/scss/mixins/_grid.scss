@@ -6,7 +6,7 @@
 
   @include breakpoint-above-tablet {
     grid-template-rows: 1fr;
-    row-gap: unit(0);
+    row-gap: units(0);
     grid-template-columns: repeat(6, 1fr);
     column-gap: $grid-gutter;
   }

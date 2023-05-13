@@ -1,3 +1,53 @@
-<nav class="navigation">
-  <a href="/">Home</a>
+<nav class="navigation" data-controller="navigation">
+  <div class="wrapper">
+    <a href="/" class="navigation__home-link">
+      <img src="/static_assets/images/semanticar-logo.svg" alt="Semanticar logo">
+      <span class="visually-hidden">Ir para a página inicial</span>
+    </a>
+
+    <button class="navigation__toggle" data-action="click->navigation#toggle">
+      <img src="/static_assets/icons/list.svg" alt="navigation icon">
+      <span class="visually-hidden">Alternar navegação</span>
+    </button>
+
+    <div class="navigation__panel">
+      <button class="navigation__toggle" data-action="click->navigation#toggle">
+        <img src="/static_assets/icons/list.svg" alt="navigation icon">
+        <span class="visually-hidden">Alternar navegação</span>
+      </button>
+
+      <ol class="navigation__list">
+        <li class="navigation__item">
+          <a class="navigation__link {% if page.url == '/' %}is-active{% endif %}" href="/">Início</a>
+        </li>
+        <li class="navigation__item">
+          <span class="navigation__label">Categorias</span>
+
+          <ol class="navigation__sub-list">
+            <li class="navigation__item">
+              <a class="navigation__link" href="/categorias/analise/">Análise</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="/categorias/opiniao/">Opinião</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="/categorias/noticia/">Notícia</a>
+            </li>
+          </ol>
+        </li>
+        <li class="navigation__item">
+          <span class="navigation__label">Redes</span>
+
+          <ol class="navigation__sub-list">
+            <li class="navigation__item">
+              <a class="navigation__link" href="https://twitter.com/semanticarpt">Twitter</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="https://instagram.com/semanticar">Instagram</a>
+            </li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </div>
 </nav>
