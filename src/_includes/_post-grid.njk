@@ -1,0 +1,29 @@
+{% set categoriesOptions = { links: false, theme: 'light' } %}
+
+<section class="post-grid">
+  <ol class="post-grid__list">
+    {% for post in posts %}
+      <li class="post-grid__item">
+        <a href="{{ post.url }}" class="post-grid__link">
+          <div class="post-grid__photo">
+            {% image
+              post.data.cover,
+              post.data.title,
+              "(min-width: 1024px) 50vw, (min-width: 768px) 80vw, 100vw",
+              "post-grid__image"
+            %}
+          </div>
+
+          <div class="post-grid__text">
+            <time datetime="{{ post.data.date }}" class="post-grid__date">{{ post.data.date | local_date }}</time>
+            <h2 class="post-grid__title">{{ post.data.title }}</h2>
+
+            {% include "_categories.njk" %}
+          </div>
+        </a>
+      </li>
+    {% endfor %}
+  </ol>
+</section>
+
+{% include "_pagination.njk" %}

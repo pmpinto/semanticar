@@ -1,0 +1,19 @@
+---
+layout: base
+bodyClass: home
+pageCss: home
+permalink: /
+---
+
+{% include "_hero.njk" %}
+
+{% include "_author.njk" %}
+
+{% set post = collections.post | reverse | getItem(0) %}
+{% include "_post-latest.njk" %}
+
+{% include "_subscribe-banner.njk" %}
+
+{% set posts = collections.post | reverse | fromUntil(1) %}
+{% include "_post-grid.njk" %}
+

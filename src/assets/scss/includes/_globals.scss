@@ -24,9 +24,9 @@ html {
 }
 
 .wrapper {
-  max-width: $global-max-width;
-  margin-left: auto;
-  margin-right: auto;
+  // max-width: $global-max-width;
+  // margin-left: auto;
+  // margin-right: auto;
   padding-left: units(3);
   padding-right: units(3);
 
@@ -35,10 +35,15 @@ html {
     padding-right: units(6);
   }
 
-  @include breakpoint-above-desktop-medium {
-    padding-left: units(4);
-    padding-right: units(4);
+  @include breakpoint-above-desktop-small {
+    padding-left: 0;
+    padding-right: 0;
   }
+
+  // @include breakpoint-above-desktop-medium {
+  //   padding-left: units(4);
+  //   padding-right: units(4);
+  // }
 }
 
 .visually-hidden {

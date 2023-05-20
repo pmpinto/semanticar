@@ -1,10 +1,34 @@
 .navigation {
+  position: fixed;
+  top: -1px;
+  width: 100dvw;
+  z-index: $layers-navigation;
+
   .wrapper {
     padding-top: units(3);
     padding-bottom: units(3);
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include breakpoint-above-desktop-small {
+      padding-left: units(6);
+      padding-right: units(6);
+    }
+  }
+
+  // Background blur
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $color-frosted;
+    backdrop-filter: blur(32px);
+    z-index: $layers-below;
   }
 }
 
@@ -25,7 +49,8 @@
 }
 
 .navigation__panel {
-  height: 100vh;
+  z-index: $layers-navigation;
+  height: 100dvh;
   width: clamp(20vw, rem(476px), 100vw);
   background-color: $color-frosted;
   position: fixed;
@@ -39,7 +64,7 @@
   transform: translateX(100%);
   transition: transform $timings-slow $ease-out-expo,
     box-shadow $timings-slower $ease-out-expo;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(32px);
   box-shadow: none;
 
   @include breakpoint-above-tablet {
@@ -51,8 +76,10 @@
   }
 
   @include breakpoint-max {
-    width: 40vw;
-    padding-right: calc((100vw - #{$global-max-width}) / 2 + #{units(4)});
+    width: 32dvw;
+    padding-right: units(6);
+
+    // padding-right: calc((100dvw - #{$global-max-width}) / 2 + #{units(4)});
   }
 }
 

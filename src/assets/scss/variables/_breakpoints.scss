@@ -6,3 +6,11 @@ $breakpoint-desktop-small: 1024px;
 $breakpoint-desktop-medium: 1200px;
 $breakpoint-desktop-large: 1400px;
 $breakpoint-desktop-extra-large: 1800px;
+
+$grid-gutter: 0.5rem;
+
+// $grid-gutter: clamp(
+//   0.5rem,
+//   calc(0.5vw + 0.88rem),
+//   2rem
+// ); // Can't depend on custom functions

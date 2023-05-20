@@ -6,15 +6,8 @@ $font-weight-regular: 400;
 $font-weight-bold: 700;
 $font-weight-extrabold: 800;
 
-// $font-size-caption: clamp(0.563rem, 1vw + 0.563rem, 1rem);
-// $font-size-body: clamp(1.125rem, 0.422vw + 1rem, 1.777rem);
-// $font-size-lead: clamp(1.25rem, calc(0.8vw + 1rem), 2.618rem);
-// $font-size-subtitle: clamp(1.333rem, 1vw + 1.333rem, 2.369rem);
-// $font-size-title: clamp(1.777rem, 1vw + 1.777rem, 3.157rem);
-// $font-size-jumbo: clamp(2.369rem, 2.369vw + 2.369rem, 4.209rem);
-
 $font-size-caption: 0.618rem;
-$font-size-body: clamp(1rem, calc(0.262vw + 1rem), 1.25rem);
+$font-size-body: clamp(1rem, calc(0.11vw + 1rem), 1.25rem);
 $font-size-lead: clamp(1.25rem, calc(0.8vw + 1rem), 2.618rem);
 $font-size-subtitle: clamp(1.618rem, calc(2vw + 1rem), 2.618rem);
 $font-size-title: clamp(2.618rem, calc(4vw + 1rem), 4.236rem);

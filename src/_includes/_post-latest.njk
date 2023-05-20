@@ -1,0 +1,20 @@
+<section class="post-latest">
+  <div class="wrapper">
+    <a href="{{ post.url }}" class="post-latest__link">
+      {% image
+        post.data.cover,
+        post.data.title,
+        "(min-width: 1024px) 50vw, (min-width: 768px) 44vw, 100vw",
+        "post-latest__image"
+      %}
+    </a>
+
+    <div class="post-latest__text">
+      <time datetime="{{ post.data.date }}" class="post-latest__date">{{ post.data.date | local_date }}</time>
+      <h2 class="post-latest__title">{{ post.data.title }}</h2>
+      <p class="post-latest__excerpt">{{ post.data.excerpt }}</p>
+
+      {% include "_categories.njk" %}
+    </div>
+  </div>
+</section>

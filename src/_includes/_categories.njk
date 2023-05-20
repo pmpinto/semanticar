@@ -1,0 +1,21 @@
+<ul class="
+  categories
+  {% if categoriesOptions.theme %}
+  categories--{{ categoriesOptions.theme }}
+  {% endif %}
+  {% if categoriesOptions.links == false %}
+  categories--no-links
+  {% endif %}
+">
+  {% for category in post.data.categories %}
+    <li class="categories__item">
+      {% if categoriesOptions.links != false %}
+      <a href="/{{ category | slug }}/" class="categories__link">
+      {% endif %}
+        {{ category }}
+      {% if categoriesOptions.links != false %}
+      </a>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

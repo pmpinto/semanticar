@@ -23,6 +23,8 @@
   font-size: $font-size-body;
   font-weight: $font-weight-regular;
   line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 // Lead
@@ -37,7 +39,7 @@
 // Subtitle
 @mixin text-subtitle() {
   font-size: $font-size-subtitle;
-  font-weight: $font-weight-semibold;
+  font-weight: $font-weight-extrabold;
   line-height: 1.333;
   margin: 0;
 }
@@ -83,7 +85,7 @@
   }
 
   strong {
-    font-weight: $font-weight-semibold;
+    font-weight: $font-weight-bold;
   }
 
   a {
