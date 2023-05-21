@@ -1,4 +1,4 @@
-<section class="hero">
+<section class="hero" data-controller="hero">
   <div class="hero__background">
     <img class="hero__image" src="/static_assets/images/hero@2x.jpg" alt="a white car parker on a green garden next to a wooden storage">
   </div>
@@ -9,7 +9,7 @@
     <p class="hero__blurb">Uma análise singular do mundo automóvel, com uma perspectiva racional e um toque emocional.</p>
     <p class="hero__since">Desde 2023</p>
 
-    <a href="#autor" class="hero__cta">Diz-me mais</a>
+    <a href="#" class="hero__cta" data-action="click->hero#letsGo">Segue em frente</a>
   </div>
 
   {% include "_stats.njk" %}
