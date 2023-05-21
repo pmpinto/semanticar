@@ -60,6 +60,8 @@
 .footer__logo {
   height: units(5);
   margin-bottom: units(3);
+  pointer-events: none;
+  user-select: none;
 }
 
 .footer__blurb {

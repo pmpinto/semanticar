@@ -35,6 +35,11 @@
 
 // .navigation__home-link {}
 
+.navigation__logo {
+  pointer-events: none;
+  user-select: none;
+}
+
 .navigation__toggle {
   @include button-reset;
 
