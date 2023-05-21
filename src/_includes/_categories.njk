@@ -10,7 +10,7 @@
   {% for category in post.data.categories %}
     <li class="categories__item">
       {% if categoriesOptions.links != false %}
-      <a href="/{{ category | slug }}/" class="categories__link">
+      <a href="/categoria/{{ category | slug }}/" class="categories__link">
       {% endif %}
         {{ category }}
       {% if categoriesOptions.links != false %}
