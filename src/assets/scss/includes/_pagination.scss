@@ -49,8 +49,12 @@
   padding-right: units(1);
 
   .pagination__icon {
-    left: 0;
+    left: units(1);
     rotate: 180deg;
+
+    @include breakpoint-above-tablet {
+      left: 0;
+    }
   }
 }
 
@@ -60,7 +64,11 @@
   padding-right: units(5);
 
   .pagination__icon {
-    right: 0;
+    right: units(1);
+
+    @include breakpoint-above-tablet {
+      right: 0;
+    }
   }
 }
 
