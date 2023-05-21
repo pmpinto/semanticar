@@ -108,30 +108,12 @@
 
 .navigation__link {
   @include text-lead;
+  @include text-link;
 
   text-decoration: none;
   flex-direction: column;
   align-items: flex-end;
   color: $color-text;
-  position: relative;
-
-  // Underline
-  &::after {
-    content: '';
-    width: 0%;
-    height: 2px;
-    display: block;
-    background-color: $color-brand;
-    position: absolute;
-    bottom: -5px;
-    transition: width $timings-normal $ease-out-expo;
-  }
-
-  @include hover-and-focus {
-    &::after {
-      width: 100%;
-    }
-  }
 }
 
 .navigation__link.is-active {

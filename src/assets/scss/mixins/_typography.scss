@@ -5,11 +5,13 @@
   font-size: $font-size-caption;
   font-weight: $font-weight-regular;
   line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 // Label
 @mixin text-label() {
-  font-size: $font-size-caption;
+  font-size: $font-size-label;
   font-weight: $font-weight-bold;
   letter-spacing: 1.44px;
   text-transform: uppercase;
@@ -62,15 +64,24 @@
 
 // Link
 @mixin text-link() {
-  color: $color-brand;
-  text-decoration: none;
-  border-bottom: rem(1px) solid $color-detail;
-  transition: color $timings-fast ease-in-out,
-    border-color $timings-fast ease-in-out;
+  position: relative;
 
-  &:hover {
-    color: $color-action;
-    border-color: fade-out($color: $color-red-dark, $amount: $alpha-8);
+  // Underline
+  &::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    display: block;
+    background-color: $color-brand;
+    position: absolute;
+    bottom: -5px;
+    transition: width $timings-normal $ease-out-expo;
+  }
+
+  @include hover-and-focus {
+    &::after {
+      width: 100%;
+    }
   }
 }
 

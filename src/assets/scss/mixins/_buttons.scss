@@ -20,7 +20,7 @@
   padding: rem(18px) units(5);
   text-decoration: none;
   display: inline-block;
-  transition: transform $timings-faster ease-in-out;
+  transition: transform $timings-normal ease-in-out;
 
   @include hover-and-focus {
     transform: scale(1.1);
