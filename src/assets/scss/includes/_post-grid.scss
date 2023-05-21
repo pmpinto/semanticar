@@ -89,8 +89,16 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: units(4);
+  padding: units(3);
   color: $color-white;
+
+  @include breakpoint-above-tablet {
+    padding: units(6);
+  }
+
+  @include breakpoint-above-desktop-small {
+    padding: units(4);
+  }
 }
 
 .post-grid__date {

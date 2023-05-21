@@ -1,7 +1,7 @@
 .footer {
   border-top: 1px solid $color-detail;
   padding-top: units(5);
-  padding-bottom: units(3);
+  padding-bottom: calc(env(safe-area-inset-bottom) + #{units(3)});
   margin-top: units(8);
   overflow: hidden;
 
@@ -27,6 +27,7 @@
   user-select: none;
   top: units(8);
   right: units(-16);
+  z-index: $layers-below;
 
   @include breakpoint-above-tablet {
     top: units(-16);
