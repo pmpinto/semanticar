@@ -6,7 +6,7 @@
   permalink: "/{% if pagination.pageNumber > 0 %}pagina/{{ pagination.pageNumber + 1 }}/{% endif %}index.html",
   pagination: {
     data: "collections.post",
-    size: 8,
+    size: 4,
     alias: "posts",
     before: function(paginationData, fullData) {
       return this.fromUntil(paginationData.reverse(), 1)
