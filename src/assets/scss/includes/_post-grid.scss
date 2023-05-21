@@ -3,9 +3,11 @@
 
 .post-grid {
   margin-top: units(6);
+  margin-bottom: units(3);
 
   @include breakpoint-above-desktop-small {
     margin-top: units(16);
+    margin-bottom: units(8);
   }
 }
 
@@ -35,11 +37,16 @@
   color: $color-white;
   text-decoration: none;
   text-rendering: geometricprecision;
-  transition: box-shadow $timings-normal $ease-out-expo;
+  transition: box-shadow $timings-normal $ease-out-expo,
+    scale $timings-slowest $ease-out-expo;
   display: block;
+  outline: none;
 
   @include hover-and-focus {
     box-shadow: 0 0 0 2px $color-action;
+    scale: 1.015;
+    z-index: 1;
+    position: relative;
   }
 }
 
@@ -65,7 +72,7 @@
 .post-grid__image {
   width: 100%;
   height: auto;
-  aspect-ratio: 1;
+  aspect-ratio: 16/10;
   object-fit: cover;
   object-position: center;
   user-select: none;

@@ -1,6 +1,6 @@
 {% set categoriesOptions = { links: false, theme: 'light' } %}
 
-<section class="post-grid">
+<section class="post-grid" id="posts">
   <ol class="post-grid__list">
     {% for post in posts %}
       <li class="post-grid__item">
@@ -26,4 +26,6 @@
   </ol>
 </section>
 
-{% include "_pagination.njk" %}
+{% if pagination.pages.length > 1 %}
+  {% include "_pagination.njk" %}
+{% endif %}
