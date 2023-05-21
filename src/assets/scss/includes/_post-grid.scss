@@ -23,14 +23,6 @@
 .post-grid__item {
   grid-column: span 3;
   position: relative;
-
-  @include breakpoint-above-desktop-small {
-    grid-column: span 4;
-  }
-
-  @include breakpoint-above-desktop-medium {
-    grid-column: span 3;
-  }
 }
 
 .post-grid__link {
