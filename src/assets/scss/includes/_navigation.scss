@@ -3,7 +3,7 @@
   top: -1px;
   width: 100dvw;
   z-index: $layers-navigation;
-  transition: translate $timings-slow $ease-out-expo;
+  transition: translate $timings-slower $ease-out-expo;
 
   .wrapper {
     padding-top: units(3);

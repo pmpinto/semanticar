@@ -4,8 +4,6 @@ export default class AppController extends Controller {
   static targets = ['navigation', 'footer']
 
   connect() {
-    console.log('> this.navigationTarget', this.navigationTarget,)
-
     const observer = new IntersectionObserver(([entry]) => {
       this.toggleNavAndFooter(entry)
     }, {

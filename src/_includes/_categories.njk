@@ -10,12 +10,24 @@
   {% for category in post.data.categories %}
     <li class="categories__item">
       {% if categoriesOptions.links != false %}
-      <a href="/categoria/{{ category | slug }}/" class="categories__link">
+        <a href="/categoria/{{ category | slug }}/" class="categories__link">
       {% endif %}
         {{ category }}
       {% if categoriesOptions.links != false %}
-      </a>
+        </a>
       {% endif %}
     </li>
   {% endfor %}
+
+  {% if post.data.make %}
+    <li class="categories__item">
+      {% if categoriesOptions.links != false %}
+        <a href="/marca/{{ post.data.make | slug }}/" class="categories__link">
+      {% endif %}
+        {{ post.data.make }}
+      {% if categoriesOptions.links != false %}
+        </a>
+      {% endif %}
+    </li>
+  {% endif %}
 </ul>

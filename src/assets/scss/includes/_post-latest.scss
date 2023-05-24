@@ -25,11 +25,13 @@
 
 .post-latest__link {
   margin-bottom: units(2);
-  transition: box-shadow $timings-normal $ease-out-expo;
+  transition: box-shadow $timings-normal $ease-out-expo,
+    scale $timings-slowest $ease-out-expo;
   outline: none;
 
   @include hover-and-focus {
     box-shadow: 0 0 0 2px $color-action;
+    scale: 1.015;
   }
 
   @include breakpoint-above-tablet {
