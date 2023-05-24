@@ -61,7 +61,7 @@ module.exports = (eleventyConfig) => {
     let metadata = await Image(src, {
       widths: ["auto", 384, 768, 1440, 2160],
       formats: ["jpeg"],
-      urlPath: '/static_assets/photos/',
+      urlPath: classname === 'rss' ? 'https://semanticar.pt/static_assets/photos/' : '/static_assets/photos/',
       outputDir: './dist/static_assets/photos/',
       sharpJpegOptions: {
         quality: 80
@@ -84,7 +84,9 @@ module.exports = (eleventyConfig) => {
     };
 
     // You bet we throw an error on a missing alt (alt="" works okay)
-    return Image.generateHTML(metadata, imageAttributes);
+    const imageHTML = Image.generateHTML(metadata, imageAttributes)
+
+    return classname === 'rss' ? encodeURI(imageHTML) : imageHTML;
   });
 
   // Register `fromUntil` filter
