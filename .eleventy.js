@@ -7,6 +7,7 @@ module.exports = (eleventyConfig) => {
   const siteData = require("./src/_data/site.json")
   const Image = require("@11ty/eleventy-img");
   const path = require("path");
+  const he = require("he");
 
   // Prevent clashing with static_assets folder (which is git-ignored)
   eleventyConfig.setUseGitIgnore(false);
@@ -58,10 +59,11 @@ module.exports = (eleventyConfig) => {
   // Register `image` tag
   // https://www.11ty.dev/docs/plugins/image/
   eleventyConfig.addShortcode("image", async function (src, alt, sizes, classname) {
+    const isRSS = classname === 'rss'
     let metadata = await Image(src, {
       widths: ["auto", 384, 768, 1440, 2160],
       formats: ["jpeg"],
-      urlPath: classname === 'rss' ? 'https://semanticar.pt/static_assets/photos/' : '/static_assets/photos/',
+      urlPath: isRSS ? 'https://semanticar.pt/static_assets/photos/' : '/static_assets/photos/',
       outputDir: './dist/static_assets/photos/',
       sharpJpegOptions: {
         quality: 80
@@ -86,7 +88,7 @@ module.exports = (eleventyConfig) => {
     // You bet we throw an error on a missing alt (alt="" works okay)
     const imageHTML = Image.generateHTML(metadata, imageAttributes)
 
-    return classname === 'rss' ? encodeURI(imageHTML) : imageHTML;
+    return isRSS ? he.escape(imageHTML) : imageHTML;
   });
 
   // Register `fromUntil` filter
