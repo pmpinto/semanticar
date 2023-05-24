@@ -2,11 +2,11 @@
 @import '../includes/pagination';
 
 .post-grid {
-  margin-top: units(6);
+  padding-top: units(10);
   margin-bottom: units(3);
 
   @include breakpoint-above-desktop-small {
-    margin-top: units(16);
+    margin-top: units(6);
     margin-bottom: units(8);
   }
 }
