@@ -115,6 +115,19 @@ module.exports = (eleventyConfig) => {
     })
   })
 
+  // Register `getMakes` filter
+  eleventyConfig.addFilter('getMakes', (posts) => {
+    const makes = posts.map((post) => post.data.make).filter((make) => make)
+    const uniqueMakes = [...new Set(makes)]
+    return uniqueMakes
+  })
+
+  // Register `getTotalPhotos` filter
+  eleventyConfig.addFilter('getTotalPhotos', (posts) => {
+    const photos = posts.map((post) => post.data.photos).flat()
+    return photos.length
+  })
+
   return {
     dir: {
       input: "src",

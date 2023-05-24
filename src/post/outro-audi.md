@@ -3,8 +3,8 @@ title: Pequeno utilitário para quem gosta de emoções
 date: 2023-02-04
 categories:
   - análise
-make: bmw
-cover: ./src/photos/bmw.jpeg
+make: audi
+cover: ./src/photos/audi-2.avif
 photos:
-  - ./src/photos/bmw.jpeg
+  - ./src/photos/audi-2.avif
 ---

@@ -1,4 +1,5 @@
 import { Controller } from '@hotwired/stimulus'
+import { API } from '../api'
 
 export default class AppController extends Controller {
   static targets = ['navigation', 'footer']
@@ -20,4 +21,7 @@ export default class AppController extends Controller {
     this.navigationTarget.classList.toggle('is-hidden', entry.isIntersecting)
   }
 
+  async subscribe() {
+    await API.call('/increment-subscribers-count')
+  }
 }
