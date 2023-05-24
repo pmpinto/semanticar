@@ -21,7 +21,9 @@ export default class AppController extends Controller {
     this.navigationTarget.classList.toggle('is-hidden', entry.isIntersecting)
   }
 
-  async subscribe() {
+  async subscribe(event) {
+    event.preventDefault()
     await API.call('/increment-subscribers-count')
+    window.location = event.target.getAttribute('href')
   }
 }
