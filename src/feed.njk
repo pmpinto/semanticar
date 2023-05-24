@@ -18,11 +18,7 @@ permalink: /feed.xml
     <email>{{ site.email }}</email>
     <uri>{{ site.url }}</uri>
   </author>
-
-  {% for post in posts.slice(0, 5) %}
-  {% set postBody %}
-    {{ post.content }}
-  {% endset %}
+  {%- for post in posts.slice(0, 5) %}
   <entry>
     <id>{{ site.url }}{{ post.url }}</id>
     <link rel="alternate" href="{{ site.url }}{{ post.url }}"/>
@@ -39,8 +35,8 @@ permalink: /feed.xml
         "(min-width: 1024px) 50vw, 100vw",
         "rss"
       %}
-      {{ postBody -}}
+      {{ post.content -}}
     </content>
   </entry>
-  {% endfor %}
+  {%- endfor %}
 </feed>
