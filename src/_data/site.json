@@ -5,5 +5,9 @@
   "email": "pedro@semanticar.pt",
   "metadata": {
     "default_image": "/static_assets/images/metadata/default.png"
+  },
+  "social": {
+    "twitter": "semanticarpt",
+    "instagram": "semanticar"
   }
 }
