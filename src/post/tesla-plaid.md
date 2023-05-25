@@ -4,6 +4,7 @@ date: 2023-05-10
 categories:
   - análise
 make: tesla
+model: Model S Plaid
 cover: ./src/photos/tesla-plaid.avif
 photos:
   - ./src/photos/tesla-plaid.avif
