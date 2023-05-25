@@ -1,0 +1,32 @@
+.header {
+  @include grid-wrapper;
+
+  padding-top: units(7);
+  padding-bottom: units(10);
+  background-color: $color-white;
+  grid-column: 1 / span 12;
+
+  .wrapper {
+    @include breakpoint-above-desktop-small {
+      grid-column: 2 / span 10;
+    }
+  }
+}
+
+.header__date {
+  @include text-label;
+
+  margin-bottom: units(1);
+}
+
+.header__title {
+  @include text-title;
+
+  margin-bottom: units(1);
+}
+
+.header__subtitle {
+  @include text-lead;
+
+  margin-bottom: units(2);
+}

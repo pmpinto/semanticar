@@ -1,0 +1,54 @@
+@import '../includes/imports';
+@import '../includes/header';
+@import '../includes/highlights';
+@import '../includes/sidebar';
+@import '../includes/subscribe-banner';
+@import '../includes/post-grid';
+
+// .post {}
+
+.post__article {
+  @include grid-wrapper;
+
+  row-gap: 0;
+}
+
+.post__image {
+  width: 100dvw;
+  height: auto;
+  position: sticky;
+  top: units(10);
+  margin-bottom: units(10);
+  grid-column: 1 / span 12;
+  z-index: $layers-below;
+}
+
+.post__content {
+  @include grid-wrapper;
+
+  row-gap: 0;
+  padding-top: units(10);
+  padding-bottom: units(10);
+  background-color: $color-white;
+  grid-column: 1 / span 12;
+}
+
+.post__excerpt {
+  @include text-lead;
+
+  margin-bottom: units(7);
+  padding-right: units(2);
+  grid-column: 2 / span 7;
+}
+
+.post__body {
+  @include text-body;
+  @include text-markdown;
+
+  grid-column: 2 / span 6;
+}
+
+.post__share {
+  background-color: red;
+  grid-column: 2 / span 7;
+}

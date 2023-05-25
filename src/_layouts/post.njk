@@ -3,11 +3,36 @@ layout: base
 bodyClass: post
 pageCss: post
 ---
+
+<article class="post__article">
+  {% image
+    cover,
+    title,
+    "100vw",
+    "post__image",
+    false
+  %}
+
+  {% include "_header.njk" %}
+
+  {% include "_highlights.njk" %}
+
+  <section class="post__content">
+    <p class="post__excerpt">
+      {{ excerpt }}
+    </p>
+    <div class="post__body">
+      {{ content | safe }}
+    </div>
+
+    <div class="post__share">
+      NEEDS THE SHARE COMPONENT
+    </div>
+
+    {% include "_sidebar.njk" %}
+  </section>
+</article>
+
 {% include "_subscribe-banner.njk" %}
 
-{% include "_post-grid.njk" %}
-
-<h1>{{ title }}</h1>
-<div>
-  {{ content }}
-</div>
+{# {% include "_post-grid.njk" %} #}

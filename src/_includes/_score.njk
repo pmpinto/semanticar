@@ -1,0 +1,20 @@
+<section class="score">
+  <p class="score__title">{{ (specs.weight / specs.power) | round(1) }} kg por cv</p>
+
+  <div
+    class="score__chart"
+    title="{{ (specs.power / specs.weight * 100) | round(0) }}% de potência para o seu peso"
+    aria-role="meter"
+    aria-valuemin="0"
+    aria-valuemax="100"
+    aria-valuenow="{{ (specs.power / specs.weight * 100) | round(0) }}"
+    aria-label="Relação de potência dividida pelo peso"
+  >
+    <div class="score__fill" style="width: {{ (specs.power / specs.weight * 100) | round(0) }}%"></div>
+  </div>
+
+  <div class="score__labels">
+    <p class="score__label">Potência</p>
+    <p class="score__label">Peso</p>
+  </div>
+</section>

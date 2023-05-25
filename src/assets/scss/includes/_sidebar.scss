@@ -1,0 +1,7 @@
+@import '../includes/score';
+@import '../includes/specs';
+
+.sidebar {
+  grid-column: 9 / span 3;
+  grid-row: 1 / span 3;
+}

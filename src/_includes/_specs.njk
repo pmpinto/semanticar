@@ -1,0 +1,62 @@
+<section class="specs">
+  <p class="specs__heading">Especificações</p>
+
+  <ul class="specs__list">
+    <li class="specs__item">
+      <p class="specs__title">Fabricante</p>
+      <p class="specs__value">{{ make }}</p>
+    </li>
+    <li class="specs__item">
+      <p class="specs__title">Modelo</p>
+      <p class="specs__value">{{ model }}</p>
+    </li>
+    <li class="specs__item">
+      <p class="specs__title">Lançamento</p>
+      <p class="specs__value">{{ specs.year }}</p>
+    </li>
+    <li class="specs__item">
+      <p class="specs__title">Motor</p>
+      <p class="specs__value">{{ specs.engine }}</p>
+    </li>
+    <li class="specs__item">
+      <p class="specs__title">Transmissão</p>
+      <p class="specs__value">{{ specs.transmission }}</p>
+    </li>
+    <li class="specs__item">
+      <p class="specs__title">Potência</p>
+      <p class="specs__value">{{ specs.power }} cv</p>
+    </li>
+    <li class="specs__item">
+      <p class="specs__title">Binário</p>
+      <p class="specs__value">{{ specs.torque }} Nm</p>
+    </li>
+    <li class="specs__item">
+      <p class="specs__title">Autonomia</p>
+      <p class="specs__value">{{ specs.range }} km</p>
+    </li>
+    <li class="specs__item">
+      <p class="specs__title">0—100 km/h</p>
+      <p class="specs__value">{{ specs.speed }} s</p>
+    </li>
+    <li class="specs__item">
+      <p class="specs__title">Velocidade máxima</p>
+      <p class="specs__value">{{ specs.max_speed }} km/h</p>
+    </li>
+    <li class="specs__item">
+      <p class="specs__title">Peso</p>
+      <p class="specs__value">{{ specs.weight }} kg</p>
+    </li>
+    <li class="specs__item">
+      <p class="specs__title">Mala</p>
+      <p class="specs__value">{{ specs.trunk }} L</p>
+    </li>
+  </ul>
+
+  {% if specs.link %}
+    <a href="{{ specs.link }}" class="specs__link" rel="noopener noreferrer" target="_blank">
+      <span class="specs__link-title">Especificações</span>
+      <span class="specs__link-label">Ver todas</span>
+      <img src="/static_assets/icons/open.svg" alt="open link" class="specs__link-icon">
+    </a>
+  {% endif %}
+</section>

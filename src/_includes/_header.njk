@@ -1,0 +1,9 @@
+<header class="header">
+  <div class="wrapper">
+    <time datetime="{{ date }}" class="header__date">{{ date | local_date }}</time>
+    <h1 class="header__title">{{ title }}</h1>
+    <h2 class="header__subtitle">{{ make }} {{ model }}</h2>
+
+    {% include "_categories.njk" %}
+  </div>
+</header>

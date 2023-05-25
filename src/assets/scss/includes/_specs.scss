@@ -1,0 +1,69 @@
+// .specs {}
+
+.specs__heading {
+  @include text-lead;
+
+  margin-bottom: units(3);
+}
+
+.specs__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: units(2);
+  margin-bottom: units(3);
+}
+
+.specs__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.specs__title {
+  @include text-label;
+
+  margin-bottom: rem(4px);
+}
+
+.specs__value {
+  @include text-body;
+}
+
+.specs__link {
+  display: flex;
+  flex-direction: column;
+  padding-left: units(1);
+  padding-top: rem(12px);
+  padding-bottom: rem(4px);
+  box-shadow: 0 -2px 0 0 $color-action;
+  position: relative;
+  text-decoration: none;
+  color: $color-text;
+  transition: box-shadow $timings-normal $ease-out-expo;
+  outline: none;
+  user-select: none;
+
+  @include hover-and-focus {
+    box-shadow: 0 0 0 2px $color-action;
+  }
+}
+
+.specs__link-title {
+  @include text-label;
+}
+
+.specs__link-label {
+  @include text-body;
+
+  font-weight: $font-weight-bold;
+}
+
+.specs__link-icon {
+  width: units(3);
+  height: units(3);
+  position: absolute;
+  top: rem(17px);
+  right: units(1);
+}

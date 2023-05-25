@@ -1,0 +1,31 @@
+.score {
+  margin-bottom: units(17);
+}
+
+.score__title {
+  @include text-lead;
+
+  margin-bottom: units(1);
+}
+
+.score__chart {
+  height: units(2);
+  background-color: $color-detail;
+  margin-bottom: units(1);
+  border-radius: 0 units(2) 0 units(2);
+  overflow: hidden;
+}
+
+.score__fill {
+  height: 100%;
+  background-color: $color-brand;
+}
+
+.score__labels {
+  display: flex;
+  justify-content: space-between;
+}
+
+.score__label {
+  @include text-label;
+}

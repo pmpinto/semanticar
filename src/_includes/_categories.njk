@@ -1,3 +1,10 @@
+{% if post.data.categories %}
+  {% set categories = post.data.categories %}
+{% endif %}
+{% if post.data.make %}
+  {% set make = post.data.make %}
+{% endif %}
+
 <ul class="
   categories
   {% if categoriesOptions.theme %}
@@ -7,7 +14,7 @@
   categories--no-links
   {% endif %}
 ">
-  {% for category in post.data.categories %}
+  {% for category in categories %}
     <li class="categories__item">
       {% if categoriesOptions.links != false %}
         <a href="/categoria/{{ category | slug }}/" class="categories__link">
@@ -19,12 +26,12 @@
     </li>
   {% endfor %}
 
-  {% if post.data.make %}
+  {% if make %}
     <li class="categories__item">
       {% if categoriesOptions.links != false %}
-        <a href="/marca/{{ post.data.make | slug }}/" class="categories__link">
+        <a href="/marca/{{ make | slug }}/" class="categories__link">
       {% endif %}
-        {{ post.data.make }}
+        {{ make }}
       {% if categoriesOptions.links != false %}
         </a>
       {% endif %}
