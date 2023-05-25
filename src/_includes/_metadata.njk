@@ -1,15 +1,12 @@
 {# Title #}
 {% if title %}
-  {% set pageTitle %}
-    {{ title }} •
-  {% endset %}
+  {% set pageTitle %}{{ title }} • {{ site.brand }}{% endset %}
+{% else %}
+  {% set pageTitle %}{{ site.title }}{% endset %}
 {% endif %}
-{% set finalTitle %}
-  {{ pageTitle if title else '' }}{{ site.title }}
-{% endset %}
-<title>{{ finalTitle }}</title>
-<meta property="og:title" content="{{ finalTitle }}" />
-<meta name="twitter:title" content="{{ finalTitle }}" />
+<title>{{ pageTitle }}</title>
+<meta property="og:title" content="{{ pageTitle }}" />
+<meta name="twitter:title" content="{{ pageTitle }}" />
 
 {# Canonical URLs #}
 <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
