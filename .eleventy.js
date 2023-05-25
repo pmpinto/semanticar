@@ -15,14 +15,6 @@ module.exports = (eleventyConfig) => {
   // Copy static_assets folder to dist
   eleventyConfig.addPassthroughCopy("src/static_assets");
 
-  // Copy favicon stuff to dist
-  eleventyConfig.addPassthroughCopy("src/apple-touch-icon.png");
-  eleventyConfig.addPassthroughCopy("src/favicon-192.png");
-  eleventyConfig.addPassthroughCopy("src/favicon-512.png");
-  eleventyConfig.addPassthroughCopy("src/favicon.ico");
-  eleventyConfig.addPassthroughCopy("src/favicon.svg");
-  eleventyConfig.addPassthroughCopy("src/manifest.webmanifest");
-
   // Register `markdownify` filter
   md.use(mdAttrs, {
     matcher(href, config) {
