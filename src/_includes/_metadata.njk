@@ -45,7 +45,7 @@
 
 {# Images #}
 {% if cover %}
-  {% set image = cover %}
+  {% set image = cover | image_url %}
 {% elif metadata.image %}
   {% set image = metadata.image %}
 {% else %}

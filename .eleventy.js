@@ -58,12 +58,11 @@ module.exports = (eleventyConfig) => {
 
   // Register `image` tag
   // https://www.11ty.dev/docs/plugins/image/
-  eleventyConfig.addShortcode("image", async function (src, alt, sizes, classname) {
-    const isRSS = classname === 'rss'
+  eleventyConfig.addShortcode("image", async function (src, alt, sizes, classname, wantsAbsoluteURL) {
     let metadata = await Image(src, {
       widths: ["auto", 384, 768, 1440, 2160],
       formats: ["jpeg"],
-      urlPath: isRSS ? 'https://semanticar.pt/static_assets/photos/' : '/static_assets/photos/',
+      urlPath: wantsAbsoluteURL ? 'https://semanticar.pt/static_assets/photos/' : '/static_assets/photos/',
       outputDir: './dist/static_assets/photos/',
       sharpJpegOptions: {
         quality: 80
@@ -71,9 +70,8 @@ module.exports = (eleventyConfig) => {
       filenameFormat: function (id, src, width, format, options) {
         const extension = path.extname(src);
         const name = path.basename(src, extension);
-
         return `${name}-${width}w.${format}`;
-      }
+      },
     });
 
     let imageAttributes = {
@@ -88,7 +86,27 @@ module.exports = (eleventyConfig) => {
     // You bet we throw an error on a missing alt (alt="" works okay)
     const imageHTML = Image.generateHTML(metadata, imageAttributes)
 
-    return isRSS ? he.escape(imageHTML) : imageHTML;
+    return wantsAbsoluteURL ? he.escape(imageHTML).replaceAll('https:/semanticar.pt', 'https://semanticar.pt') : imageHTML;
+  });
+
+  // Register `image_url` filter
+  // Based on the `image` tag, because we can't use `post.data.image` without it
+  eleventyConfig.addFilter("image_url", async function (src) {
+    let metadata = await Image(src, {
+      widths: [1440],
+      formats: ["jpeg"],
+      urlFormat: function ({ hash, src, width, format }) {
+        const extension = path.extname(src);
+        const name = path.basename(src, extension);
+        return `https://semanticar.pt/static_assets/photos/${name}-${width}w.${format}`;
+      },
+      outputDir: './dist/static_assets/photos/',
+      sharpJpegOptions: {
+        quality: 80
+      }
+    })
+
+    return metadata.jpeg[metadata.jpeg.length - 1].url;
   });
 
   // Register `fromUntil` filter

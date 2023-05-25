@@ -10,7 +10,7 @@ permalink: /feed.xml
   <subtitle>Uma análise singular do mundo automóvel, com uma perspectiva racional e um toque emocional.</subtitle>
   <link href="{{ site.url }}/feed.xml" rel="self" />
   <link href="{{ site.url }}" rel="alternate" />
-  <icon>{{ site.url }}/static_assets/images/metadata/semanticar-logo-square@1x.png</icon>
+  <icon>{{ site.url }}/static_assets/images/metadata/logo-512.png</icon>
   <updated>{{ build_data.date.toISOString() }}</updated>
   <rights>© {{ build_data.year }} Semanticar</rights>
   <author>
@@ -18,7 +18,7 @@ permalink: /feed.xml
     <email>{{ site.email }}</email>
     <uri>{{ site.url }}</uri>
   </author>
-  {%- for post in posts.slice(0, 5) %}
+  {%- for post in posts.slice(0, 10) %}
   <entry>
     <id>{{ site.url }}{{ post.url }}</id>
     <link rel="alternate" href="{{ site.url }}{{ post.url }}"/>
@@ -33,9 +33,14 @@ permalink: /feed.xml
         post.data.cover,
         post.data.title,
         "(min-width: 1024px) 50vw, 100vw",
-        "rss"
+        "cover",
+        true
       %}
       {{ post.content -}}
+
+      {% if post.data.make %}
+      (Para veres as fotos todas visita {{ site.url }}{{ post.url }})
+      {% endif -%}
     </content>
   </entry>
   {%- endfor %}

@@ -4,6 +4,9 @@
   bodyClass: "home",
   pageCss: "home",
   permalink: "/{% if pagination.pageNumber > 0 %}pagina/{{ pagination.pageNumber + 1 }}/{% endif %}index.html",
+  metadata: {
+    description: "Uma análise singular do mundo automóvel, com uma perspectiva racional e um toque emocional."
+  },
   pagination: {
     data: "collections.post",
     size: 4,
