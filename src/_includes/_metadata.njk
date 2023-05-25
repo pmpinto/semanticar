@@ -1,0 +1,57 @@
+{# Title #}
+{% if title %}
+  {% set pageTitle %}
+    {{ title }} •
+  {% endset %}
+{% endif %}
+{% set finalTitle %}
+  {{ pageTitle if title else '' }}{{ site.title }}
+{% endset %}
+<title>{{ finalTitle }}</title>
+<meta property="og:title" content="{{ finalTitle }}" />
+<meta name="twitter:title" content="{{ finalTitle }}" />
+
+{# Canonical URLs #}
+<link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+
+{# Non page-specific metadata #}
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="pt_PT" />
+<meta property="og:site_name" content="Semanticar" />
+<meta name="twitter:site" content="@semanticarpt" />
+<link rel="alternate" type="application/atom+xml" title="RSS da Semanticar" href="/feed.xml" />
+
+{# Icons #}
+<link rel="icon" type="image/svg+xml" href="/static_assets/images/metadata/logo-16.svg" />
+<link rel="icon" type="image/png" sizes="16x16" href="/static_assets/images/metadata/logo-16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/static_assets/images/metadata/logo-32.png" />
+<link rel="icon" type="image/png" sizes="96x96" href="/static_assets/images/metadata/logo-96.png" />
+<link rel="apple-touch-icon-precomposed" type="image/png" sizes="152x152" href="/static_assets/images/metadata/logo-152.png" />
+<link rel="apple-touch-icon-precomposed" type="image/png" sizes="167x167" href="/static_assets/images/metadata/logo-167.png" />
+<link rel="apple-touch-icon-precomposed" type="image/png" sizes="180x180" href="/static_assets/images/metadata/logo-180.png" />
+
+{# Description #}
+{% if excerpt %}
+  {% set description = excerpt %}
+{% elif metadata.description %}
+    {% set description = metadata.description %}
+{% endif %}
+{%- if description %}
+<meta name="description" content="{{ description }}" />
+<meta property="og:description" content="{{ description }}" />
+<meta name="twitter:description" content="{{ description }}" />
+{%- endif %}
+
+{# Images #}
+{% if cover %}
+  {% set image = cover %}
+{% elif metadata.image %}
+  {% set image = metadata.image %}
+{% else %}
+  {% set image %}{{ site.url }}{{ site.metadata.default_image }}{% endset %}
+{% endif %}
+{%- if image %}
+<meta property="og:image" content="{{ image }}" />
+{%- endif %}
+<meta name="twitter:card" content="summary_large_image" />

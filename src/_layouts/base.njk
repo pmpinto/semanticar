@@ -4,12 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-    {% if title %}
-      {% set pageTitle %}
-        {{ title }} •
-      {% endset %}
-    {% endif %}
-    <title>{{ pageTitle if title else '' }}{{ site.title }}</title>
+    {% include "_metadata.njk" %}
 
     <link rel="stylesheet" href="/static_assets/css/styles.css">
     {% if pageCss %}

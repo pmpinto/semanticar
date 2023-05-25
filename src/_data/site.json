@@ -1,5 +1,8 @@
 {
   "title": "Semanticar — Uma análise singular do mundo automóvel",
   "url": "https://semanticar.pt",
-  "email": "pedro@semanticar.pt"
+  "email": "pedro@semanticar.pt",
+  "metadata": {
+    "default_image": "/static_assets/images/metadata/default.png"
+  }
 }
