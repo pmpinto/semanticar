@@ -1,5 +1,6 @@
 import { Controller } from '@hotwired/stimulus'
 import { API } from '../api'
+import throttle from 'lodash.throttle'
 
 export default class AppController extends Controller {
   static targets = ['navigation', 'footer', 'highlights']
@@ -7,6 +8,8 @@ export default class AppController extends Controller {
   connect() {
     this.observeFooter()
     this.observeHighlights()
+
+    this.watchScrollPosition()
 
     this.toggleNavAndFooter = this.toggleNavAndFooter.bind(this)
   }
@@ -47,5 +50,17 @@ export default class AppController extends Controller {
 
   displayHighlights(entry) {
     this.highlightsTarget.classList.toggle('is-visible', entry.isIntersecting)
+  }
+
+  watchScrollPosition() {
+    window.addEventListener('scroll', throttle(() => {
+      this.updateScrollPosition()
+    }, 60), false)
+  }
+
+  updateScrollPosition() {
+    const navigationOffset = -88
+    const scrollPosition = (window.pageYOffset + navigationOffset) / document.body.offsetHeight
+    document.body.style.setProperty('--scroll-position', scrollPosition)
   }
 }

@@ -2,8 +2,16 @@
 @import '../includes/header';
 @import '../includes/highlights';
 @import '../includes/sidebar';
+@import '../includes/share';
 @import '../includes/subscribe-banner';
 @import '../includes/post-grid';
+
+@keyframes blur-image {
+  to {
+    filter: blur(16px);
+    scale: 1.1618;
+  }
+}
 
 // .post {}
 
@@ -15,12 +23,20 @@
 
 .post__image {
   width: 100dvw;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  object-position: center;
   height: auto;
   position: sticky;
   top: units(10);
   margin-bottom: units(10);
   grid-column: 1 / span 12;
   z-index: $layers-below;
+  animation: blur-image $timings-spinner linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll-position) * ($timings-spinner * -1));
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
 }
 
 .post__content {
@@ -46,9 +62,5 @@
   @include text-markdown;
 
   grid-column: 2 / span 6;
-}
-
-.post__share {
-  background-color: red;
-  grid-column: 2 / span 7;
+  margin-bottom: units(10);
 }
