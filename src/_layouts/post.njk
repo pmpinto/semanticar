@@ -39,8 +39,10 @@ pageCss: post
   </section>
 </article>
 
+{% include "_gallery.njk" %}
+
 {% include "_subscribe-banner.njk" %}
 
-{% if photos.length > 0 %}
+{% if related.length > 0 %}
 {# {% include "_post-grid.njk" %} #}
 {% endif %}

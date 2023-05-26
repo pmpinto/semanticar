@@ -1,0 +1,191 @@
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    translate: 0 units(-5);
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    translate: 0 0;
+  }
+}
+
+.gallery {
+  padding-bottom: units(11);
+
+  .wrapper {
+    @include grid-wrapper;
+  }
+}
+
+.gallery__list-wrapper {
+  margin-bottom: units(2);
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.gallery__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: units(1);
+}
+
+// .gallery__item {}
+
+.gallery__thumb {
+  display: block;
+  width: 64dvw;
+  height: auto;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  object-position: center;
+
+  @include breakpoint-above-desktop-small {
+    width: 40dvw;
+  }
+}
+
+.gallery__button {
+  @include button-reset;
+
+  display: flex;
+  flex-direction: column;
+  padding: rem(12px) units(7) rem(4px) units(1);
+  box-shadow: 0 -2px 0 0 $color-action;
+  position: relative;
+  text-decoration: none;
+  color: $color-text;
+  transition: box-shadow $timings-normal $ease-out-expo;
+  outline: none;
+  user-select: none;
+
+  @include breakpoint-above-tablet {
+    grid-column: 5 / span 2;
+  }
+
+  @include breakpoint-above-desktop-small {
+    grid-column: 10 / span 2;
+  }
+
+  @include hover-and-focus {
+    box-shadow: 0 0 0 2px $color-action;
+  }
+}
+
+.gallery__button-icon {
+  width: units(3);
+  height: units(3);
+  position: absolute;
+  top: rem(19px);
+  right: units(1);
+}
+
+.gallery__button-label {
+  @include text-label;
+}
+
+.gallery__button-view {
+  @include text-body;
+
+  font-weight: $font-weight-bold;
+}
+
+.gallery__lightbox {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: $color-frosted;
+  backdrop-filter: blur(32px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $layers-lightbox;
+  padding: units(3);
+  padding-top: units(10);
+  overflow-y: scroll;
+  overscroll-behavior: contain;
+  transition: opacity $timings-slow $ease-out-expo;
+
+  @include breakpoint-above-tablet {
+    padding: units(7);
+    padding-top: units(10);
+  }
+
+  @include breakpoint-above-desktop-small {
+    padding: units(10);
+  }
+}
+
+.gallery__close {
+  @include button-reset;
+
+  position: absolute;
+  right: units(3);
+  top: units(3);
+  transition: scale $timings-fast $ease-out-expo;
+
+  @include hover-and-focus {
+    scale: 1.1;
+  }
+
+  &:active {
+    scale: 0.9;
+  }
+
+  @include breakpoint-above-tablet {
+    right: units(7);
+  }
+
+  @include breakpoint-above-desktop-small {
+    right: units(10);
+  }
+}
+
+.gallery__close-icon {
+  display: block;
+  width: units(4);
+  height: units(4);
+}
+
+.gallery__photo {
+  height: auto;
+  width: 100%;
+  margin-bottom: units(5);
+  animation-timing-function: $ease-out-expo;
+  animation-name: fade-in;
+  animation-fill-mode: backwards;
+  animation-iteration-count: 1;
+  animation-duration: $timings-slowest;
+
+  &:nth-of-type(2) {
+    animation-delay: $timings-faster;
+  }
+
+  &:nth-of-type(3) {
+    animation-delay: $timings-faster * 2;
+  }
+
+  &:nth-of-type(4) {
+    animation-delay: $timings-faster * 3;
+  }
+}
+
+.gallery.is-open {
+  .gallery__lightbox {
+    display: block;
+    opacity: 1;
+    pointer-events: all;
+  }
+}
