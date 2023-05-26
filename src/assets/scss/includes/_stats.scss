@@ -5,8 +5,8 @@
   border-bottom: 1px solid $color-detail;
   margin-top: auto;
   display: flex;
-  overflow: scroll;
   translate: 0 1px;
+  overflow-x: scroll;
 
   &::-webkit-scrollbar {
     display: none;

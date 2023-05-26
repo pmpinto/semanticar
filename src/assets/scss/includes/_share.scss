@@ -1,5 +1,11 @@
 .share {
-  grid-column: 2 / span 7;
+  margin-bottom: units(5);
+  order: 4;
+
+  @include breakpoint-above-desktop-small {
+    margin-bottom: 0;
+    grid-column: 2 / span 7;
+  }
 }
 
 .share__title {

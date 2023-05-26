@@ -20,16 +20,18 @@ pageCss: post
   {% include "_highlights.njk" %}
 
   <section class="post__content">
-    <p class="post__excerpt">
-      {{ excerpt }}
-    </p>
-    <div class="post__body">
-      {{ content | safe }}
+    <div class="wrapper">
+      <p class="post__excerpt">
+        {{ excerpt }}
+      </p>
+      <div class="post__body">
+        {{ content | safe }}
+      </div>
+
+      {% include "_share.njk" %}
+
+      {% include "_sidebar.njk" %}
     </div>
-
-    {% include "_share.njk" %}
-
-    {% include "_sidebar.njk" %}
   </section>
 </article>
 

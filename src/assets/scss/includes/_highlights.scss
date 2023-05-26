@@ -7,7 +7,19 @@
   backdrop-filter: blur(32px);
   border-top: 1px solid $color-detail;
   border-bottom: 1px solid $color-detail;
-  grid-column: 1 / span 12;
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @include breakpoint-above-tablet {
+    grid-column: 1 / span 6;
+  }
+
+  @include breakpoint-above-desktop-small {
+    grid-column: 1 / span 12;
+  }
 
   .wrapper {
     @include breakpoint-above-desktop-small {
@@ -23,6 +35,19 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  gap: units(4);
+
+  @include breakpoint-above-tablet {
+    gap: units(8);
+  }
+
+  @include breakpoint-above-desktop-small {
+    gap: units(6);
+  }
+
+  @include breakpoint-above-desktop-medium {
+    gap: 0;
+  }
 }
 
 .highlights__item-wrapper {
@@ -33,6 +58,19 @@
   transform: translateY(units(-2));
   transition: transform $timings-normal $ease-out-expo,
     opacity $timings-slow $ease-out-expo;
+  width: 32dvw;
+
+  @include breakpoint-above-tablet {
+    width: 20dvw;
+  }
+
+  @include breakpoint-above-desktop-small {
+    width: 16dvw;
+  }
+
+  @include breakpoint-above-desktop-medium {
+    width: auto;
+  }
 }
 
 .highlights__item {

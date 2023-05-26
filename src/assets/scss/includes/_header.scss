@@ -1,12 +1,27 @@
 .header {
   @include grid-wrapper;
 
-  padding-top: units(7);
-  padding-bottom: units(10);
+  padding-top: units(3);
+  padding-bottom: units(5);
   background-color: $color-white;
-  grid-column: 1 / span 12;
+
+  @include breakpoint-above-tablet {
+    padding-top: units(4);
+    padding-bottom: units(7);
+    grid-column: 1 / span 6;
+  }
+
+  @include breakpoint-above-desktop-small {
+    padding-top: units(7);
+    padding-bottom: units(10);
+    grid-column: 1 / span 12;
+  }
 
   .wrapper {
+    @include breakpoint-above-tablet {
+      grid-column: 1 / span 6;
+    }
+
     @include breakpoint-above-desktop-small {
       grid-column: 2 / span 10;
     }

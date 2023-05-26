@@ -1,4 +1,10 @@
-// .specs {}
+.specs {
+  margin-bottom: units(5);
+
+  @include breakpoint-above-desktop-small {
+    margin-bottom: 0;
+  }
+}
 
 .specs__heading {
   @include text-lead;

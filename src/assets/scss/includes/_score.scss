@@ -1,5 +1,9 @@
 .score {
-  margin-bottom: units(17);
+  margin-bottom: units(5);
+
+  @include breakpoint-above-desktop-small {
+    margin-bottom: units(17);
+  }
 }
 
 .score__title {
