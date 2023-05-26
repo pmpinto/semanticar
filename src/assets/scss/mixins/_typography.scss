@@ -127,4 +127,25 @@
     color: $color-action;
     text-decoration: none;
   }
+
+  blockquote {
+    @include text-lead;
+
+    margin: 0;
+    margin-top: units(3);
+    margin-bottom: units(3);
+    padding-left: units(2);
+    border-left: 2px solid $color-action;
+
+    @include breakpoint-above-tablet {
+      margin-top: units(4);
+      margin-bottom: units(4);
+      padding-left: units(4);
+    }
+
+    @include breakpoint-above-desktop-small {
+      margin-top: units(6);
+      margin-bottom: units(6);
+    }
+  }
 }
