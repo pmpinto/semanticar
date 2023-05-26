@@ -5,13 +5,15 @@ pageCss: post
 ---
 
 <article class="post__article">
-  {% image
-    cover,
-    title,
-    "100vw",
-    "post__image",
-    false
-  %}
+  <div class="post__image-wrapper">
+    {% image
+      cover,
+      title,
+      "100vw",
+      "post__image",
+      false
+    %}
+  </div>
 
   {% include "_header.njk" %}
 

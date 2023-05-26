@@ -27,16 +27,20 @@
   object-fit: cover;
   object-position: center;
   height: auto;
-  position: sticky;
-  top: units(10);
-  margin-bottom: units(10);
-  grid-column: 1 / span 12;
-  z-index: $layers-below;
   animation: blur-image $timings-spinner linear infinite;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll-position) * ($timings-spinner * -1));
   animation-iteration-count: 1;
   animation-fill-mode: both;
+}
+
+.post__image-wrapper {
+  overflow-x: hidden;
+  position: sticky;
+  top: units(10);
+  margin-bottom: units(10);
+  grid-column: 1 / span 12;
+  z-index: $layers-below;
 }
 
 .post__content {
