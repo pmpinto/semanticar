@@ -17,7 +17,9 @@ pageCss: post
 
   {% include "_header.njk" %}
 
-  {% include "_highlights.njk" %}
+  {% if make %}
+    {% include "_highlights.njk" %}
+  {% endif %}
 
   <section class="post__content">
     <div class="wrapper">
@@ -30,11 +32,15 @@ pageCss: post
 
       {% include "_share.njk" %}
 
-      {% include "_sidebar.njk" %}
+      {% if make %}
+        {% include "_sidebar.njk" %}
+      {% endif %}
     </div>
   </section>
 </article>
 
 {% include "_subscribe-banner.njk" %}
 
+{% if photos.length > 0 %}
 {# {% include "_post-grid.njk" %} #}
+{% endif %}

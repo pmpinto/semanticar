@@ -23,7 +23,7 @@
 
 .post__image {
   width: 100dvw;
-  aspect-ratio: 16/10;
+  aspect-ratio: 16/9;
   object-fit: cover;
   object-position: center;
   height: auto;
@@ -77,6 +77,10 @@
       row-gap: 0;
     }
   }
+}
+
+.header + .post__content {
+  padding-top: 0;
 }
 
 .post__excerpt {
