@@ -1,0 +1,36 @@
+.share {
+  grid-column: 2 / span 7;
+}
+
+.share__title {
+  @include text-lead;
+
+  margin-bottom: units(3);
+}
+
+.share__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  gap: units(4);
+}
+
+// .share__item {}
+
+.share__link {
+  @include button-reset;
+
+  transition: scale $timings-normal $ease-out-expo;
+  display: block;
+
+  @include hover-and-focus {
+    scale: 1.1;
+  }
+}
+
+.share__icon {
+  width: units(4);
+  height: units(4);
+}

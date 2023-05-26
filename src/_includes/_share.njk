@@ -1,0 +1,26 @@
+<div class="share" data-controller="share" data-share-post-title-value="{{ title }}">
+  <p class="share__title">Partilha nas tuas redes</p>
+
+  <ul class="share__list">
+    <li class="share__item">
+      <button class="share__link" data-action="click->share#shareNative">
+        <img class="share__icon" src="/static_assets/icons/share.svg" alt="share">
+      </button>
+    </li>
+    <li class="share__item">
+      <a class="share__link" rel="noopener noreferrer" target="_blank" href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ title }}">
+        <img class="share__icon" src="/static_assets/icons/twitter.svg" alt="twitter">
+      </a>
+    </li>
+    <li class="share__item">
+      <a class="share__link" rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/sharer.php?u={{ site.url }}{{ page.url }}">
+        <img class="share__icon" src="/static_assets/icons/facebook.svg" alt="facebook">
+      </a>
+    </li>
+    <li class="share__item">
+      <a href="mailto:?subject=Semanticar: {{ title }}&body={{ site.url }}{{ page.url }}" class="share__link">
+        <img class="share__icon" src="/static_assets/icons/at.svg" alt="email">
+      </a>
+    </li>
+  </ul>
+</div>
