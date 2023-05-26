@@ -28,11 +28,17 @@ export default class ShareController extends Controller {
       icon: '/static_assets/images/metadata/logo-32.png'
     })
 
-    notification.addEventListener('error', alert(text))
+    notification.addEventListener('error', (error) => {
+      console.log('Notification Error:', error)
+      alert(text)
+    })
   }
 
   async askNotificationPermission(text) {
-    if (!('Notification' in window)) return
+    if (!('Notification' in window)) {
+      alert(text)
+      return
+    }
 
     if (Notification.permission === 'granted') {
       this.notify(text)
@@ -40,9 +46,8 @@ export default class ShareController extends Controller {
     }
 
     const permission = await Notification.requestPermission()
-
     if (permission !== 'granted') {
-      alert('Endereço copiado!')
+      alert(text)
       return
     }
 
