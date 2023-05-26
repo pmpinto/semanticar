@@ -36,7 +36,7 @@ export default class AppController extends Controller {
   }
 
   observeHighlights() {
-    if (!this.highlightsTarget) return
+    if (!this.hasHighlightsTarget) return
 
     const observer = new IntersectionObserver(([entry]) => {
       this.displayHighlights(entry)
