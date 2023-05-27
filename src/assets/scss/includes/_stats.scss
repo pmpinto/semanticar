@@ -27,11 +27,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: units(5) units(6) units(6) units(6);
+  padding: units(5) units(2) units(6) units(2);
   background-color: $color-detail;
   backdrop-filter: blur(32px);
   transition: background-color $timings-normal $ease-out-expo;
-  width: 40%;
+  flex: 0 0 42dvw;
 
   @include hover-and-focus {
     background-color: $color-frosted;
