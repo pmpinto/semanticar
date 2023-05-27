@@ -1,8 +1,7 @@
 ---
 title: Não há palavras para descrever isto
 date: 2023-05-10
-categories:
-  - análise
+category: análise
 make: tesla
 model: Model S Plaid
 cover: ./src/photos/tesla-plaid.avif

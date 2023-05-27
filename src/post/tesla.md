@@ -1,8 +1,7 @@
 ---
 title: Há um motivo para a Tesla ser a pioneira
 date: 2022-10-23
-categories:
-  - análise
+category: análise
 make: tesla
 cover: ./src/photos/tesla.jpeg
 photos:

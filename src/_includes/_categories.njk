@@ -1,5 +1,5 @@
-{% if post.data.categories %}
-  {% set categories = post.data.categories %}
+{% if post.data.category %}
+  {% set category = post.data.category %}
 {% endif %}
 {% if post.data.make %}
   {% set make = post.data.make %}
@@ -14,22 +14,22 @@
   categories--no-links
   {% endif %}
 ">
-  {% for category in categories %}
+  {% if category %}
     <li class="categories__item">
       {% if categoriesOptions.links != false %}
-        <a href="/categoria/{{ category | slug }}/" class="categories__link">
+        <a href="/{{ category | slug }}/" class="categories__link">
       {% endif %}
         {{ category }}
       {% if categoriesOptions.links != false %}
         </a>
       {% endif %}
     </li>
-  {% endfor %}
+  {% endif %}
 
   {% if make and categoriesOptions.wantsMake != false %}
     <li class="categories__item">
       {% if categoriesOptions.links != false %}
-        <a href="/marca/{{ make | slug }}/" class="categories__link">
+        <a href="/{{ category | slug }}/{{ make | slug }}/" class="categories__link">
       {% endif %}
         {{ make }}
       {% if categoriesOptions.links != false %}

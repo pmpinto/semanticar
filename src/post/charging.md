@@ -1,8 +1,7 @@
 ---
 title: Serão os carros elétricos demasiado avançados?
 date: 2022-12-16
-categories:
-  - opinião
+category: opinião
 cover: ./src/photos/charging.jpeg
 ---
 ### As 'assets' independentes

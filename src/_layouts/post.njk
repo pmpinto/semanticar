@@ -3,7 +3,6 @@ layout: base
 bodyClass: post
 pageCss: post
 ---
-
 <article class="post__article">
   <div class="post__image-wrapper">
     {% image
@@ -46,18 +45,20 @@ pageCss: post
 
 {% include "_subscribe-banner.njk" %}
 
-{% set posts = collections.post | without(page) | whereList('categories', categories[0]) | reverse %}
+{% set posts = collections.post | without(page) | whereList('category', category) | reverse %}
 {% set posts = posts.slice(0, 4) %}
 
-<div class="post__related">
-  <div class="wrapper">
-    <div class="post__related-inner">
-      <p class="post__related-title">Outros artigos da categoria</p>
+{% ifAsync posts.length > 0 %}
+  <div class="post__related">
+    <div class="wrapper">
+      <div class="post__related-inner">
+        <p class="post__related-title">Outros artigos da categoria</p>
 
-      {% set categoriesOptions = { wantsMake: false } %}
-      {% include "_categories.njk" %}
+        {% set categoriesOptions = { wantsMake: false } %}
+        {% include "_categories.njk" %}
+      </div>
     </div>
-  </div>
 
-  {% include "_post-grid.njk" %}
-</div>
+    {% include "_post-grid.njk" %}
+  </div>
+{% endif %}
