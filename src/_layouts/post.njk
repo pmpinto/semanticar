@@ -39,10 +39,24 @@ pageCss: post
   </section>
 </article>
 
-{% include "_gallery.njk" %}
+{# This is not currently part of nunjucks documentation, but we need it because of the `image` tag #}
+{% ifAsync photos.length > 0 %}
+  {% include "_gallery.njk" %}
+{% endif %}
 
 {% include "_subscribe-banner.njk" %}
 
-{% if related.length > 0 %}
-{# {% include "_post-grid.njk" %} #}
-{% endif %}
+{% set posts = collections.post | without(page) | whereList('categories', categories[0]) | reverse %}
+{% set posts = posts.slice(0, 4) %}
+
+<div class="post__related">
+  <div class="wrapper">
+    <div class="post__related-inner">
+      <p class="post__related-title">Outros artigos da categoria</p>
+
+      {% set categoriesOptions = { wantsMake: false } %}
+      {% include "_categories.njk" %}
+    </div>
+  </div>
+  {% include "_post-grid.njk" %}
+</div>

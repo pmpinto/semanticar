@@ -16,6 +16,7 @@
   @include text-label;
 
   background-color: $color-detail;
+  backdrop-filter: blur(8px);
   border-radius: units(2);
   padding: rem(8px) rem(12px) rem(7px) rem(12px);
   display: block;
@@ -34,6 +35,7 @@
     @include text-label;
 
     background-color: $color-detail;
+    backdrop-filter: blur(8px);
     border-radius: units(2);
     padding: rem(8px) rem(12px) rem(7px) rem(12px);
     display: block;

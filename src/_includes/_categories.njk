@@ -26,7 +26,7 @@
     </li>
   {% endfor %}
 
-  {% if make %}
+  {% if make and categoriesOptions.wantsMake != false %}
     <li class="categories__item">
       {% if categoriesOptions.links != false %}
         <a href="/marca/{{ make | slug }}/" class="categories__link">

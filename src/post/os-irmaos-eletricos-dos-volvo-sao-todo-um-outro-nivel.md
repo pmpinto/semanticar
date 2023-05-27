@@ -26,6 +26,7 @@ photos:
   - ./src/photos/polestar-3.avif
   - ./src/photos/polestar-4.avif
   - ./src/photos/polestar-5.avif
+
 ---
 ### Interior
 Com Joakim Rydholm, engenheiro de testes chefe da [Polestar](https://polestar.com), ao volante, o traçado espanhol foi o “parque de diversões” perfeito para que o **Polestar 2 BST Edition 270** pudesse exibir todo o seu potencial dinâmico.

@@ -1,46 +1,43 @@
-{# For some weird reason, if this condition was on the post.njk file, it wouldn't include this file #}
-{% if photos.length > 0 %}
-  <section class="gallery" data-controller="gallery">
-    <div class="gallery__list-wrapper">
-      <ul class="gallery__list">
-        {% for photo in photos.slice(0, 3) %}
-          {% set alt %}Foto {{ loop.index }}{% endset %}
-          <li class="gallery__item">
-            {% image
-              photo,
-              alt,
-              "(min-width: 1024px) 40vw, 64vw",
-              "gallery__thumb",
-              false
-            %}
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-
-    <div class="wrapper">
-      <button class="gallery__button" data-action="click->gallery#open">
-        <img src="/static_assets/icons/images.svg" alt="images icon" class="gallery__button-icon">
-        <span class="gallery__button-label">{{ photos.length }} fotos</span>
-        <span class="gallery__button-view">Ver todas</span>
-      </button>
-    </div>
-
-    <div class="gallery__lightbox">
-      <button class="gallery__close" title="Fechar" data-action="click->gallery#close">
-        <img src="/static_assets/icons/close.svg" alt="close icon" class="gallery__close-icon">
-      </button>
-
-      {% for photo in photos %}
+<section class="gallery" data-controller="gallery">
+  <div class="gallery__list-wrapper">
+    <ul class="gallery__list">
+      {% for photo in photos.slice(0, 3) %}
         {% set alt %}Foto {{ loop.index }}{% endset %}
-        {% image
-          photo,
-          alt,
-          "100vw",
-          "gallery__photo",
-          false
-        %}
+        <li class="gallery__item">
+          {% image
+            photo,
+            alt,
+            "(min-width: 1024px) 40vw, 64vw",
+            "gallery__thumb",
+            false
+          %}
+        </li>
       {% endfor %}
-    </div>
-  </section>
-{% endif %}
+    </ul>
+  </div>
+
+  <div class="wrapper">
+    <button class="gallery__button" data-action="click->gallery#open">
+      <img src="/static_assets/icons/images.svg" alt="images icon" class="gallery__button-icon">
+      <span class="gallery__button-label">{{ photos.length }} fotos</span>
+      <span class="gallery__button-view">Ver todas</span>
+    </button>
+  </div>
+
+  <div class="gallery__lightbox">
+    <button class="gallery__close" title="Fechar" data-action="click->gallery#close">
+      <img src="/static_assets/icons/close.svg" alt="close icon" class="gallery__close-icon">
+    </button>
+
+    {% for photo in photos %}
+      {% set alt %}Foto {{ loop.index }}{% endset %}
+      {% image
+        photo,
+        alt,
+        "100vw",
+        "gallery__photo",
+        false
+      %}
+    {% endfor %}
+  </div>
+</section>

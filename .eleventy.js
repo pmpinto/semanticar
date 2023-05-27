@@ -142,6 +142,40 @@ module.exports = (eleventyConfig) => {
     return photos.length
   })
 
+  // Register `where` filter
+  // Returns 1 item of collection
+  eleventyConfig.addFilter('where', (collection, field, value) => {
+    if (!field || !value) {
+      return collection
+    }
+
+    return collection.find((item) => item[field] === value)
+  })
+
+  // Register `whereList` filter
+  // Returns a list
+  eleventyConfig.addFilter('whereList', (collection, field, value) => {
+    if (!field || !value) {
+      return collection
+    }
+
+    return collection.filter((item) => {
+      if (!item.data[field]) return false
+
+      return item.data[field] === value || item.data[field].includes(value)
+    })
+  })
+
+  // Register `without` filter
+  // Removes an item from a collection
+  eleventyConfig.addFilter('without', (collection, page) => {
+    if (!page) {
+      return collection
+    }
+
+    return collection.filter((item) => item.inputPath !== page.inputPath)
+  })
+
   return {
     dir: {
       input: "src",

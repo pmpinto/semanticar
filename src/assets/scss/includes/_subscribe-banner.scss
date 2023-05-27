@@ -38,7 +38,7 @@
   right: units(8);
 
   @include breakpoint-above-desktop-small {
-    top: units(-16);
+    top: units(-40);
     right: units(16);
   }
 }

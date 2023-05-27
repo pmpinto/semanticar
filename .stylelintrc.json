@@ -1,7 +1,7 @@
 {
   "extends": ["stylelint-config-recommended", "stylelint-config-standard-scss"],
   "plugins": ["stylelint-scss"],
-  "ignoreFiles": ["**/*.js", "**/*.md", "**/*.xml"],
+  "ignoreFiles": ["**/*.js", "**/*.md", "**/*.xml", ".eleventy.js"],
   "overrides": [
     {
       "files": [".scss"]
