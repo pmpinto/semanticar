@@ -1,9 +1,12 @@
 <section class="score">
-  <p class="score__title">{{ (specs.weight / specs.power) | round(1) }} kg por cv</p>
+  <p class="score__title">Classificação</p>
+  <p class="score__blurb">Em alternativa à rapidez com que os carros atingem 100 km/h, que é cada vez menos relevante, olhemos para a relação do seu peso com a potência.</p>
+
+  <p class="score__relation">{{ (specs.power / specs.weight * 100) | round(0) }}%</p>
 
   <div
     class="score__chart"
-    title="{{ (specs.power / specs.weight * 100) | round(0) }}% de potência para o seu peso"
+    title="{{ (specs.power / specs.weight * 100) | round(0) }}% de potência para o total de peso"
     aria-role="meter"
     aria-valuemin="0"
     aria-valuemax="100"
@@ -14,7 +17,6 @@
   </div>
 
   <div class="score__labels">
-    <p class="score__label">Potência</p>
-    <p class="score__label">Peso</p>
+    <p class="score__label">{{ (specs.weight / specs.power) | round(1) }} kg por cv</p>
   </div>
 </section>

@@ -56,7 +56,7 @@
   align-items: center;
   opacity: 0;
   transform: translateY(units(-2));
-  transition: transform $timings-normal $ease-out-expo,
+  transition: transform $timings-slow $ease-out-expo,
     opacity $timings-slow $ease-out-expo;
   width: 32dvw;
 

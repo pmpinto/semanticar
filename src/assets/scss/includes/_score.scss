@@ -2,14 +2,15 @@
   margin-bottom: units(5);
 
   @include breakpoint-above-desktop-small {
-    margin-bottom: units(17);
+    margin-bottom: units(10);
   }
 }
 
-.score__title {
-  @include text-lead;
+.score__relation {
+  @include text-body;
 
-  margin-bottom: units(1);
+  font-weight: $font-weight-bold;
+  margin-bottom: rem(4px);
 }
 
 .score__chart {
@@ -32,4 +33,16 @@
 
 .score__label {
   @include text-label;
+}
+
+.score__title {
+  @include text-lead;
+
+  margin-bottom: units(1);
+}
+
+.score__blurb {
+  @include text-caption;
+
+  margin-bottom: units(2);
 }
