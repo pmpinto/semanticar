@@ -1,15 +1,23 @@
 import { Controller } from '@hotwired/stimulus'
 
 export default class GalleryController extends Controller {
-  // static targets = []
+  connect() {
+    window.addEventListener('popstate', () => {
+      this.element.classList.toggle('is-open', history.state.isGalleryOpen)
+    })
 
-  // connect() {  }
+    if (window.location.hash === '#galeria') {
+      this.open()
+    }
+  }
 
   open() {
-    this.element.classList.add('is-open')
+    window.history.pushState({ name: document.querySelector('title').innerText, path: window.location.pathname, isGalleryOpen: true }, '', `${window.location.origin}${window.location.pathname}#galeria`)
+    window.dispatchEvent(new Event('popstate'))
   }
 
   close() {
-    this.element.classList.remove('is-open')
+    window.history.pushState({ name: document.querySelector('title').innerText, path: window.location.pathname, isGalleryOpen: false }, '', `${window.location.origin}${window.location.pathname}`)
+    window.dispatchEvent(new Event('popstate'))
   }
 }
