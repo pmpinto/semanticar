@@ -20,7 +20,13 @@ export default class AppController extends Controller {
 
   async subscribe(event) {
     event.preventDefault()
-    await API.call('/increment-subscribers-count')
+
+    const hasSubscription = !!window.localStorage.getItem('subscription')
+    if (!hasSubscription) {
+      window.localStorage.setItem('subscription', new Date())
+      await API.call('/increment-subscribers-count')
+    }
+
     window.location = event.target.closest('a').getAttribute('href')
   }
 
