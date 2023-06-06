@@ -1,11 +1,18 @@
+{% if pagination.items[0].pageNumber == 0 or pagination.pageNumber == 0 %}
+  {% set isFirstPage = true %}
+{% endif %}
+{% if pagination.items[0].totalPages - 1 == pagination.items[0].pageNumber or pagination.pages.length - 1 == pagination.pageNumber %}
+  {% set isLastPage = true %}
+{% endif %}
+
 <nav class="pagination">
-  <a href="{{ pagination.href.previous }}#posts" class="pagination__button pagination__button--previous {% if not pagination.href.previous %}pagination__button--disabled{% endif %}" {% if not pagination.href.previous %}tabindex="-1"{% endif %}>
+  <a href="{{ pagination.href.previous }}{% if bodyClass == 'home' %}#posts{% endif %}" class="pagination__button pagination__button--previous {% if isFirstPage %}pagination__button--disabled{% endif %}" {% if isFirstPage %}tabindex="-1"{% endif %}>
     <img src="/static_assets/icons/caret.svg" alt="caret icon" class="pagination__icon">
     <span class="pagination__label">Página</span>
     <span class="pagination__page">Anterior</span>
   </a>
 
-  <a href="{{ pagination.href.next }}#posts" class="pagination__button pagination__button--next {% if not pagination.href.next %}pagination__button--disabled{% endif %}" {% if not pagination.href.next %}tabindex="-1"{% endif %}>
+  <a href="{{ pagination.href.next }}{% if bodyClass == 'home' %}#posts{% endif %}" class="pagination__button pagination__button--next {% if isLastPage %}pagination__button--disabled{% endif %}" {% if isLastPage %}tabindex="-1"{% endif %}>
     <img src="/static_assets/icons/caret.svg" alt="caret icon" class="pagination__icon">
     <span class="pagination__label">Página</span>
     <span class="pagination__page">Seguinte</span>

@@ -1,0 +1,48 @@
+@import '../includes/imports';
+
+// .legal {}
+
+.legal__article {
+  padding-top: units(24);
+
+  .wrapper {
+    @include grid-wrapper;
+  }
+}
+
+.legal__header {
+  margin-bottom: units(5);
+
+  @include breakpoint-above-tablet {
+    grid-column: 1 / span 6;
+  }
+
+  @include breakpoint-above-desktop-small {
+    grid-column: 3 / span 8;
+  }
+}
+
+.legal__date {
+  @include text-label;
+
+  margin-bottom: units(1);
+}
+
+.legal__title {
+  @include text-title;
+}
+
+// .legal__content {}
+
+.legal__body {
+  @include text-body;
+  @include text-markdown;
+
+  @include breakpoint-above-tablet {
+    grid-column: 1 / span 6;
+  }
+
+  @include breakpoint-above-desktop-small {
+    grid-column: 3 / span 7;
+  }
+}

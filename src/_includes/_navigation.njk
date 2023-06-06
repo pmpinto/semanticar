@@ -25,16 +25,33 @@
 
           <ol class="navigation__sub-list">
             <li class="navigation__item">
-              <a class="navigation__link" href="/analise/">Análise</a>
+              <a class="navigation__link {% if page.url.includes('/analise/') %}is-active{% endif %}" href="/analise/">Análise</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="/opiniao/">Opinião</a>
+              <a class="navigation__link {% if page.url.includes('/opiniao/') %}is-active{% endif %}" href="/opiniao/">Opinião</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="/noticia/">Notícia</a>
+              <a class="navigation__link {% if page.url.includes('/noticia/') %}is-active{% endif %}" href="/noticia/">Notícia</a>
             </li>
           </ol>
         </li>
+
+        {% set makes = collections.post | getMakes() %}
+        {% if makes.length %}
+          <li class="navigation__item">
+            <span class="navigation__label">Fabricantes</span>
+
+            <ol class="navigation__sub-list">
+              {% for make in makes %}
+              {% set makeSlug = make | slugify %}
+                <li class="navigation__item">
+                  <a class="navigation__link {% if page.url.includes('/' + makeSlug) %}is-active{% endif %}" href="/{{ makeSlug }}/">{{ make }}</a>
+                </li>
+              {% endfor %}
+            </ol>
+          </li>
+        {% endif %}
+
         <li class="navigation__item">
           <span class="navigation__label">Redes</span>
 

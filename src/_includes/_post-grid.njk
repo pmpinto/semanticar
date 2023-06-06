@@ -1,4 +1,9 @@
 {% set categoriesOptions = { links: false, theme: 'light' } %}
+{% if pagination.items[0].totalPages %}
+  {% set totalPages = pagination.items[0].totalPages %}
+{% else %}
+  {% set totalPages = pagination.pages.length %}
+{% endif %}
 
 <section class="post-grid" id="posts">
   <ol class="post-grid__list">
@@ -27,6 +32,6 @@
   </ol>
 </section>
 
-{% if pagination.pages.length > 1 %}
+{% if totalPages > 1 %}
   {% include "_pagination.njk" %}
 {% endif %}

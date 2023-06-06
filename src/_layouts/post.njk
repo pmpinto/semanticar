@@ -49,10 +49,10 @@ pageCss: post
 {% set posts = posts.slice(0, 4) %}
 
 {% ifAsync posts.length > 0 %}
-  <div class="post__related">
+  <div class="related">
     <div class="wrapper">
-      <div class="post__related-inner">
-        <p class="post__related-title">Outros artigos da categoria</p>
+      <div class="related__inner">
+        <p class="related__title">Outros artigos da categoria</p>
 
         {% set categoriesOptions = { wantsMake: false } %}
         {% include "_categories.njk" %}

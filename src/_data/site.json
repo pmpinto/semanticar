@@ -4,10 +4,13 @@
   "url": "https://semanticar.pt",
   "email": "pedro@semanticar.pt",
   "metadata": {
-    "default_image": "/static_assets/images/metadata/default.png"
+    "default_image": "https://semanticar.pt/static_assets/images/metadata/default.png"
   },
   "social": {
     "twitter": "semanticarpt",
     "instagram": "semanticar"
+  },
+  "pagination": {
+    "postsPerPage": 8
   }
 }

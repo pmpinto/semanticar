@@ -46,7 +46,7 @@
 {% elif metadata.image %}
   {% set image = metadata.image %}
 {% else %}
-  {% set image %}{{ site.url }}{{ site.metadata.default_image }}{% endset %}
+  {% set image %}{{ site.metadata.default_image }}{% endset %}
 {% endif %}
 {%- if image %}
 <meta property="og:image" content="{{ image }}" />

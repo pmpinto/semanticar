@@ -1,0 +1,35 @@
+---js
+{
+  layout: "base",
+  bodyClass: "category",
+  pageCss: "category",
+  permalink: "/{{ makePage.makeName | slugify }}/{% if makePage.pageNumber %}{{ makePage.pageNumber + 1 }}/{% endif %}index.html",
+  metadata: {
+    description: "Todos os artigos do fabricante \"{{ makePage.makeName }}\" na Semanticar."
+  },
+  eleventyComputed: {
+    title: "Artigos do fabricante {{ makePage.makeName }}"
+  },
+  pagination: {
+    data: "collections.makePagination",
+    size: 1,
+    alias: "makePage",
+    addAllPagesToCollections: true,
+  }
+}
+---
+{% set posts = makePage.items | reverse %}
+
+<div class="related">
+  <div class="wrapper">
+    <div class="related__inner">
+      <p class="related__title">Todos os artigos do fabricante</p>
+
+      {% set categoriesOptions = { wantsMake: true } %}
+      {% set category = makePage.makeName %}
+      {% include "_categories.njk" %}
+    </div>
+  </div>
+
+  {% include "_post-grid.njk" %}
+</div>

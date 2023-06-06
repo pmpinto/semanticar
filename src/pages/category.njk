@@ -1,0 +1,36 @@
+---js
+{
+  layout: "base",
+  bodyClass: "category",
+  pageCss: "category",
+  permalink: "/{{ tagPage.tagName | slugify }}/{% if tagPage.pageNumber %}{{ tagPage.pageNumber + 1 }}/{% endif %}index.html",
+  metadata: {
+    description: "Todos os artigos da categoria \"{{ tagPage.tagName }}\" na Semanticar."
+  },
+  eleventyComputed: {
+    title: "Artigos da categoria {{ tagPage.tagName }}"
+  },
+  pagination: {
+    data: "collections.tagPagination",
+    size: 1,
+    alias: "tagPage",
+    filter: ['all', 'post'],
+    addAllPagesToCollections: true,
+  }
+}
+---
+{% set posts = tagPage.items | reverse %}
+
+<div class="related">
+  <div class="wrapper">
+    <div class="related__inner">
+      <p class="related__title">Todos os artigos da categoria</p>
+
+      {% set categoriesOptions = { wantsMake: false } %}
+      {% set category = tagPage.tagName %}
+      {% include "_categories.njk" %}
+    </div>
+  </div>
+
+  {% include "_post-grid.njk" %}
+</div>

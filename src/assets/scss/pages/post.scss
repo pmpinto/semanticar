@@ -6,6 +6,7 @@
 @import '../includes/gallery';
 @import '../includes/subscribe-banner';
 @import '../includes/post-grid';
+@import '../includes/related';
 
 @keyframes blur-image {
   to {
@@ -108,44 +109,4 @@
     margin-bottom: units(10);
     grid-column: 2 / span 6;
   }
-}
-
-.post__related {
-  padding-top: units(4);
-
-  @include breakpoint-above-tablet {
-    padding-top: units(7);
-  }
-
-  .wrapper {
-    @include grid-wrapper;
-  }
-
-  .post-grid {
-    padding-top: units(4);
-
-    @include breakpoint-above-tablet {
-      padding-top: units(7);
-    }
-
-    @include breakpoint-above-desktop-small {
-      padding-top: 0;
-    }
-  }
-}
-
-.post__related-inner {
-  @include breakpoint-above-tablet {
-    grid-column: 1 / span 6;
-  }
-
-  @include breakpoint-above-desktop-small {
-    grid-column: 2 / span 10;
-  }
-}
-
-.post__related-title {
-  @include text-lead;
-
-  margin-bottom: units(1);
 }

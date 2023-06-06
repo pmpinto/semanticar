@@ -57,6 +57,8 @@
 .navigation__panel {
   z-index: $layers-navigation;
   height: 100dvh;
+  overflow-y: scroll;
+  overscroll-behavior: contain;
   width: clamp(20dvw, rem(476px), 88dvw);
   background-color: $color-frosted;
   position: fixed;
@@ -118,6 +120,7 @@
   flex-direction: column;
   align-items: flex-end;
   color: $color-text;
+  text-transform: capitalize;
 }
 
 .navigation__link.is-active {

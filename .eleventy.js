@@ -8,6 +8,7 @@ module.exports = (eleventyConfig) => {
   const Image = require("@11ty/eleventy-img");
   const path = require("path");
   const he = require("he");
+  const _chunk = require("lodash.chunk");
 
   // Prevent clashing with static_assets folder (which is git-ignored)
   eleventyConfig.setUseGitIgnore(false);
@@ -131,8 +132,8 @@ module.exports = (eleventyConfig) => {
 
   // Register `getMakes` filter
   eleventyConfig.addFilter('getMakes', (posts) => {
-    const makes = posts.map((post) => post.data.make).filter((make) => make)
-    const uniqueMakes = [...new Set(makes)]
+    const makes = posts.map((post) => post.data.make?.toLowerCase()).filter((make) => make)
+    const uniqueMakes = [...new Set(makes)].sort();
     return uniqueMakes
   })
 
@@ -175,6 +176,91 @@ module.exports = (eleventyConfig) => {
 
     return collection.filter((item) => item.inputPath !== page.inputPath)
   })
+
+  // Tag pagination
+  // Src: https://github.com/11ty/eleventy/issues/332#issuecomment-445236776
+  eleventyConfig.addCollection("tagPagination", function (collection) {
+    // Get unique list of tags
+    let tagSet = new Set();
+    collection.getAllSorted().map(function (item) {
+      if ("tags" in item.data) {
+        let tags = item.data.tags;
+
+        // optionally filter things out before you iterate over?
+        for (let tag of tags) {
+          tagSet.add(tag);
+        }
+      }
+    });
+
+    // Get each item that matches the tag
+    let paginationSize = siteData.pagination.postsPerPage;
+    let tagMap = [];
+    let tagArray = [...tagSet].filter((tag) => tag !== 'post');
+    for (let tagName of tagArray) {
+      let tagItems = collection.getFilteredByTag(tagName).sort((a, b) => b.data.date - a.data.date);
+      let pagedItems = _chunk(tagItems, paginationSize);
+      // console.log( tagName, tagItems.length, pagedItems.length );
+      for (let pageNumber = 0, max = pagedItems.length; pageNumber < max; pageNumber++) {
+        tagMap.push({
+          tagName: tagName,
+          pageNumber: pageNumber,
+          totalPages: pagedItems.length,
+          items: pagedItems[pageNumber].reverse()
+        });
+      }
+    }
+
+    /* returns data looks like:
+      [{
+        tagName: "tag1",
+        pageNumber: 0
+        items: [] // array of items
+      }]
+    */
+    //console.log( tagMap );
+    return tagMap;
+  });
+
+  // Make pagination
+  // Src: https://github.com/11ty/eleventy/issues/332#issuecomment-445236776
+  eleventyConfig.addCollection("makePagination", function (collection) {
+    // Get unique list of tags
+    let tagSet = new Set();
+    collection.getAllSorted().map(function (item) {
+      if ("make" in item.data) {
+        tagSet.add(item.data.make);
+      }
+    });
+
+    // Get each item that matches the make
+    let paginationSize = siteData.pagination.postsPerPage;
+    let tagMap = [];
+    let makeArray = [...tagSet]
+    for (let makeName of makeArray) {
+      let tagItems = collection.getAllSorted().reverse().filter((item) => item.data.make === makeName)
+      let pagedItems = _chunk(tagItems, paginationSize);
+      // console.log( makeName, tagItems.length, pagedItems.length );
+      for (let pageNumber = 0, max = pagedItems.length; pageNumber < max; pageNumber++) {
+        tagMap.push({
+          makeName: makeName,
+          pageNumber: pageNumber,
+          totalPages: pagedItems.length,
+          items: pagedItems[pageNumber].reverse()
+        });
+      }
+    }
+
+    /* returns data looks like:
+      [{
+        tagName: "tag1",
+        pageNumber: 0
+        items: [] // array of items
+      }]
+    */
+    //console.log( tagMap );
+    return tagMap;
+  });
 
   return {
     dir: {

@@ -87,15 +87,16 @@
 
 // Markdown
 @mixin text-markdown() {
-  p {
-    margin: 0;
-
-    + p {
-      margin-top: units(2);
-    }
+  > p {
+    margin-top: 0;
   }
 
-  h3 {
+  + p {
+    margin-top: units(2);
+  }
+
+  h3,
+  h2 {
     @include text-subtitle;
 
     margin-bottom: units(2);
@@ -147,5 +148,33 @@
       margin-top: units(6);
       margin-bottom: units(6);
     }
+  }
+
+  ol li {
+    &::marker {
+      @include text-label;
+    }
+  }
+
+  ol,
+  ul {
+    margin-left: 0;
+    margin-bottom: units(3);
+    padding-left: units(3);
+
+    li {
+      &:not(:last-child) {
+        margin-bottom: units(1);
+      }
+
+      &::marker {
+        color: $color-grey;
+        font-weight: $font-weight-extrabold;
+      }
+    }
+  }
+
+  ul {
+    list-style: circle;
   }
 }
