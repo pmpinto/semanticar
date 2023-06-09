@@ -24,7 +24,7 @@ O lado menos óbvio prende-se com os avanços tecnológicos que se têm vindo a 
 
 Por sua vez, os motores elétricos disponibilizam todo o seu binário e todo a sua potência desde as 0 “rotações”. Quer isto dizer que, com num carro elétrico completamente parado, assim que pressionamos o pedal do acelerador, temos uma aceleração significativamente mais rápida.
 
-Não será uma aceleração constante, simplesmente porque há fabricantes que optam por tornar a aceleração gradual, por vários motivos, nomeadamente por uma questão de conforto para os passageiros, mas também por uma questão de performance. Isto porque, de nada serviriam os 1020 cavalos do Tesla Model S Plaid, se eles fossem transferidos para as rodas num piscar de olhos. Ficariam com as rodas a patinar, sem sair do sítio. Pouco útil.
+Não será uma aceleração constante, simplesmente porque há fabricantes que optam por tornar a aceleração gradual, por vários motivos, nomeadamente por uma questão de conforto para os passageiros, mas também por uma questão de performance. Isto porque, de nada serviriam os 1020 cavalos do **Tesla Model S** Plaid, se eles fossem transferidos para as rodas num piscar de olhos. Ficariam com as rodas a patinar, sem sair do sítio. Pouco útil.
 
 No entanto, os carros elétricos ainda não estão capazes de ter boa performance a velocidades mais elevadas. Aliás, são muitas vezes limitados a velocidades máximas surpreendentemente baixas para a rapidez com que atingem os 100 km/h.
 
@@ -32,12 +32,12 @@ No entanto, os carros elétricos ainda não estão capazes de ter boa performanc
 
 Já sabemos portanto que o carros elétricos aceleram mais rapidamente do que os carros com motor a combustão. Mas um outro factor relevante para a equação é o peso! Muitos de vocês podem nunca se ter apercebido, mas reparem que o peso dos automóveis elétricos é regra geral muito superior ao peso de um automóvel equivalente com motor de combustão interna.
 
-Por exemplo, um Hyundai Ionic 5 (elétrico), com 229 cv de potência, pesa 2450 kg. Faz 7.3 s dos 0–100 km/h e tem velocidade máxima de 185 km/h.
-Por outro lado, um Cupra Formentor, com 150 cv de potência, pesa 1960kg. Faz 8.9 s dos 0–100 km/h e tem velocidade máxima de 204 km/h.
+Por exemplo, um **Hyundai Ionic 5** (elétrico), com 229 cv de potência, pesa 2450 kg. Faz 7.3 s dos 0–100 km/h e tem velocidade máxima de 185 km/h.
+Por outro lado, um **Cupra Formentor**, com 150 cv de potência, pesa 1960kg. Faz 8.9 s dos 0–100 km/h e tem velocidade máxima de 204 km/h.
 
 É uma diferença de pouco menos de meia tonelada!
 Muitas vezes ficamos surpreendidos com a quantidade astronómica de cavalos que os fabricantes “injectam” nos automóveis electrificados. Mas a verdade é que, para o peso deles, eles precisam dessa potência.
-Claro que o exemplo do Tesla Model S Plaid é totalmente desnecessário, e o propósito há-de ser completamente diferente.
+Claro que o exemplo do **Tesla Model S** Plaid é totalmente desnecessário, e o propósito há-de ser completamente diferente.
 
 > Regra geral, os elétricos são mais potentes, fazem tempos dos 0–100 km/h mais baixos, mas pesam bem mais e têm velocidades máximas inferiores.
 
@@ -45,6 +45,6 @@ Tendo tudo isto em conta, pareceu-me que a métrica que faria mais sentido para 
 
 Mantendo os exemplos anteriores, o Ionic 5 teria um rácio de 0.09 — ou seja, 9% de potência para o peso total do carro. O Formentor, teria 0.07 — ou seja, 7%. Significa isto também que no Ionic 5 cada cavalo transporta 10.7 kg. Enquanto que no Formentor, esse número passa para 13.1 kg.
 
-Por fim, e apenas por curiosidade, o Tesla Model S Plaid, com 1020 cv e 2161 kg, teria um rácio de 0.47, ou seja, 47%. E algo como o Koenigsegg Jesko, com 1281 cv e 1420 kg — que nunca me há-de passar pelas mãos, diga-se — teria um rácio de 0.9, ou seja, 90%.
+Por fim, e apenas por curiosidade, o **Tesla Model S** Plaid, com 1020 cv e 2161 kg, teria um rácio de 0.47, ou seja, 47%. E algo como o **Koenigsegg Jesko**, com 1281 cv e 1420 kg — que nunca me há-de passar pelas mãos, diga-se — teria um rácio de 0.9, ou seja, 90%.
 
 Espero honestamente que esta métrica seja tão útil para vocês como será para mim, e que traga alguma clareza num mundo automóvel que está em drásticas mudanças e com mais variantes a nível motriz do que alguma vez existiram.
