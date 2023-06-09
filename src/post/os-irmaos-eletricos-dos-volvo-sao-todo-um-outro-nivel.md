@@ -2,7 +2,7 @@
 title: Os irmãos elétricos dos Volvo são todo um outro nível
 date: 2023-05-12
 tags:
-  - análise
+  - ensaio
 make: Polestar
 model: 2 BST
 excerpt: Apresentado há sete meses, o Polestar 2 BST Edition 270 é o Polestar mais desportivo da atualidade e para mostrar aquilo de que este elétrico é capaz de fazer, a jovem marca sueca levou-o até ao circuito de Ascari.

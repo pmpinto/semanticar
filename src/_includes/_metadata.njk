@@ -4,9 +4,9 @@
 {% else %}
   {% set pageTitle %}{{ site.title }}{% endset %}
 {% endif %}
-<title>{{ pageTitle }}</title>
-<meta property="og:title" content="{{ pageTitle }}" />
-<meta name="twitter:title" content="{{ pageTitle }}" />
+<title>{{ pageTitle | safe }}</title>
+<meta property="og:title" content="{{ pageTitle | safe }}" />
+<meta name="twitter:title" content="{{ pageTitle | safe }}" />
 
 {# Canonical URLs #}
 <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
@@ -41,10 +41,10 @@
 {%- endif %}
 
 {# Images #}
-{% if cover %}
-  {% set image = cover | image_url %}
-{% elif metadata.image %}
+{% if metadata.image %}
   {% set image = metadata.image %}
+{% elif cover %}
+  {% set image = cover | image_url %}
 {% else %}
   {% set image %}{{ site.metadata.default_image }}{% endset %}
 {% endif %}

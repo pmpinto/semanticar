@@ -39,7 +39,7 @@
 .post__image-wrapper {
   overflow-x: hidden;
   position: sticky;
-  top: units(10);
+  top: rem(84px);
   margin-bottom: units(10);
   z-index: $layers-below;
 

@@ -45,7 +45,8 @@ pageCss: post
 
 {% include "_subscribe-banner.njk" %}
 
-{% set posts = collections.post | without(page) | whereList('category', category) | reverse %}
+{% set category = tags[1] %}
+{% set posts = collections.post | without(page) | whereList('tags', category) | reverse %}
 {% set posts = posts.slice(0, 4) %}
 
 {% ifAsync posts.length > 0 %}
