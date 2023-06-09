@@ -3,7 +3,7 @@ title: Serão os carros eléctricos muito avançados para os nossos tempos?
 date: 2023-06-08
 tags:
   - opinião
-excerpt: Se existissem dúvidas, os carros eléctricos que têm sido anunciados e lançados para o mercado nos últimos anos, provam que estes têm vários pontos a seu favor e que ainda têm muito para oferecer.
+excerpt: Se ainda existissem dúvidas que os eléctricos têm vários pontos a seu favor, os carros que têm sido anunciados e lançados para o mercado nos últimos anos provam não só isso, mas também que ainda têm muito para oferecer.
 cover: ./src/photos/zaptec-9166Worfn_Q-unsplash.jpg
 metadata:
   image: https://semanticar.pt/static_assets/images/metadata/post/opengraph-carros-electricos-muito-avancados.jpg
@@ -36,14 +36,14 @@ Mas aquele que será provavelmente o ponto mais relevante, a meu ver, é o facto
 
 > Força = Massa × Aceleração
 
-Segundo o nosso amigo Newton, a formula da força pode ser descrita como Força = Massa × Aceleração. Portanto, sem querer entrar em detalhes matemáticos com os quais eu próprio me sentiria desconfortável, é relativamente fácil perceber que a força envolvida num acidente em que os 2 carros são significativamente mais pesados, seria bem superior. O que pode ser catastrófico para os seus passageiros e conductores.
+Segundo o nosso amigo Newton, a fórmula da força pode ser descrita como Força = Massa × Aceleração. Portanto, sem querer entrar em detalhes matemáticos com os quais eu próprio me sentiria desconfortável, é relativamente fácil perceber que a força envolvida num acidente em que os 2 carros são significativamente mais pesados, seria bem superior. O que pode ser catastrófico para os seus passageiros e condutores.
 
 ## Infraestruturas
 
-Esta é, provavelmente, aquela que mantém mais potenciais compradores de pé atrás no nosso mercado. Já todos vimos e sentimos o quão agonizante pode ser uma ida à bomba de gasolina que tem vários carros em fila de espera. Abastecer um carro com motor de combustão interna demora segundos ou poucos minutos, no máximo — sendo que muitas vezes se fica tanto tempo à espera para pagar como para abastecer.
+Esta é, provavelmente, aquela que mantém mais potenciais compradores de pé atrás no nosso mercado. Já todos vimos e sentimos o quão agoniante pode ser uma ida à bomba de gasolina que tem vários carros em fila de espera. Abastecer um carro com motor de combustão interna demora segundos ou poucos minutos, no máximo — sendo que muitas vezes se fica tanto tempo à espera para pagar como para abastecer.
 
 Por outro lado, abastecer um carro eléctrico pode levar horas!
-Claro que, como sabemos, há carros que suportam carregamentos rápidos. Mas ainda assim, estamos a falar de abastecimentos que podem demorar 20 ou 30 minutos. Se multiplicarmos esse valor, por 4 carros que estejam eventualmente à nossa frente, vamos ficar cerca de 2 horas à espera — e apenas à espera — até começarmos a abastecer o nosso carro.
+Claro que, como sabemos, há carros que suportam carregamentos rápidos. Mas ainda assim, estamos a falar de abastecimentos que podem demorar 20 ou 30 minutos. Se multiplicarmos esse valor por 4 carros que estejam eventualmente à nossa frente, vamos ficar cerca de 2 horas à espera — e apenas à espera — até começarmos a abastecer o nosso carro.
 
 Volto a dizer que, no dia-a-dia, acredito que isto não seja um problema para a maioria das pessoas. No entanto, há vários relatos de pessoas que deixam o carro a carregar numa rua paralela a casa, por não terem forma de o carregar em casa. Histórias de quem deixou a carregar num posto de carregamento público e quando voltou, o cabo estava preso e não conseguiam ir embora. Ou mesmo pessoas que deixam o carro a carregar no posto de abastecimento mais próximo de casa, mas que ainda assim têm de voltar para casa de Uber, ou outro qualquer meio de transporte público.
 
@@ -69,8 +69,8 @@ As baterias, como qualquer outro componente eléctrico, dentro ou fora de um car
 
 Ainda é relativamente cedo para podermos olhar para esta questão com dados mais concretos. Mas, ainda assim, diz-se que as baterias dos carros eléctricos terão uma longevidade algures entre os 10 a 20 anos. Este facto por si só levanta várias questões, nomeadamente a questão ambiental que será abordada mais à frente.
 
-Diz-se também, que as baterias apenas, equivalem neste momento a cerca de 30% do valor total de um carro eléctrico. É expectável que este valor desça à medida que o tempo e a tecnologia avançam, mas neste momento ronda os 30%.
-Para o **Renault Zoe** mencionado acima, seriam cerca de € 10.500 só para a bateria.
+Diz-se também que as baterias equivalem, neste momento, a cerca de 30% do valor total de um carro eléctrico. É expectável que este valor desça à medida que o tempo e a tecnologia avançam, mas neste momento ronda os 30%.
+Para o **Renault Zoe**, mencionado acima, seriam cerca de € 10.500 só para a bateria.
 
 Ora, o meu carro actual — **Volvo V50** — é de 2005. Faz daqui a 2 anos, 20 anos. Tem mais de *200.000 km* e por enquanto continua a rolar. Seria impensável para mim fazer um investimento de tamanha grandeza neste carro. Por muito que goste dele, 30% do valor que ele custou na altura — que não faço ideia qual seja porque não sou o primeiro dono — há-de ser bem mais do dobro de € 10.500. Por essa quantidade de dinheiro já se encontram carros novos, ou semi-novos.
 
@@ -91,7 +91,7 @@ Como disse acima, este é um dos pontos que leva muita a gente a comprar um carr
 
 Um carro com motor a gasolina, consome gasolina, naturalmente. Neste momento não há outro tipo de gasolina disponível ao público que não se enquadre na categoria de combustíveis fósseis — que são baseados em recursos finitos.
 
-Um carro eléctrico, por outro lado, consome energia eléctrica. Energia limpa que atrai muitos consumidores preocupados com a sua "pegada ecológica".
+Um carro eléctrico, por outro lado, consome energia eléctrica. Energia limpa que atrai muitos consumidores preocupados com a sua pegada ecológica.
 
 Mas, só em 2021, e pela primeira vez, a [Europa produziu](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Energy_balances_-_early_estimates) mais energia eléctrica a partir de energias renováveis, por oposição a energias fósseis, como tem vindo a acontecer.
 
@@ -109,7 +109,7 @@ Por outro lado — e por questões técnicas que eu sou incapaz de apontar — o
 
 ***
 
-Não deixa de ser interessante que os carros eléctricos tivessem começado por ser pequenos — e feios, diga-se — e cada vez mais se vejam carros enormes totalmente eletrificados. Na minha humilde opinião, os carros eléctricos seriam bem mais benéficos nas cidades, onde há trânsito e pessoas a respirar por perto e onde é mais fácil aceder a um posto de carregamento — carros para o dia-a-dia da maior parte das pessoas, portanto.
+Não deixa de ser interessante que os carros eléctricos tivessem começado por ser pequenos — e feios, diga-se — e cada vez mais se vejam carros enormes totalmente electrificados. Na minha humilde opinião, os carros eléctricos seriam bem mais benéficos nas cidades, onde há trânsito e pessoas a respirar por perto e onde é mais fácil aceder a um posto de carregamento — carros para o dia-a-dia da maior parte das pessoas, portanto.
 
 Por outro lado, para viajar ou para distâncias mais longas, acredito que os carros com motor a combustão interna continuam a fazer mais sentido.
 
