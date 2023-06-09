@@ -109,6 +109,7 @@
     margin-bottom: units(2);
   }
 
+  h2,
   h3,
   h4 {
     &:not(:first-child) {
@@ -176,5 +177,27 @@
 
   ul {
     list-style: circle;
+  }
+
+  hr {
+    position: relative;
+    margin-top: units(6);
+    margin-bottom: units(6);
+    border: 0;
+    height: 1px;
+    background-color: $color-detail;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: rem(-20px);
+      left: calc(50% - #{units(1)});
+      height: units(1);
+      width: units(1);
+      border-radius: 100%;
+      background-color: $color-brand;
+      border: units(2) solid $color-white;
+    }
   }
 }
