@@ -15,12 +15,39 @@
   }
 }
 
+@keyframes grow-to-100w {
+  to {
+    transform: translateX(0);
+  }
+}
+
 // .post {}
 
 .post__article {
   @include grid-wrapper;
 
   row-gap: 0;
+}
+
+.post__progress {
+  position: fixed;
+  top: rem(83px);
+  z-index: $layers-above-body;
+  left: 0;
+  height: rem(4px);
+  transform: translateX(-100dvw);
+  width: 100dvw;
+  background-color: $color-brand;
+  animation: grow-to-100w $timings-spinner linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll-percentage) * ($timings-spinner * -1));
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  transition: translate $timings-slower $ease-out-expo;
+
+  &.is-hidden {
+    translate: 0 units(-11);
+  }
 }
 
 .post__image {
@@ -39,7 +66,7 @@
 .post__image-wrapper {
   overflow-x: hidden;
   position: sticky;
-  top: rem(84px);
+  top: rem(83px);
   margin-bottom: units(10);
   z-index: $layers-below;
 

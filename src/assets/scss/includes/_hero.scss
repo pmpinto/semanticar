@@ -1,7 +1,7 @@
 .hero {
   @include grid-wrapper;
 
-  padding-top: calc(#{units(6)} + #{rem(84px)});
+  padding-top: calc(#{units(6)} + #{rem(83px)});
   position: relative;
   overflow: hidden;
   grid-template-rows: max-content;
@@ -13,12 +13,12 @@
   }
 
   @include breakpoint-above-tablet {
-    padding-top: calc(#{units(12)} + #{rem(84px)});
+    padding-top: calc(#{units(12)} + #{rem(83px)});
     min-height: rem(850px);
   }
 
   @include breakpoint-above-desktop-small {
-    padding-top: calc(#{units(16)} + #{rem(84px)});
+    padding-top: calc(#{units(16)} + #{rem(83px)});
     min-height: rem(1100px);
   }
 }

@@ -3,19 +3,24 @@ import { API } from '../api'
 import throttle from 'lodash.throttle'
 
 export default class AppController extends Controller {
-  static targets = ['navigation', 'footer', 'highlights']
+  static targets = ['navigation', 'footer', 'highlights', 'progressBar']
 
   connect() {
     this.observeFooter()
     this.observeHighlights()
 
-    this.watchScrollPosition()
+    this.watchScroll()
 
-    this.toggleNavAndFooter = this.toggleNavAndFooter.bind(this)
+    this.toggleNav = this.toggleNav.bind(this)
+    this.isPost = this.element.classList.contains('post')
   }
 
-  toggleNavAndFooter(entry) {
+  toggleNav(entry) {
     this.navigationTarget.classList.toggle('is-hidden', entry.isIntersecting)
+  }
+
+  toggleProgressBar(entry) {
+    this.progressBarTarget.classList.toggle('is-hidden', entry.isIntersecting)
   }
 
   async subscribe(event) {
@@ -32,7 +37,10 @@ export default class AppController extends Controller {
 
   observeFooter() {
     const observer = new IntersectionObserver(([entry]) => {
-      this.toggleNavAndFooter(entry)
+      this.toggleNav(entry)
+      if (this.isPost) {
+        this.toggleProgressBar(entry)
+      }
     }, {
       rootMargin: '0px',
       threshold: 0.5,
@@ -58,9 +66,12 @@ export default class AppController extends Controller {
     this.highlightsTarget.classList.toggle('is-visible', entry.isIntersecting)
   }
 
-  watchScrollPosition() {
+  watchScroll() {
     window.addEventListener('scroll', throttle(() => {
-      this.updateScrollPosition()
+      if (this.isPost) {
+        this.updateScrollPosition()
+        this.updateScrollPercentage()
+      }
     }, 60), false)
   }
 
@@ -68,5 +79,11 @@ export default class AppController extends Controller {
     const offset = document.body.offsetWidth / -4
     const scrollPosition = (window.pageYOffset + offset) / document.body.offsetHeight
     document.body.style.setProperty('--scroll-position', scrollPosition)
+  }
+
+  updateScrollPercentage() {
+    const post = document.querySelector('.post__main')
+    const scrollPercentage = Math.min(window.pageYOffset / (post.scrollHeight - window.innerHeight), 1)
+    document.body.style.setProperty('--scroll-percentage', scrollPercentage)
   }
 }
