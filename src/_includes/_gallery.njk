@@ -1,4 +1,4 @@
-<section class="gallery" data-controller="gallery" id="galeria">
+<section class="gallery" data-controller="gallery" id="galeria" data-action="keydown.esc->gallery#close">
   <div class="gallery__list-wrapper">
     <ul class="gallery__list">
       {% for photo in photos.slice(0, 3) %}
