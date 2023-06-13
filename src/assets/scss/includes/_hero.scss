@@ -52,12 +52,16 @@
 .hero__image {
   display: block;
   width: 100dvw;
-  height: clamp(100dvh, rem(1000px), 200dvh);
+  height: clamp(100lvh, rem(512px), 200lvh);
   object-fit: cover;
   object-position: 50% center;
 
   @include breakpoint-above-tablet {
     object-position: 32% center;
+
+    @media (orientation: landscape) {
+      height: clamp(100dvh, rem(1000px), 200dvh);
+    }
   }
 
   @include breakpoint-above-desktop-small {

@@ -2,7 +2,7 @@
   <p class="score__title">Classificação</p>
   <p class="score__blurb">Em alternativa à rapidez com que os carros atingem 100 km/h, que é cada vez menos relevante, olhemos para a relação do seu peso com a potência.</p>
 
-  <p class="score__relation">{{ (specs.power / specs.weight * 100) | round(0) }}%</p>
+  <p class="score__relation" title="{{ (specs.power / specs.weight * 100) | round(0) }}% de potência para o total de peso">{{ (specs.power / specs.weight * 100) | round(0) }}%</p>
 
   <div
     class="score__chart"
