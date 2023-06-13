@@ -139,8 +139,11 @@ module.exports = (eleventyConfig) => {
 
   // Register `getTotalPhotos` filter
   eleventyConfig.addFilter('getTotalPhotos', (posts) => {
-    const photos = posts.map((post) => post.data.photos).flat()
-    return photos.length
+    const photosLength = posts
+      .filter((post) => post.data.photos)
+      .map((post) => post.data.photos.length)
+      .reduce((accumulator, currentValue) => accumulator + currentValue, 0)
+    return photosLength
   })
 
   // Register `where` filter
