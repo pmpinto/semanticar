@@ -47,6 +47,6 @@ Mas independentemente disso, que efeitos terão estas cópias de Renault com emb
 
 Afinal, quem procura um Mitsubishi procura algo que um Renault geralmente não oferece. E vice versa. A Renault ultimamente tem lançado modelos muito bonitos. Algo que, na minha opinião não se pode dizer da Mitsubishi, em época alguma — vamos ignorar momentaneamente que existiu um **Mitsubishi Lancer Evo**.
 
-Estamos a falar de carros (Captur e ASX) que são literalmente uma cópia um do outro. Ao ponto de existir um sinal sonoro quando se abre a porta do conductor no Renault que se mantém inalterado no novo ASX.
+Estamos a falar de carros (Captur e ASX) que são literalmente uma cópia um do outro. Ao ponto de existir um sinal sonoro quando se abre a porta do condutor no Renault que se mantém inalterado no novo ASX.
 
 Pessoalmente, nunca vejo com bons olhos quando os fabricantes decidem partilhar designs entre eles. Componentes mecânicos ou plataformas, pode ser benéfico para ambos. Mas no que toca aos designs vai haver sempre um que é a cópia do outro. E infelizmente para a Mitsubishi, neste caso eles fazem as cópias — uma vez que a Renault já apresentou os seus modelos bem antes da Mitsubishi o fazer.

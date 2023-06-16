@@ -89,7 +89,7 @@ Conta também com rodas de 15", que não atrai muito os que procuram um aspecto 
 Os materiais utilizados nestas carrinhas são bons o suficiente para que passados quase 20 anos, apenas se note desgaste nos suspeitos do costume: borrachas. Especificamente, as borrachas à volta dos vidros.
 Todos sabemos que as borrachas não se dão muito bem com o sol, mas a verdade é que desde que o carro está na minha mão passou muito mais tempo dentro de uma garagem do que na rua. Quanto ao dono anterior, não sei que uso lhe dava.
 
-Os espelhos exteriores são manualmente retrateis, têm pisca embutido e ajuste elétrico. O espelho do lado do conductor conta ainda com uma faixa vertical que abrange uma área superior, que ajuda a colmatar a ausência de sistemas de segurança mais recentes.
+Os espelhos exteriores são manualmente retrateis, têm pisca embutido e ajuste elétrico. O espelho do lado do condutor conta ainda com uma faixa vertical que abrange uma área superior, que ajuda a colmatar a ausência de sistemas de segurança mais recentes.
 
 A chave é um pouco grande para o meu gosto, especialmente tendo em conta que não retrai como alguns fabricantes optam por fazer, como por exemplo a Ford. Tem, no entanto, algumas funções que são muito úteis e a meu ver compensam o tamanho dela.
 
@@ -114,7 +114,7 @@ Os bancos são inteiramente em pele. Todos eles. E posso dizer com alguma confia
 
 > O encosto de cabeça é fixo — e bem, uma vez que não está lá por conforto, mas sim por segurança.
 
-Ainda que o espaço interior esteja longe de ser curto, a verdade é que se o banco do conductor estiver na minha posição de condução, resta muito pouco espaço para quem viajar imediatamente atrás. Sendo que eu meço 1.81 m e no banco de trás ficaria com os joelhos a roçar no banco do conductor. A boa notícia é que como os bancos são moles, não se torna demasiado desconfortável. Não chego sequer a tocar com a cabeça no "tecto", nem à frente, nem atrás — e isso é bastante positivo.
+Ainda que o espaço interior esteja longe de ser curto, a verdade é que se o banco do condutor estiver na minha posição de condução, resta muito pouco espaço para quem viajar imediatamente atrás. Sendo que eu meço 1.81 m e no banco de trás ficaria com os joelhos a roçar no banco do condutor. A boa notícia é que como os bancos são moles, não se torna demasiado desconfortável. Não chego sequer a tocar com a cabeça no "tecto", nem à frente, nem atrás — e isso é bastante positivo.
 
 Claro que a coluna de transmissão em conjunto com a coluna central que se estende até ao tablier, rouba algum espaço para os pés no lugar central traseiro, que impossibilita que quem viajar no meio tenha um espaço dedicado para repousar os pés.
 
@@ -124,13 +124,13 @@ O sistema de info entretenimento é bastante básico. É, aliás, um dos pontos 
 
 Sendo que a última vez que comprei algum CD já foi há demasiado tempo para me lembrar, e que a última vez que ouvi rádio por vontade própria aconteceu bem antes disso, arranjar forma de conectar o telemóvel às colunas do carro era essencial para mim. No meu caso, a solução que encontrei foi um daqueles emissores de onda rádio que recebe sinal bluetooth do telemóvel. Mas isso não diz respeito a este artigo.
 
-O quadrante é também ele algo básico, mas isso nem é mau de todo. Afinal, tem tudo aquilo que o conductor pode precisar, sem qualquer distração que um ecrã moderno poderia trazer. Conta com dois grandes círculos principais. Um conta rotações à direita e um velocímetro à esquerda. Dentro de cada uma delas, e respectivamente, conta ainda com um medidor de temperatura do óleo de motor, bem como um medidor de combustível. Conta ainda com dois mini ecrãs entre os dois círculos. Um posicionado na parte superior onde se pode ver os consumos, bem como algumas sinalizações como a de falta de uso de cintos de segurança, portas abertas, mala aberta, capot aberto, etc. E um outro na zona inferior que é um conta quilómetros.
+O quadrante é também ele algo básico, mas isso nem é mau de todo. Afinal, tem tudo aquilo que o condutor pode precisar, sem qualquer distração que um ecrã moderno poderia trazer. Conta com dois grandes círculos principais. Um conta rotações à direita e um velocímetro à esquerda. Dentro de cada uma delas, e respectivamente, conta ainda com um medidor de temperatura do óleo de motor, bem como um medidor de combustível. Conta ainda com dois mini ecrãs entre os dois círculos. Um posicionado na parte superior onde se pode ver os consumos, bem como algumas sinalizações como a de falta de uso de cintos de segurança, portas abertas, mala aberta, capot aberto, etc. E um outro na zona inferior que é um conta quilómetros.
 
-Algo que teve bastante impacto para mim desde o primeiro dia, foi o volante. É muito confortável e tem algumas funções extra comuns que previnem que o conductor tire as mãos do mesmo enquanto conduz, como o controlo do cruise control, o volume do rádio, bem como botões que são claramente da década passada, que servem para mudar de música quando se está a ouvir um CD ou sintonizar outra emissora de rádio — mas que servem de absolutamente nada no meu caso.
+Algo que teve bastante impacto para mim desde o primeiro dia, foi o volante. É muito confortável e tem algumas funções extra comuns que previnem que o condutor tire as mãos do mesmo enquanto conduz, como o controlo do cruise control, o volume do rádio, bem como botões que são claramente da década passada, que servem para mudar de música quando se está a ouvir um CD ou sintonizar outra emissora de rádio — mas que servem de absolutamente nada no meu caso.
 
 Conta ainda com aquilo que me parecem ser 6 colunas, mas posso estar errado neste ponto. Tem duas grandes colunas nas portas frontais. Outras duas grandes nas portas traseiras, bem como outras duas pequenas junto aos puxadores das portas traseiras. As traseiras parece-me ligeiramente maiores, a contar pelos sons baixos que emitem quando o som é enviado mais para trás do que para a frente — que é aliás como está configurado. É possível que existam mais colunas mas honestamente não andei à caça delas.
 
-Por fim, uma funcionalidade bastante querida de quem se costuma sentar ao meu lado nesta V50 é o AC de 2 zonas. Não só me deixa ligar o AC para mim enquanto as saídas de ar para o lugar do passageiro estão fechadas. Como ainda deixa ter o AC configurado para 19º C para o conductor e 21º C para o passageiro. Quem é sensível ao frio, diz que é essencial.
+Por fim, uma funcionalidade bastante querida de quem se costuma sentar ao meu lado nesta V50 é o AC de 2 zonas. Não só me deixa ligar o AC para mim enquanto as saídas de ar para o lugar do passageiro estão fechadas. Como ainda deixa ter o AC configurado para 19º C para o condutor e 21º C para o passageiro. Quem é sensível ao frio, diz que é essencial.
 
 ## Praticidade
 Do ponto de vista da praticidade, a V50 é também ela muito jeitosa. A bagageira conta com 417 L de capacidade — que pela minha experiência é bastante — com todos os 5 lugares disponíveis. A verdade é que tem sido uma dádiva divina no que toca a viagens. Ainda que não seja exageradamente grande — comparada por exemplo com os quase 600 L de uma carrinha **Ford Focus** recente — é o suficiente para albergar 2 malas grandes, 2 mochilas e alguns extras como lancheiras ou sacos.
@@ -143,9 +143,9 @@ A outra funcionalidade que adoro nesta V50 é a divisão de arrumação da bagag
 
 Ainda ligada à chapeleira, esta unidade vem com uma cortina de carga, que pode ser aplicada em 2 pontos: atrás dos bancos traseiros ou atrás dos bancos frontais. Isto porque, se baixarmos os bancos traseiros, aumentando assim a capacidade de carga, temos a possibilidade de "fechar" a zona de carga imediatamente atrás dos bancos frontais. Mais uma vez, muito bem pensado! Para além desta cortina, esta peça única tem ainda uma pequena zona de arrumação onde eu guardo alguns sacos plásticos, luzes suplentes e uma pequena garrafa de água.
 
-Há ainda um pormenor que nunca tinha visto em carro algum e, até hoje, só vi em carros Volvo, que é um suporte de papeis que aparece no para-brisas do lado do conductor. Sabem quando estacionam numa via pública e têm de pagar estacionamento? Cada vez mais comum… Pois bem, este suporte é muito prático para segurar o comprovativo de pagamento. Pode também ser usado para segurar qualquer outro papel. Já o fiz por exemplo com uma receita que fui levantar à farmácia para que o papel não ficasse totalmente solto no interior.
+Há ainda um pormenor que nunca tinha visto em carro algum e, até hoje, só vi em carros Volvo, que é um suporte de papeis que aparece no para-brisas do lado do condutor. Sabem quando estacionam numa via pública e têm de pagar estacionamento? Cada vez mais comum… Pois bem, este suporte é muito prático para segurar o comprovativo de pagamento. Pode também ser usado para segurar qualquer outro papel. Já o fiz por exemplo com uma receita que fui levantar à farmácia para que o papel não ficasse totalmente solto no interior.
 
-A arrumação nas portas é, tanto na frente como atrás, bastante pobre. Tem muito pouco espaço para o que quer que seja. No meu caso, guardo apenas um pano micro fibras para limpar os vidros no inverno do lado do conductor e absolutamente nada do lado do passageiro.
+A arrumação nas portas é, tanto na frente como atrás, bastante pobre. Tem muito pouco espaço para o que quer que seja. No meu caso, guardo apenas um pano micro fibras para limpar os vidros no inverno do lado do condutor e absolutamente nada do lado do passageiro.
 
 Na coluna central, atrás do travão de mão, tem uma pequena zona de arrumação, que ainda que não seja muito grande, dá muito jeito para guardar algumas coisas básicas. Pessoalmente tenho alguns pacotes de lenços de papel, uma lata com rebuçados, alguns papeis, álcool gel e pouco mais. Sendo bem organizado, guarda muita coisa.
 
@@ -158,7 +158,7 @@ Ainda que a Volvo seja conhecida pela sua preocupação com a segurança, esta V
 
 De resto, não existe qualquer outro tipo de ajuda no que toca a manter o carro na sua faixa de rodagem, avisar quando algum carro se chega perto na faixa ao lado, manter o carro intacto em subidas… Nada disso.
 
-No entanto, conta com vários air bags. Tanto para o conductor, como para o passageiro, bem como para quem viajar atrás. Conta inclusivamente com airbags cortina de cada lado para proteger contra impactos laterais.
+No entanto, conta com vários air bags. Tanto para o condutor, como para o passageiro, bem como para quem viajar atrás. Conta inclusivamente com airbags cortina de cada lado para proteger contra impactos laterais.
 
 ## Desempenho
 Como já disse anteriormente, os 100 cv não são minimamente surpreendentes. Nota-se que estão lá, mas não nos colam as costas ao banco de maneira nenhuma. E acreditem, isso é um ponto positivo para algumas pessoas. Contudo, não deixam de ser mais do que suficientes para o centro de cidade, ou para fazer uma ultrapassagem quando necessária.
@@ -171,7 +171,7 @@ Quanto aos consumos, neste momento, depois de uma viagem de cerca de 600 km, and
 
 > Em estrada, a V50 porta-se muito bem.
 
-Como boa carrinha familiar que é, não nos pede mais rotação nem nos força a andar em regimes que se tornariam desconfortáveis para quem viaja com o conductor. Nas minhas mãos já teve também algumas incursões fora de estrada — uma vez que aqui por casa somos adeptos de férias pouco convencionais — e conseguiu não nos desiludir. Ainda que não tenha as mesmas valências que a sua prima **Volvo XC70**, não envergonha ninguém.
+Como boa carrinha familiar que é, não nos pede mais rotação nem nos força a andar em regimes que se tornariam desconfortáveis para quem viaja com o condutor. Nas minhas mãos já teve também algumas incursões fora de estrada — uma vez que aqui por casa somos adeptos de férias pouco convencionais — e conseguiu não nos desiludir. Ainda que não tenha as mesmas valências que a sua prima **Volvo XC70**, não envergonha ninguém.
 
 O ponto onde pessoalmente gostaria de ver algumas melhorias prende-se com a travagem. Aqui é preciso ter em conta que esta unidade em particular já conta com mais de 200.000 km. Há naturalmente algum desgaste a ter em conta. Não estou com isto a dizer que os travões são originais, longe disso, mas sendo que tanto os discos como as pastilhas foram aplicadas pela própria Volvo, eu estaria à espera que a travagem fosse um pouco mais assertiva. Ela trava, e os travões seguram-na sempre que é preciso. Creio que aqui é mesmo uma questão de preferência pessoal, mais do que qualquer outra coisa.
 
