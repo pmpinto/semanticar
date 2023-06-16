@@ -9,7 +9,7 @@
   <ol class="post-grid__list">
     {% for post in posts %}
       <li class="post-grid__item">
-        <a href="{{ post.url }}" class="post-grid__link">
+        <a href="{{ post.url }}" class="post-grid__link" data-event-category="grid" data-event-label="{{ loop.index }}">
           <div class="post-grid__photo">
             {% image
               post.data.cover,

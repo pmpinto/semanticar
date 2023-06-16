@@ -1,6 +1,6 @@
 <section class="post-latest">
   <div class="wrapper">
-    <a href="{{ post.url }}" class="post-latest__link">
+    <a href="{{ post.url }}" class="post-latest__link" data-event-category="latest" data-event-label="{{ post.url }}">
       {% image
         post.data.cover,
         post.data.title,

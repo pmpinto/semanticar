@@ -10,6 +10,7 @@ export default class AppController extends Controller {
     this.observeHighlights()
 
     this.watchScroll()
+    this.setAnalyticsEvents()
 
     this.toggleNav = this.toggleNav.bind(this)
     this.isPost = this.element.classList.contains('post')
@@ -85,5 +86,21 @@ export default class AppController extends Controller {
     const post = document.querySelector('.post__main')
     const scrollPercentage = Math.min(window.pageYOffset / (post.scrollHeight - window.innerHeight), 1)
     document.body.style.setProperty('--scroll-percentage', scrollPercentage)
+  }
+
+  setAnalyticsEvents() {
+    const elements = document.querySelectorAll('[data-event-category]')
+
+    elements.forEach((element) => {
+      element.addEventListener('click', () => {
+        const category = element.getAttribute('data-event-category')
+        const label = element.getAttribute('data-event-label')
+
+        window.gtag('event', 'click', {
+          'event_category': category,
+          'event_label': label
+        })
+      })
+    })
   }
 }

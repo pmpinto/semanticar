@@ -15,13 +15,13 @@
         <p class="footer__label">Categorias</p>
         <ul class="footer__list">
           <li class="footer__item">
-            <a href="/ensaio/" class="footer__link">Ensaio</a>
+            <a href="/ensaio/" class="footer__link" data-event-category="footer" data-event-label="ensaio">Ensaio</a>
           </li>
           <li class="footer__item">
-            <a href="/opiniao/" class="footer__link">Opinião</a>
+            <a href="/opiniao/" class="footer__link" data-event-category="footer" data-event-label="opiniao">Opinião</a>
           </li>
           <li class="footer__item">
-            <a href="/actualidade/" class="footer__link">Actualidade</a>
+            <a href="/actualidade/" class="footer__link" data-event-category="footer" data-event-label="actualidade">Actualidade</a>
           </li>
         </ul>
       </li>
@@ -30,10 +30,10 @@
         <p class="footer__label">Redes</p>
         <ul class="footer__list">
           <li class="footer__item">
-            <a rel="noopener noreferrer" target="_blank" href="https://twitter.com/{{ site.social.twitter }}" class="footer__link">Twitter</a>
+            <a rel="noopener noreferrer" target="_blank" href="https://twitter.com/{{ site.social.twitter }}" class="footer__link" data-event-category="footer" data-event-label="twitter">Twitter</a>
           </li>
           <li class="footer__item">
-            <a rel="noopener noreferrer" target="_blank" href="https://instagram.com/{{ site.social.instagram }}" class="footer__link">Instagram</a>
+            <a rel="noopener noreferrer" target="_blank" href="https://instagram.com/{{ site.social.instagram }}" class="footer__link" data-event-category="footer" data-event-label="instagram">Instagram</a>
           </li>
         </ul>
       </li>
@@ -42,7 +42,7 @@
         <p class="footer__label">Contacto</p>
         <ul class="footer__list">
           <li class="footer__item">
-            <a href="mailto:{{ site.email }}" class="footer__link">Email</a>
+            <a href="mailto:{{ site.email }}" class="footer__link" data-event-category="footer" data-event-label="email">Email</a>
           </li>
         </ul>
       </li>
@@ -51,10 +51,10 @@
         <p class="footer__label">Legal</p>
         <ul class="footer__list">
           <li class="footer__item">
-            <a href="/privacidade/" class="footer__link">Política de Privacidade</a>
+            <a href="/privacidade/" class="footer__link" data-event-category="footer" data-event-label="privacy">Política de Privacidade</a>
           </li>
           <li class="footer__item">
-            <a href="/termos/" class="footer__link">Termos e Condições</a>
+            <a href="/termos/" class="footer__link" data-event-category="footer" data-event-label="terms">Termos e Condições</a>
           </li>
         </ul>
       </li>
@@ -62,10 +62,10 @@
 
     <div class="footer__bottom">
       <p class="footer__copyright">
-        © 2023 <a href="/" class="footer__link-semanticar">{{ site.brand }}</a>. Todos os direitos reservados.
+        © 2023 <a href="/" class="footer__link-semanticar" data-event-category="footer" data-event-label="copyright">{{ site.brand }}</a>. Todos os direitos reservados.
       </p>
 
-      <a href="/feed.xml" class="footer__subscribe" data-action="click->app#subscribe">
+      <a href="/feed.xml" class="footer__subscribe" data-action="click->app#subscribe" data-event-category="subscribe" data-event-label="footer">
         <img src="/static_assets/icons/rss.svg" alt="RSS icon" class="footer__subscribe-icon">
 
         <div class="footer__subscribe-text">

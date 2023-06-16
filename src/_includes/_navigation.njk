@@ -1,37 +1,37 @@
 <nav class="navigation" data-controller="navigation" data-app-target="navigation">
   <div class="wrapper">
-    <a href="/" class="navigation__home-link">
+    <a href="/" class="navigation__home-link" data-event-category="navigation" data-event-label="logo">
       <img draggable="false" src="/static_assets/images/semanticar-logo.svg" alt="Semanticar logo" class="navigation__logo">
       <span class="visually-hidden">Ir para a página inicial</span>
     </a>
 
-    <button class="navigation__toggle" data-action="click->navigation#toggle">
+    <button class="navigation__toggle" data-action="click->navigation#toggle" data-event-category="navigation" data-event-label="open">
       <img src="/static_assets/icons/list.svg" alt="navigation icon">
       <span class="visually-hidden">Alternar navegação</span>
     </button>
 
     <div class="navigation__panel">
-      <button class="navigation__toggle" data-action="click->navigation#toggle">
+      <button class="navigation__toggle" data-action="click->navigation#toggle" data-event-category="navigation" data-event-label="close">
         <img src="/static_assets/icons/list.svg" alt="navigation icon">
         <span class="visually-hidden">Alternar navegação</span>
       </button>
 
       <ol class="navigation__list">
         <li class="navigation__item">
-          <a class="navigation__link {% if page.url == '/' %}is-active{% endif %}" href="/">Início</a>
+          <a class="navigation__link {% if page.url == '/' %}is-active{% endif %}" href="/" data-event-category="navigation" data-event-label="home">Início</a>
         </li>
         <li class="navigation__item">
           <span class="navigation__label">Categorias</span>
 
           <ol class="navigation__sub-list">
             <li class="navigation__item">
-              <a class="navigation__link {% if page.url.includes('/ensaio/') %}is-active{% endif %}" href="/ensaio/">Ensaio</a>
+              <a class="navigation__link {% if page.url.includes('/ensaio/') %}is-active{% endif %}" href="/ensaio/" data-event-category="navigation" data-event-label="ensaio">Ensaio</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link {% if page.url.includes('/opiniao/') %}is-active{% endif %}" href="/opiniao/">Opinião</a>
+              <a class="navigation__link {% if page.url.includes('/opiniao/') %}is-active{% endif %}" href="/opiniao/" data-event-category="navigation" data-event-label="opiniao">Opinião</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link {% if page.url.includes('/actualidade/') %}is-active{% endif %}" href="/actualidade/">Actualidade</a>
+              <a class="navigation__link {% if page.url.includes('/actualidade/') %}is-active{% endif %}" href="/actualidade/" data-event-category="navigation" data-event-label="actualidade">Actualidade</a>
             </li>
           </ol>
         </li>
@@ -45,7 +45,7 @@
               {% for make in makes %}
               {% set makeSlug = make | slugify %}
                 <li class="navigation__item">
-                  <a class="navigation__link {% if page.url.includes('/' + makeSlug) %}is-active{% endif %}" href="/{{ makeSlug }}/">{{ make }}</a>
+                  <a class="navigation__link {% if page.url.includes('/' + makeSlug) %}is-active{% endif %}" href="/{{ makeSlug }}/" data-event-category="navigation" data-event-label="{{ makeSlug }}">{{ make }}</a>
                 </li>
               {% endfor %}
             </ol>
@@ -57,10 +57,10 @@
 
           <ol class="navigation__sub-list">
             <li class="navigation__item">
-              <a class="navigation__link" rel="noopener noreferrer" target="_blank" href="https://twitter.com/{{ site.social.twitter }}">Twitter</a>
+              <a class="navigation__link" rel="noopener noreferrer" target="_blank" href="https://twitter.com/{{ site.social.twitter }}" data-event-category="navigation" data-event-label="twitter">Twitter</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" rel="noopener noreferrer" target="_blank" href="https://instagram.com/{{ site.social.instagram }}">Instagram</a>
+              <a class="navigation__link" rel="noopener noreferrer" target="_blank" href="https://instagram.com/{{ site.social.instagram }}" data-event-category="navigation" data-event-label="instagram">Instagram</a>
             </li>
           </ol>
         </li>

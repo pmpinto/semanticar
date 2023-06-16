@@ -17,7 +17,7 @@
   </div>
 
   <div class="wrapper">
-    <button class="gallery__button" data-action="click->gallery#open">
+    <button class="gallery__button" data-action="click->gallery#open" data-event-category="gallery" data-event-label="open">
       <img src="/static_assets/icons/images.svg" alt="images icon" class="gallery__button-icon">
       <span class="gallery__button-label">{{ photos.length }} fotos</span>
       <span class="gallery__button-view">Ver todas</span>
@@ -25,7 +25,7 @@
   </div>
 
   <div class="gallery__lightbox">
-    <button class="gallery__close" title="Fechar" data-action="click->gallery#close">
+    <button class="gallery__close" title="Fechar" data-action="click->gallery#close" data-event-category="gallery" data-event-label="close">
       <img src="/static_assets/icons/close.svg" alt="close icon" class="gallery__close-icon">
     </button>
 
