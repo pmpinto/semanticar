@@ -7,9 +7,9 @@
     {% include "_metadata.njk" %}
     {% include "_analytics.njk" %}
 
-    <link rel="stylesheet" href="/static_assets/css/styles.css">
+    <link rel="stylesheet" href="/static_assets/css/styles.css?{{ build_data.timestamp }}">
     {% if pageCss %}
-      <link rel="stylesheet" href="/static_assets/css/pages/{{ pageCss }}.css">
+      <link rel="stylesheet" href="/static_assets/css/pages/{{ pageCss }}.css?{{ build_data.timestamp }}">
     {% endif %}
   </head>
   <body class="{{ bodyClass }}" data-controller="app">
@@ -21,6 +21,6 @@
 
     {% include "_footer.njk" %}
 
-    <script async src="/static_assets/javascript/bundle.js"></script>
+    <script async src="/static_assets/javascript/bundle.js?{{ build_data.timestamp }}"></script>
   </body>
 </html>
