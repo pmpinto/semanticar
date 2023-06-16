@@ -1,5 +1,6 @@
-@mixin media-hover() {
-  @media (hover: hover) {
+@mixin hover-and-focus() {
+  &:hover,
+  &:focus {
     @content;
   }
 }

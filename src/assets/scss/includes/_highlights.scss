@@ -1,0 +1,117 @@
+.highlights {
+  @include grid-wrapper;
+
+  padding-top: units(7);
+  padding-bottom: units(7);
+  background-color: $color-frosted-high;
+  backdrop-filter: blur(32px);
+  border-top: 1px solid $color-detail;
+  border-bottom: 1px solid $color-detail;
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @include breakpoint-above-tablet {
+    grid-column: 1 / span 6;
+  }
+
+  @include breakpoint-above-desktop-small {
+    grid-column: 1 / span 12;
+  }
+
+  .wrapper {
+    @include breakpoint-above-desktop-small {
+      grid-column: 2 / span 10;
+    }
+  }
+}
+
+.highlights__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: units(4);
+
+  @include breakpoint-above-tablet {
+    gap: units(8);
+  }
+
+  @include breakpoint-above-desktop-small {
+    gap: units(6);
+  }
+
+  @include breakpoint-above-desktop-medium {
+    gap: 0;
+  }
+}
+
+.highlights__item-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(units(-2));
+  transition: transform $timings-slow $ease-out-expo,
+    opacity $timings-slow $ease-out-expo;
+  width: 32dvw;
+
+  @include breakpoint-above-tablet {
+    width: 20dvw;
+  }
+
+  @include breakpoint-above-desktop-small {
+    width: 16dvw;
+  }
+
+  @include breakpoint-above-desktop-medium {
+    width: auto;
+  }
+}
+
+.highlights__item {
+  &:nth-child(1) .highlights__item-wrapper {
+    transition-delay: $timings-faster * 1;
+  }
+
+  &:nth-child(2) .highlights__item-wrapper {
+    transition-delay: $timings-faster * 2;
+  }
+
+  &:nth-child(3) .highlights__item-wrapper {
+    transition-delay: $timings-faster * 3;
+  }
+
+  &:nth-child(4) .highlights__item-wrapper {
+    transition-delay: $timings-faster * 4;
+  }
+
+  &:nth-child(5) .highlights__item-wrapper {
+    transition-delay: $timings-faster * 5;
+  }
+
+  &:nth-child(6) .highlights__item-wrapper {
+    transition-delay: $timings-faster * 6;
+  }
+}
+
+.highlights__title {
+  @include text-label;
+
+  margin-bottom: rem(4px);
+}
+
+.highlights__value {
+  @include text-lead;
+}
+
+.highlights.is-visible {
+  .highlights__item-wrapper {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

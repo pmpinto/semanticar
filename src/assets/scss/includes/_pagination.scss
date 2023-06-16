@@ -1,0 +1,79 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: units(1);
+}
+
+.pagination__button {
+  display: flex;
+  flex-direction: column;
+  padding-top: rem(12px);
+  padding-bottom: rem(4px);
+  box-shadow: 0 -2px 0 0 $color-action;
+  position: relative;
+  text-decoration: none;
+  color: $color-text;
+  transition: box-shadow $timings-normal $ease-out-expo;
+  outline: none;
+  user-select: none;
+  flex-grow: 1;
+
+  @include breakpoint-above-tablet {
+    flex-grow: 0;
+  }
+
+  @include hover-and-focus {
+    box-shadow: 0 0 0 2px $color-action;
+  }
+}
+
+.pagination__icon {
+  width: units(2);
+  height: units(2);
+  position: absolute;
+  top: rem(19px);
+}
+
+.pagination__label {
+  @include text-label;
+}
+
+.pagination__page {
+  @include text-body;
+
+  font-weight: $font-weight-bold;
+}
+
+.pagination__button--previous {
+  align-items: flex-end;
+  padding-left: units(5);
+  padding-right: units(1);
+
+  .pagination__icon {
+    left: units(1);
+    rotate: 180deg;
+
+    @include breakpoint-above-tablet {
+      left: 0;
+    }
+  }
+}
+
+.pagination__button--next {
+  align-items: flex-start;
+  padding-left: units(1);
+  padding-right: units(5);
+
+  .pagination__icon {
+    right: units(1);
+
+    @include breakpoint-above-tablet {
+      right: 0;
+    }
+  }
+}
+
+.pagination__button--disabled {
+  opacity: $alpha-4;
+  pointer-events: none;
+}

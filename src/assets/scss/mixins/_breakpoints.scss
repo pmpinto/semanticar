@@ -3,17 +3,18 @@
     @content;
   }
 }
+
 @mixin breakpoint-below($breakpoint-value) {
   @media screen and (max-width: #{$breakpoint-value - 1px}) {
     @content;
   }
 }
+
 @mixin breakpoint-between($breakpoint-value-min, $breakpoint-value-max) {
   @media screen and (min-width: #{$breakpoint-value-min}) and (max-width: #{$breakpoint-value-max - 1px}) {
     @content;
   }
 }
-
 
 // Min width
 @mixin breakpoint-above-phone-small {
@@ -58,6 +59,11 @@
   }
 }
 
+@mixin breakpoint-max {
+  @include breakpoint-above($global-max-width) {
+    @content;
+  }
+}
 
 // Max width
 @mixin breakpoint-below-tablet {
@@ -71,7 +77,6 @@
     @content;
   }
 }
-
 
 // Between
 @mixin breakpoint-between-tablet-and-desktop-small {

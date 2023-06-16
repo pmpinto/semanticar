@@ -1,0 +1,99 @@
+.subscribe-banner {
+  background-color: $color-detail;
+  padding-top: units(4);
+  padding-bottom: units(4);
+  position: relative;
+  overflow: hidden;
+
+  @include breakpoint-above-tablet {
+    padding-top: units(5);
+    padding-bottom: units(5);
+  }
+
+  @include breakpoint-above-desktop-small {
+    padding-top: units(9);
+    padding-bottom: units(9);
+  }
+
+  .wrapper {
+    @include grid-wrapper;
+
+    row-gap: units(4);
+
+    @include breakpoint-above-tablet {
+      row-gap: units(4);
+      align-items: flex-start;
+    }
+
+    @include breakpoint-above-desktop-small {
+      align-items: center;
+    }
+  }
+}
+
+.subscribe-banner__background {
+  position: absolute;
+  z-index: $layers-below;
+  top: units(-16);
+  right: units(8);
+
+  @include breakpoint-above-desktop-small {
+    top: units(-40);
+    right: units(16);
+  }
+}
+
+.subscribe-banner__text {
+  display: flex;
+  gap: units(2);
+
+  @include breakpoint-above-tablet {
+    gap: units(4);
+    grid-column: 1 / span 6;
+  }
+
+  @include breakpoint-above-desktop-small {
+    grid-column: 2 / span 7;
+  }
+}
+
+// .subscribe-banner__icon {}
+
+.subscribe-banner__title {
+  @include text-lead;
+
+  font-weight: $font-weight-bold;
+}
+
+.subscribe-banner__lead {
+  @include text-lead;
+
+  margin-bottom: units(1);
+}
+
+.subscribe-banner__caption {
+  @include text-label;
+}
+
+.subscribe-banner__cta-wrapper {
+  text-align: center;
+
+  @include breakpoint-above-tablet {
+    grid-column: 1 / span 6;
+  }
+
+  @include breakpoint-above-desktop-small {
+    text-align: right;
+    grid-column: 9 / span 3;
+  }
+}
+
+.subscribe-banner__cta {
+  @include button-big;
+
+  width: 100%;
+
+  @include breakpoint-above-desktop-small {
+    width: auto;
+  }
+}

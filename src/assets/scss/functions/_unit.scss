@@ -1,3 +1,3 @@
-@function unit($multiplier: 1) {
+@function units($multiplier: 1) {
   @return calc($unit-base-rem * $multiplier);
 }

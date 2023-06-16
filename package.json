@@ -40,7 +40,12 @@
     "stylelint-scss": "^5.0.0"
   },
   "dependencies": {
+    "@11ty/eleventy-img": "^3.1.0",
+    "@hotwired/stimulus": "^3.2.1",
     "autoprefixer": "^10.4.13",
+    "he": "^1.2.0",
+    "lodash.chunk": "^4.2.0",
+    "lodash.throttle": "^4.1.1",
     "markdown-it": "^13.0.1",
     "markdown-it-link-attributes": "^4.0.1",
     "normalize.css": "^8.0.1",

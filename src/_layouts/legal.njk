@@ -1,0 +1,19 @@
+---
+layout: base
+bodyClass: legal
+pageCss: legal
+---
+<article class="legal__article">
+  <section class="legal__content">
+    <div class="wrapper">
+      <header class="legal__header">
+        <p class="legal__date">{{ date | local_date }}</p>
+        <h1 class="legal__title">{{ title }}</h1>
+      </header>
+
+      <div class="legal__body">
+        {{ content | safe }}
+      </div>
+    </div>
+  </section>
+</article>

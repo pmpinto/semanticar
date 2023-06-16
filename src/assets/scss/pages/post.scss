@@ -1,0 +1,140 @@
+@import '../includes/imports';
+@import '../includes/header';
+@import '../includes/highlights';
+@import '../includes/sidebar';
+@import '../includes/share';
+@import '../includes/gallery';
+@import '../includes/subscribe-banner';
+@import '../includes/post-grid';
+@import '../includes/related';
+
+@keyframes blur-image {
+  to {
+    filter: blur(40px);
+    scale: 1.1618;
+  }
+}
+
+@keyframes grow-to-100w {
+  to {
+    transform: translateX(0);
+  }
+}
+
+// .post {}
+
+.post__article {
+  @include grid-wrapper;
+
+  row-gap: 0;
+}
+
+.post__progress {
+  position: fixed;
+  top: rem(83px);
+  z-index: $layers-above-body;
+  left: 0;
+  height: rem(4px);
+  transform: translateX(-100dvw);
+  width: 100dvw;
+  background-color: $color-brand;
+  animation: grow-to-100w $timings-spinner linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll-percentage) * ($timings-spinner * -1));
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  transition: translate $timings-slower $ease-out-expo;
+
+  &.is-hidden {
+    translate: 0 units(-11);
+  }
+}
+
+.post__image {
+  width: 100dvw;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: center;
+  height: auto;
+  animation: blur-image $timings-spinner linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll-position) * ($timings-spinner * -1));
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+.post__image-wrapper {
+  overflow-x: hidden;
+  position: sticky;
+  top: rem(83px);
+  margin-bottom: units(10);
+  z-index: $layers-below;
+
+  @include breakpoint-above-tablet {
+    grid-column: 1 / span 6;
+  }
+
+  @include breakpoint-above-desktop-small {
+    grid-column: 1 / span 12;
+  }
+}
+
+.post__content {
+  padding-top: units(5);
+  padding-bottom: units(5);
+  background-color: $color-white;
+
+  @include breakpoint-above-tablet {
+    padding-top: units(7);
+    padding-bottom: units(7);
+    grid-column: 1 / span 6;
+  }
+
+  @include breakpoint-above-desktop-small {
+    padding-top: units(10);
+    padding-bottom: units(10);
+    grid-column: 1 / span 12;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint-above-desktop-small {
+      @include grid-wrapper;
+
+      row-gap: 0;
+    }
+  }
+}
+
+.header + .post__content {
+  padding-top: 0;
+}
+
+.post__excerpt {
+  @include text-lead;
+
+  margin-bottom: units(5);
+  order: 1;
+
+  @include breakpoint-above-desktop-small {
+    margin-bottom: units(7);
+    padding-right: units(2);
+    grid-column: 2 / span 7;
+  }
+}
+
+.post__body {
+  @include text-body;
+  @include text-markdown;
+
+  line-height: 1.6;
+  margin-bottom: units(7);
+  order: 2;
+
+  @include breakpoint-above-desktop-small {
+    margin-bottom: units(10);
+    grid-column: 2 / span 6;
+  }
+}

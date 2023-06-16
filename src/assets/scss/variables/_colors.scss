@@ -1,12 +1,18 @@
-$color-white: #f8f8f8;
-$color-lavender: #d8d8d8;
-$color-gold: #f3a405;
-$color-sinopia: #bf4e30;
-$color-purple: #4b0f7a;
-$color-black: #201a24;
-$color-detail: $color-lavender;
-$color-brand: $color-purple;
-$color-text: $color-black;
-$color-muted: fade-out($color-black, $alpha-3);
+@use 'sass:color';
+
+$color-white: #fff5eb;
+$color-grey: #afb5c0;
+$color-detail: #afb5c048;
+$color-blue: #211f3b;
+$color-orange: #de6e4b;
+
+$color-brand: $color-orange;
+$color-text: $color-blue;
+$color-frosted: #fff5ebaa;
+$color-frosted-high: #fff5ebcc;
+
 $color-action: $color-brand;
-$color-action-hover: lighten($color-action, 5%);
+$color-action-hover: color.adjust(
+  $color: $color-action,
+  $lightness: 5%,
+);

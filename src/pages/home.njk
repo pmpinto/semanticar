@@ -1,0 +1,32 @@
+---js
+{
+  layout: "base",
+  bodyClass: "home",
+  pageCss: "home",
+  permalink: "/{% if pagination.pageNumber > 0 %}pagina/{{ pagination.pageNumber + 1 }}/{% endif %}index.html",
+  metadata: {
+    description: "Uma análise singular do mundo automóvel, com uma perspectiva racional e um toque emocional."
+  },
+  pagination: {
+    data: "collections.post",
+    size: 8,
+    alias: "posts",
+    before: function(paginationData, fullData) {
+      return this.fromUntil(paginationData.reverse(), 1)
+    }
+  }
+}
+---
+
+{% include "_hero.njk" %}
+
+{% if pagination.pageNumber == 0 %}
+  {% include "_author.njk" %}
+
+  {% set post = collections.post | reverse | getItem(0) %}
+  {% include "_post-latest.njk" %}
+
+  {% include "_subscribe-banner.njk" %}
+{% endif %}
+
+{% include "_post-grid.njk" %}

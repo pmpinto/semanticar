@@ -19,26 +19,31 @@ html {
 }
 
 ::selection {
-  background-color: $color-muted;
+  background-color: $color-brand;
   color: $color-white;
 }
 
 .wrapper {
-  max-width: $global-max-width;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: unit(3);
-  padding-right: unit(3);
+  // max-width: $global-max-width;
+  // margin-left: auto;
+  // margin-right: auto;
+  padding-left: units(3);
+  padding-right: units(3);
 
   @include breakpoint-above-tablet {
-    padding-left: unit(6);
-    padding-right: unit(6);
+    padding-left: units(6);
+    padding-right: units(6);
   }
 
-  @include breakpoint-above-desktop-medium {
-    padding-left: unit(4);
-    padding-right: unit(4);
+  @include breakpoint-above-desktop-small {
+    padding-left: 0;
+    padding-right: 0;
   }
+
+  // @include breakpoint-above-desktop-medium {
+  //   padding-left: units(4);
+  //   padding-right: units(4);
+  // }
 }
 
 .visually-hidden {

@@ -1,0 +1,67 @@
+---
+layout: base
+bodyClass: post
+pageCss: post
+---
+<article class="post__article">
+  <div class="post__progress" data-app-target="progressBar"></div>
+
+  <div class="post__image-wrapper">
+    {% image
+      cover,
+      title,
+      "100vw",
+      "post__image",
+      false
+    %}
+  </div>
+
+  {% include "_header.njk" %}
+
+  {% if make %}
+    {% include "_highlights.njk" %}
+  {% endif %}
+
+  <section class="post__content">
+    <div class="wrapper">
+      <p class="post__excerpt">
+        {{ excerpt }}
+      </p>
+      <div class="post__body">
+        {{ content | safe }}
+      </div>
+
+      {% include "_share.njk" %}
+
+      {% if make %}
+        {% include "_sidebar.njk" %}
+      {% endif %}
+    </div>
+  </section>
+</article>
+
+{# This is not currently part of nunjucks documentation, but we need it because of the `image` tag #}
+{% ifAsync photos.length > 0 %}
+  {% include "_gallery.njk" %}
+{% endif %}
+
+{% include "_subscribe-banner.njk" %}
+
+{% set category = tags[1] %}
+{% set posts = collections.post | without(page) | whereList('tags', category) | reverse %}
+{% set posts = posts.slice(0, 4) %}
+
+{% ifAsync posts.length > 0 %}
+  <div class="related">
+    <div class="wrapper">
+      <div class="related__inner">
+        <p class="related__title">Outros artigos da categoria</p>
+
+        {% set categoriesOptions = { wantsMake: false } %}
+        {% include "_categories.njk" %}
+      </div>
+    </div>
+
+    {% include "_post-grid.njk" %}
+  </div>
+{% endif %}
