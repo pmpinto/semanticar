@@ -19,6 +19,8 @@ specs:
   max_speed: 185
   trunk: 417
   link: https://www.ultimatespecs.com/pt/car-specs/Volvo/4656/Volvo-V50-16.html
+metadata:
+  image: https://semanticar.pt/static_assets/images/metadata/post/opengraph-volvo-v50.jpg
 cover: ./src/photos/volvo-v50/img_0894.jpg
 photos:
   - ./src/photos/volvo-v50/img_0894.jpg
