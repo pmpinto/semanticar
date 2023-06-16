@@ -1,0 +1,76 @@
+@import '../includes/imports';
+@import '../includes/post-latest';
+@import '../includes/subscribe-banner';
+
+// .error {}
+
+.error__header {
+  padding-top: calc(#{units(8)} + #{rem(83px)});
+
+  @include breakpoint-above-tablet {
+    padding-top: calc(#{units(16)} + #{rem(83px)});
+  }
+
+  .wrapper {
+    @include grid-wrapper;
+  }
+}
+
+.error__title {
+  @include text-title;
+
+  text-align: center;
+
+  @include breakpoint-above-tablet {
+    @include text-jumbo;
+
+    grid-column: 1 / span 6;
+  }
+
+  @include breakpoint-above-desktop-small {
+    grid-column: 1 / span 12;
+  }
+}
+
+.error__subtitle {
+  @include text-lead;
+
+  text-align: center;
+  margin-bottom: units(3);
+
+  @include breakpoint-above-tablet {
+    grid-column: 1 / span 6;
+  }
+
+  @include breakpoint-above-desktop-small {
+    grid-column: 4 / span 6;
+  }
+}
+
+.error__hint {
+  @include text-label;
+
+  text-align: center;
+  margin-bottom: units(6);
+  color: $color-grey;
+
+  @include breakpoint-above-tablet {
+    grid-column: 1 / span 6;
+  }
+
+  @include breakpoint-above-desktop-small {
+    grid-column: 4 / span 6;
+  }
+}
+
+.error__cta {
+  @include button-big;
+
+  @include breakpoint-above-tablet {
+    grid-column: 1 / span 6;
+  }
+
+  @include breakpoint-above-desktop-small {
+    grid-column: 5 / span 4;
+  }
+}

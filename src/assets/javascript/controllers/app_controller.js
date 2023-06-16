@@ -14,6 +14,7 @@ export default class AppController extends Controller {
 
     this.toggleNav = this.toggleNav.bind(this)
     this.isPost = this.element.classList.contains('post')
+    this.isError = this.element.classList.contains('error')
   }
 
   toggleNav(entry) {
@@ -38,6 +39,8 @@ export default class AppController extends Controller {
 
   observeFooter() {
     const observer = new IntersectionObserver(([entry]) => {
+      if (this.isError) return
+
       this.toggleNav(entry)
       if (this.isPost) {
         this.toggleProgressBar(entry)
