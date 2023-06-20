@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
     {% include "_metadata.njk" %}
-    {% include "_analytics.njk" %}
+
+    {% if build_data.env == 'production' %}
+      {% include "_analytics.njk" %}
+    {% endif %}
 
     <link rel="stylesheet" href="/static_assets/css/styles.css?{{ build_data.timestamp }}">
     {% if pageCss %}
