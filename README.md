@@ -1,5 +1,8 @@
 # semanticar
 
+## Production
+https://semanticar.pt
+
 ## Developing
 
 Run `npm start`.
