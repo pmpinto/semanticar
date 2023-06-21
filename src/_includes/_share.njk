@@ -8,7 +8,7 @@
       </button>
     </li>
     <li class="share__item">
-      <a class="share__link" rel="noopener noreferrer" target="_blank" href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ title }}" data-event-category="share" data-event-label="twitter">
+      <a class="share__link" rel="noopener noreferrer" target="_blank" href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ excerpt }}" data-event-category="share" data-event-label="twitter">
         <img class="share__icon" src="/static_assets/icons/twitter.svg" alt="twitter">
       </a>
     </li>
@@ -18,7 +18,7 @@
       </a>
     </li>
     <li class="share__item">
-      <a href="mailto:?subject=Semanticar: {{ title }}&body={{ site.url }}{{ page.url }}" class="share__link" data-event-category="share" data-event-label="email">
+      <a href="mailto:?subject=Semanticar: {{ title }}&body={{ excerpt }}%0D%0A%0D%0A{{ site.url }}{{ page.url }}" class="share__link" data-event-category="share" data-event-label="email">
         <img class="share__icon" src="/static_assets/icons/at.svg" alt="email">
       </a>
     </li>
