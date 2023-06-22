@@ -20,8 +20,8 @@ permalink: /feed.xml
   </author>
   {%- for post in posts.slice(0, 10) %}
   <entry>
-    <id>{{ site.url }}{{ post.url }}</id>
-    <link rel="alternate" href="{{ site.url }}{{ post.url }}"/>
+    <id>{{ site.url }}{{ post.url }}?utm_medium=rss&utm_source=rss&utm_campaign=rss</id>
+    <link rel="alternate" href="{{ site.url }}{{ post.url }}?utm_medium=rss&utm_source=rss&utm_campaign=rss"/>
     <title>{{ post.data.title }}</title>
     {% if post.excerpt -%}
     <summary>{{ post.data.excerpt }}</summary>
@@ -36,10 +36,10 @@ permalink: /feed.xml
         "cover",
         true
       %}
-      {{ post.content -}}
+      {{ post.excerpt -}}
 
       {% if post.data.make %}
-      (Para veres as fotos todas visita {{ site.url }}{{ post.url }})
+      (Podes ver o artigo completo em {{ site.url }}{{ post.url }}?utm_medium=rss&utm_source=rss&utm_campaign=rss)
       {% endif -%}
     </content>
   </entry>
