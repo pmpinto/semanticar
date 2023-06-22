@@ -38,9 +38,7 @@ permalink: /feed.xml
       %}
       {{ post.excerpt -}}
 
-      {% if post.data.make %}
       (Podes ver o artigo completo em {{ site.url }}{{ post.url }}?utm_medium=rss&utm_source=rss&utm_campaign=rss)
-      {% endif -%}
     </content>
   </entry>
   {%- endfor %}
