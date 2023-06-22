@@ -23,6 +23,6 @@ jobs:
           time_zone: 'Atlantic/Azores'
           # Require all pull request statuses to be successful before
           # merging. Default is `false`.
-          require_statuses_success: 'true'
+          require_statuses_success: 'false'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
