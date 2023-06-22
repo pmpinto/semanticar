@@ -20,12 +20,10 @@ permalink: /feed.xml
   </author>
   {%- for post in posts.slice(0, 10) %}
   <entry>
-    <id>{{ site.url }}{{ post.url }}?utm_medium=rss&utm_source=rss&utm_campaign=rss</id>
-    <link rel="alternate" href="{{ site.url }}{{ post.url }}?utm_medium=rss&utm_source=rss&utm_campaign=rss"/>
+    <id>{{ site.url }}{{ post.url }}?utm_medium=rss&amp;utm_source=rss&amp;utm_campaign=rss</id>
+    <link rel="alternate" href="{{ site.url }}{{ post.url }}?utm_medium=rss&amp;utm_source=rss&amp;utm_campaign=rss"/>
     <title>{{ post.data.title }}</title>
-    {% if post.excerpt -%}
     <summary>{{ post.data.excerpt }}</summary>
-    {%- endif -%}
     <published>{{ post.date.toISOString() }}</published>
     <updated>{{ post.date.toISOString() }}</updated>
     <content type="html">
@@ -36,9 +34,10 @@ permalink: /feed.xml
         "cover",
         true
       %}
-      {{ post.excerpt -}}
 
-      (Podes ver o artigo completo em {{ site.url }}{{ post.url }}?utm_medium=rss&utm_source=rss&utm_campaign=rss)
+      &lt;p&gt;{{ post.data.excerpt -}}&lt;/p&gt;
+
+      &lt;p&gt;(Podes ver o artigo completo em &lt;a&gt; href=&quot;{{ site.url }}{{ post.url }}?utm_medium=rss&amp;utm_source=rss&amp;utm_campaign=rss&quot;&gt;{{ site.url }}{{ post.url }}&lt;/a&gt;)&lt;/p&gt;
     </content>
   </entry>
   {%- endfor %}
