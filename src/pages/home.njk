@@ -20,7 +20,7 @@
 
 {% include "_hero.njk" %}
 
-{% if pagination.pageNumber == 0 %}
+{% ifAsync pagination.pageNumber == 0 %}
   {% include "_author.njk" %}
 
   {% set post = collections.post | reverse | getItem(0) %}
