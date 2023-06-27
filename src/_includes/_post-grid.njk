@@ -21,7 +21,7 @@
           </div>
 
           <div class="post-grid__text">
-            <time datetime="{{ post.data.date }}" class="post-grid__date">{{ post.data.date | local_date }}</time>
+            <time datetime="{{ post.date }}" class="post-grid__date">{{ post.date | local_date }}</time>
             <h2 class="post-grid__title">{{ post.data.title }}</h2>
 
             {% include "_categories.njk" %}
