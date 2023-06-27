@@ -1,5 +1,6 @@
 ---
 title: Carregamento realmente rápido pode estar a chegar aos carros elétricos
+date: git Created
 tags:
   - actualidade
 excerpt: "Uma empresa do Reino Unido terá encontrado a “pólvora” dos tempos modernos: tecnologia que permitirá um carregamento total nos carros elétricos em tempo record e que poderá mudar a indústria automóvel."
