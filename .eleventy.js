@@ -1,15 +1,17 @@
-module.exports = (eleventyConfig) => {
-  const md = require("markdown-it")({
-    linkify: true,
-    typographer: true
-  });
-  const mdAttrs = require("markdown-it-link-attributes");
-  const siteData = require("./src/_data/site.json")
-  const Image = require("@11ty/eleventy-img");
-  const path = require("path");
-  const he = require("he");
-  const _chunk = require("lodash.chunk");
+const fs = require('fs')
+const md = require("markdown-it")({
+  linkify: true,
+  typographer: true
+});
+const mdAttrs = require("markdown-it-link-attributes");
+const siteData = require("./src/_data/site.json")
+const Image = require("@11ty/eleventy-img");
+const path = require("path");
+const he = require("he");
+const _chunk = require("lodash.chunk");
+// const EleventyPluginOgImage = require('eleventy-plugin-og-image');
 
+module.exports = (eleventyConfig) => {
   // Prevent clashing with static_assets folder (which is git-ignored)
   eleventyConfig.setUseGitIgnore(false);
 
@@ -264,6 +266,62 @@ module.exports = (eleventyConfig) => {
     //console.log( tagMap );
     return tagMap;
   });
+
+  // // Set up dynamic OG images
+  // eleventyConfig.addPlugin(EleventyPluginOgImage, {
+  //   satoriOptions: {
+  //     width: 2000,
+  //     height: 1000,
+  //     fonts: [],
+  //   },
+  //   generateHTML: (outputUrl) => outputUrl
+  // });
+
+
+  // // Register `base64Image` tag
+  // eleventyConfig.addNunjucksShortcode("base64Image", (path) => {
+  //   const file = fs.readFileSync(path);
+  //   return `data:image/jpeg;base64,${file.toString('base64')}`;
+  // });
+
+  // Transform OG images from SVG into JPG
+  eleventyConfig.on('afterBuild', () => {
+    const socialPreviewImagesDir = "dist/static_assets/images/metadata/post/";
+    fs.readdir(socialPreviewImagesDir, function (err, files) {
+      if (files.length > 0) {
+        files.forEach(function (filename) {
+          if (filename.endsWith(".svg")) {
+            let imageUrl = socialPreviewImagesDir + filename;
+            Image(imageUrl, {
+              formats: ["jpeg"],
+              outputDir: "./" + socialPreviewImagesDir,
+              filenameFormat: function (id, src, width, format, options) {
+                let outputFilename = filename.substring(0, (filename.length - 4));
+                return `${outputFilename}.${format}`;
+              }
+            });
+          }
+        })
+      }
+    })
+  });
+
+  // Register `getBiggestVersion` filter
+  // Get biggest image version from cover path
+  eleventyConfig.addFilter('getBiggestVersion', (image) => {
+    const folder = 'dist/static_assets/photos/'
+    const filename = path.basename(image)
+    const extension = path.extname(filename)
+
+    const allFiles = fs.readdirSync(folder)
+    const relevantFiles = allFiles.filter((name) => name.startsWith(`${filename.replace(extension, '')}`))
+    const imagePath = `../../../${folder.replace('dist/static_assets/', '')}${relevantFiles[0]}`
+
+    console.log('⚠️ relevantPath', imagePath)
+    // ../../../photos/citroen-ami-buggy-1200w.jpeg
+    // ../../../static_assets/photos/photo-1572375180666-c23ef8bef639-1440w.jpeg
+    return imagePath
+  })
 
   return {
     dir: {
