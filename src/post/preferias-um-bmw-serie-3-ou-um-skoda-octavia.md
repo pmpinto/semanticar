@@ -18,7 +18,7 @@ Sendo que neste caso, tal como em muitos outros que poderão existir, o valor é
 {% image
   "./src/photos/bmw-serie-3.jpg",
   "BMW Série 3",
-  "(min-width: 1024px) 40vw, 64vw",
+  "(min-width: 1024px) 50vw, 87vw",
   "post__body-image",
   false
 %}
@@ -29,7 +29,7 @@ Este BMW é a versão base do Série 3. Tem um motor com *2000 cc* e *184 cv*. E
 {% image
   "./src/photos/skoda-octavia-rs.jpg",
   "Škoda Octavia RS",
-  "(min-width: 1024px) 40vw, 64vw",
+  "(min-width: 1024px) 50vw, 87vw",
   "post__body-image",
   false
 %}
