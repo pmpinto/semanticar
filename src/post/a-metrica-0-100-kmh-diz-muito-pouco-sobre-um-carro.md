@@ -1,6 +1,6 @@
 ---
 title: A métrica 0–100 km/h diz muito pouco sobre um carro
-date: 2023-06-01
+date: 2023-06-01T18:00:00.000+01:00
 tags:
   - opinião
 excerpt: À medida que o mercado automóvel avança a grande velocidade para uma nova realidade parcialmente ou completamente eletrificada, será que continua a fazer sentido basearmo-nos na métrica 0–100 km/h como forma de comparar comportamentos entre automóveis?

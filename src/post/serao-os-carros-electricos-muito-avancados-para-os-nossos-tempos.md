@@ -1,6 +1,6 @@
 ---
 title: Serão os carros eléctricos muito avançados para os nossos tempos?
-date: 2023-06-08
+date: 2023-06-08T18:00:00.000+01:00
 tags:
   - opinião
 excerpt: Se ainda existissem dúvidas que os eléctricos têm vários pontos a seu favor, os carros que têm sido anunciados e lançados para o mercado nos últimos anos provam não só isso, mas também que ainda têm muito para oferecer.

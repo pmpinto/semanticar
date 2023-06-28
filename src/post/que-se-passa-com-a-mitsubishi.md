@@ -1,6 +1,6 @@
 ---
 title: Que se passa com a Mitsubishi?
-date: 2023-06-09
+date: 2023-06-09T18:00:00.000+01:00
 tags:
   - actualidade
 excerpt: Recentemente temos visto a Mitsubishi apresentar novos modelos que são em tudo semelhantes aos seus companheiros de segmento da Renault, com a excepção natural dos emblemas frontais e designações traseiras. O que significa isto para o fabricante nipónico?

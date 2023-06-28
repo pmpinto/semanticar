@@ -1,6 +1,6 @@
 ---
 title: "Volvo V50: carrinha familiar de outros tempos e ainda sem rugas"
-date: 2023-06-13
+date: 2023-06-13T18:00:00.000+01:00
 tags:
   - ensaio
 make: Volvo
