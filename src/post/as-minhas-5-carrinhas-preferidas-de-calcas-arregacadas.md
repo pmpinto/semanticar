@@ -4,7 +4,7 @@ date: 2023-06-30
 tags:
   - opinião
 excerpt: É verdade que o mercado está inundado de SUV, mas se eles existem é porque há quem os compre. No entanto, estou convencido que muitos desses consumidores queriam uma carrinha destas.
-cover: ./src/photos/5-carrinhas-tt.jpg
+cover: ./src/photos/cover-5-carrinhas-tt.jpg
 metadata:
   image: https://semanticar.pt/static_assets/images/metadata/post/opengraph-5-carrinhas-tt.jpg
 ---
@@ -43,7 +43,7 @@ Para mim, que conduzo uma [Volvo V50](/ensaio/volvo-v50-uma-carrinha-familiar-de
     {% image
       "./src/photos/volvo-v60-cc.jpg",
       "Volvo V60 Cross Country",
-      "(min-width: 1024px) 40vw, 64vw",
+      "(min-width: 1024px) 50vw, 87vw",
       "post__body-image",
       false
     %}
@@ -53,7 +53,7 @@ Para mim, que conduzo uma [Volvo V50](/ensaio/volvo-v50-uma-carrinha-familiar-de
     {% image
       "./src/photos/ford-focus-sw-active.jpg",
       "Ford Focus SW Active",
-      "(min-width: 1024px) 40vw, 64vw",
+      "(min-width: 1024px) 50vw, 87vw",
       "post__body-image",
       false
     %}
@@ -63,7 +63,7 @@ Para mim, que conduzo uma [Volvo V50](/ensaio/volvo-v50-uma-carrinha-familiar-de
     {% image
       "./src/photos/subaru-outback.webp",
       "Subaru Outback",
-      "(min-width: 1024px) 40vw, 64vw",
+      "(min-width: 1024px) 50vw, 87vw",
       "post__body-image",
       false
     %}
@@ -73,7 +73,7 @@ Para mim, que conduzo uma [Volvo V50](/ensaio/volvo-v50-uma-carrinha-familiar-de
     {% image
       "./src/photos/vw-golf-sw-alltrack.jpg",
       "Volkswagen Golf Alltrack",
-      "(min-width: 1024px) 40vw, 64vw",
+      "(min-width: 1024px) 50vw, 87vw",
       "post__body-image",
       false
     %}
@@ -83,7 +83,7 @@ Para mim, que conduzo uma [Volvo V50](/ensaio/volvo-v50-uma-carrinha-familiar-de
     {% image
       "./src/photos/peugeot-508-sw-rxh.jpg",
       "Peugeot 508 RXH",
-      "(min-width: 1024px) 40vw, 64vw",
+      "(min-width: 1024px) 50vw, 87vw",
       "post__body-image",
       false
     %}
