@@ -17,3 +17,29 @@ pageCss: legal
     </div>
   </section>
 </article>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ site.url }}{{ page.url }}"
+  },
+  "headline": "{{ title }}",
+  "author": {
+    "@type": "Organization",
+    "name": "Semanticar",
+    "url": "{{ site.url }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Semanticar",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}/static_assets/images/metadata/logo-180.png"
+    }
+  },
+  "datePublished": "{{ date.toISOString() }}"
+}
+</script>
