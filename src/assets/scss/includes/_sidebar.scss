@@ -3,8 +3,12 @@
 
 .sidebar {
   order: 3;
+  display: flex;
+  flex-direction: column;
+  gap: units(5);
 
   @include breakpoint-above-desktop-small {
+    gap: units(10);
     grid-column: 9 / span 3;
     grid-row: 1 / span 3;
   }
