@@ -3,7 +3,7 @@ import { API } from '../api'
 import throttle from 'lodash.throttle'
 
 export default class AppController extends Controller {
-  static targets = ['navigation', 'footer', 'highlights', 'progressBar']
+  static targets = ['navigation', 'footer', 'highlights', 'progressBar', 'toc']
 
   connect() {
     this.observeFooter()
@@ -15,6 +15,8 @@ export default class AppController extends Controller {
     this.toggleNav = this.toggleNav.bind(this)
     this.isPost = this.element.classList.contains('post')
     this.isError = this.element.classList.contains('error')
+
+    this.setupTocEvents()
   }
 
   toggleNav(entry) {
@@ -104,6 +106,32 @@ export default class AppController extends Controller {
           'event_label': label
         })
       })
+    })
+  }
+
+  setupTocEvents() {
+    const toc = document.querySelector('.toc__list')
+
+    if (!toc) return
+
+    toc.addEventListener('click', (event) => {
+      event.preventDefault()
+      toc.classList.add('is-open')
+    }, { once: true })
+
+    this.cleanMarkupFromTocPlugin(toc)
+    this.tocTarget.appendChild(toc)
+    this.tocTarget.classList.add('is-visible')
+  }
+
+  cleanMarkupFromTocPlugin(toc) {
+    const siblings = [toc.previousElementSibling, toc.nextElementSibling]
+
+    siblings.forEach((sibling) => {
+      const markup = sibling.outerHTML
+      if (markup === '<p></p>') {
+        sibling.remove()
+      }
     })
   }
 }

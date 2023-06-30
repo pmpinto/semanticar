@@ -4,6 +4,7 @@ module.exports = (eleventyConfig) => {
     typographer: true
   });
   const mdAttrs = require("markdown-it-link-attributes");
+  const mdTocAndAnchor = require('markdown-it-toc-and-anchor').default;
   const siteData = require("./src/_data/site.json")
   const Image = require("@11ty/eleventy-img");
   const path = require("path");
@@ -17,6 +18,13 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy("src/static_assets");
 
   // Register `markdownify` filter
+  md.use(mdTocAndAnchor, {
+    anchorLink: false,
+    toc: true,
+    tocClassName: 'toc__list',
+    tocFirstLevel: 2,
+    slugify: string => eleventyConfig.getFilter('slugify')(string)
+  });
   md.use(mdAttrs, {
     matcher(href, config) {
       return href.startsWith("https://");
