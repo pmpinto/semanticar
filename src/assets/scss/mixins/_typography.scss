@@ -115,6 +115,8 @@
     &:not(:first-child) {
       margin-top: units(7);
     }
+
+    scroll-margin-top: units(14);
   }
 
   strong {

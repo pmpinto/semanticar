@@ -114,11 +114,6 @@ export default class AppController extends Controller {
 
     if (!toc) return
 
-    toc.addEventListener('click', (event) => {
-      event.preventDefault()
-      toc.classList.add('is-open')
-    }, { once: true })
-
     this.cleanMarkupFromTocPlugin(toc)
     this.tocTarget.appendChild(toc)
     this.tocTarget.classList.add('is-visible')
