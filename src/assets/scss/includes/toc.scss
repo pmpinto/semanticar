@@ -2,6 +2,10 @@
   &:not(.is-visible) {
     display: none;
   }
+
+  @include breakpoint-below-desktop-small {
+    display: none;
+  }
 }
 
 .toc__title {
