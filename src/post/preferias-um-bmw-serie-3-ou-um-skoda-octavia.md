@@ -8,6 +8,8 @@ cover: ./src/photos/cover-bmw-vs-skoda.jpg
 metadata:
   image: https://semanticar.pt/static_assets/images/metadata/post/opengraph-bmw-vs-skoda.jpg
 ---
+@[toc]
+
 Posto desta forma, estou convencido que muitos de vocês iriam eventualmente acabar por escolher o **BMW Série 3**. E não há nada de errado nisso! É uma questão de preferência. No fundo, esta pergunta poderia ser feita de outra forma um pouco mais genérica.
 
 > Preferias um carro premium de versão base ou um generalista topo de gama?
