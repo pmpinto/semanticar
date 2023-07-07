@@ -25,7 +25,11 @@ permalink: /feed.xml
     <title>{{ post.data.title }}</title>
     <summary>{{ post.data.excerpt }}</summary>
     <published>{{ post.date.toISOString() }}</published>
+    {% if post.data.update_date -%}
+    <updated>{{ post.data.update_date.toISOString() }}</updated>
+    {% else -%}
     <updated>{{ post.date.toISOString() }}</updated>
+    {% endif -%}
     <content type="html">
       {% image
         post.data.cover,

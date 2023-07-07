@@ -88,7 +88,8 @@ pageCss: post
       "url": "{{ site.url }}/static_assets/images/metadata/logo-180.png"
     }
   },
-  "datePublished": "{{ date.toISOString() }}"
+  "datePublished": "{{ date.toISOString() }}"{% if update_date %},
+  "dateModified": "{{ update_date.toISOString() }}"{% endif %}
 }
 </script>
 <script type="application/ld+json">
