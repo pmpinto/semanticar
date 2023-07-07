@@ -59,9 +59,26 @@
   height: auto;
   animation: blur-image $timings-spinner linear infinite;
   animation-play-state: paused;
-  animation-delay: calc(var(--scroll-position) * ($timings-spinner * -1));
+  animation-delay: calc(
+    min(calc(var(--scroll-position) - 0.1), 0.1) * ($timings-spinner * -1)
+  );
   animation-iteration-count: 1;
   animation-fill-mode: both;
+  translate: 0 min(calc(var(--scroll-position) * -50px), 0px);
+  transition: translate $timings-normal $ease-out-expo;
+
+  @include breakpoint-above-tablet {
+    translate: 0 min(calc(var(--scroll-position) * -100px), 0px);
+    animation-delay: calc(
+      min(calc(var(--scroll-position) - 0.15), 0.15) * ($timings-spinner * -1)
+    );
+  }
+
+  @include breakpoint-above-desktop-small {
+    animation-delay: calc(
+      min(calc(var(--scroll-position) - 0.3), 0.3) * ($timings-spinner * -1)
+    );
+  }
 }
 
 .post__image-wrapper {

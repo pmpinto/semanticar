@@ -83,8 +83,7 @@ export default class AppController extends Controller {
   }
 
   updateScrollPosition() {
-    const offset = document.body.offsetWidth / -4
-    const scrollPosition = (window.pageYOffset + offset) / document.body.offsetHeight
+    const scrollPosition = window.pageYOffset / document.body.offsetHeight
     document.body.style.setProperty('--scroll-position', scrollPosition)
   }
 
