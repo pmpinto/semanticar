@@ -8,6 +8,8 @@ cover: ./src/photos/cover-5-carrinhas-tt.jpg
 metadata:
   image: https://semanticar.pt/static_assets/images/metadata/post/opengraph-5-carrinhas-tt.jpg
 ---
+@[toc]
+
 O público pede, o mercado oferece. É assim desde sempre, e há-de continuar por muitos e longos anos. Mas ainda que hoje em dia existam SUV ao virar de qualquer esquina, nem sempre foi assim.
 
 ## Os SUV
