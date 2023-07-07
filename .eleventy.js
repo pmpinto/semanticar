@@ -1,7 +1,8 @@
 module.exports = (eleventyConfig) => {
   const md = require("markdown-it")({
     linkify: true,
-    typographer: true
+    typographer: true,
+    html: true
   });
   const mdAttrs = require("markdown-it-link-attributes");
   const mdTocAndAnchor = require('markdown-it-toc-and-anchor').default;
