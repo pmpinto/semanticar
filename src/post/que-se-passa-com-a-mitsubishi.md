@@ -8,6 +8,7 @@ cover: ./src/photos/sergio-gomez-BHGFpY_iHis-unsplash.jpg
 metadata:
   image: https://semanticar.pt/static_assets/images/metadata/post/opengraph-que-se-passa-com-a-mitsubishi.jpg
 ---
+@[toc]
 
 Vamos inevitavelmente precisar de recuar um pouco no tempo para contextualizar aquilo que vou dizer aqui.
 A gigante francesa Renault e a japonesa Nissan têm sido parceiros desde 1999. Nessa altura a Renault estava com bastantes lucros, ao contrário da Nissan, que estava à porta da falência.

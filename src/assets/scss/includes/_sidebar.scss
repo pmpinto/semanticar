@@ -3,9 +3,15 @@
 
 .sidebar {
   order: 3;
+  display: flex;
+  flex-direction: column;
+  gap: units(5);
+  margin-bottom: units(7);
 
   @include breakpoint-above-desktop-small {
+    margin-bottom: units(10);
+    gap: units(10);
     grid-column: 9 / span 3;
-    grid-row: 1 / span 3;
+    grid-row: 1 / span 2;
   }
 }

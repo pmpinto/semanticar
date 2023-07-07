@@ -8,6 +8,7 @@ cover: ./src/photos/julian-hochgesang-qNKfj9mgraI-unsplash.jpg
 metadata:
   image: https://semanticar.pt/static_assets/images/metadata/post/opengraph-metrica-0-100.jpg
 ---
+@[toc]
 Recentemente, enquanto desenvolvia este blog, apercebi-me de que iria ser útil ter alguma forma de qualificar os automóveis que me passarem pelas mãos. Afinal, quando a nossa única preocupação aquando da compra de um automóvel se pode traduzir numa métrica facilmente mensurável, eu queria fazer questão de tornar essa métrica evidente.
 
 O mercado motorizado, e em especial o mercado automóvel, tem-se baseado muito na quantidade de tempo que um automóvel demora a fazer um arranque dos 0 km/h, até aos 100 km/h, como métrica chave para definir a performance de um determinado automóvel. Afinal, é uma boa forma de sabermos quão rápido pode ser em situações ideias, e eventualmente, como se compara aos competidores directos.

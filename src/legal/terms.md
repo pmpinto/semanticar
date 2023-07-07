@@ -5,7 +5,6 @@ title: Termos e Condições
 metadata:
   image: https://semanticar.pt/static_assets/images/metadata/opengraph-termos.jpg
 ---
-
 Bem-vindo à Semanticar!
 
 Estes termos e condições descrevem as regras e regulamentos para o uso do site da Semanticar, localizado em https://semanticar.pt.
@@ -66,7 +65,7 @@ Podemos considerar e aprovar outras solicitações de hiperligações dos seguin
 
 Aprovaremos as solicitações de hiperligação dessas organizações se decidirmos que:
 1. A hiperligação não nos faria parecer desfavoravelmente para nós mesmos ou para nossos negócios credenciados;
-2. A organização não possui registos negativos conosco;
+2. A organização não possui registos negativos connosco;
 3. O benefício para nós da visibilidade da hiperligação compensa a ausência da Semanticar; e
 4. A hiperligação está no contexto de informações gerais de recursos;
 
@@ -104,7 +103,7 @@ Nada nesta isenção de responsabilidade:
 * Limitará qualquer uma das nossas responsabilidades de qualquer forma que não seja permitida pela lei aplicável; ou
 * Excluirá qualquer uma das nossas ou suas responsabilidades que não possam ser excluídas sob a lei aplicável.
 
-As limitações e proibições de responsabilidade definidas nesta seção e em outras partes desta isenção de responsabilidade:
+As limitações e proibições de responsabilidade definidas nesta secção e em outras partes desta isenção de responsabilidade:
 1. Estão sujeitas ao parágrafo anterior; e
 2. Regem todas as responsabilidades decorrentes da isenção de responsabilidade, incluindo responsabilidades decorrentes de contratos, atos ilícitos e por violação de dever estatutário.
 

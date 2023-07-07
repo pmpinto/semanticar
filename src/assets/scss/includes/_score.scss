@@ -1,10 +1,4 @@
-.score {
-  margin-bottom: units(5);
-
-  @include breakpoint-above-desktop-small {
-    margin-bottom: units(10);
-  }
-}
+// .score {}
 
 .score__relation {
   @include text-body;
