@@ -132,6 +132,8 @@ export default class AppController extends Controller {
   }
 
   observePostSections() {
+    if (!this.isPost) return
+
     const tocLinks = this.tocTarget.querySelectorAll('a')
     const observer = new IntersectionObserver(([entry]) => {
       if (this.isError || !this.isPost) return
