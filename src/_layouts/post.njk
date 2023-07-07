@@ -33,9 +33,7 @@ pageCss: post
 
       {% include "_share.njk" %}
 
-      {% if make %}
-        {% include "_sidebar.njk" %}
-      {% endif %}
+      {% include "_sidebar.njk" %}
     </div>
   </section>
 </article>
@@ -65,3 +63,48 @@ pageCss: post
     {% include "_post-grid.njk" %}
   </div>
 {% endif %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ site.url }}{{ page.url }}"
+  },
+  "headline": "{{ title }}",
+  "description": "{{ excerpt }}",
+  "image": "{{ cover | image_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "Pedro Pinto",
+    "url": "https://pedropinto.me"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Semanticar",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}/static_assets/images/metadata/logo-180.png"
+    }
+  },
+  "datePublished": "{{ date.toISOString() }}"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Artigos da categoria “{{ category }}”",
+  "itemListElement": [
+    {% for post in posts %}
+    {
+      "@type": "ListItem",
+      "position": {{ loop.index }},
+      "url": "{{ site.url }}{{ post.url }}",
+      "name": "{{ post.data.title }}"
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>

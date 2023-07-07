@@ -7,6 +7,7 @@
 @import '../includes/subscribe-banner';
 @import '../includes/post-grid';
 @import '../includes/related';
+@import '../includes/toc';
 
 @keyframes blur-image {
   to {
@@ -137,4 +138,17 @@
     margin-bottom: units(10);
     grid-column: 2 / span 6;
   }
+}
+
+.post__body-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  object-position: center;
+  user-select: none;
+  pointer-events: none;
+  box-shadow: 0 0 0 2px $color-detail;
+  background-color: $color-detail;
 }

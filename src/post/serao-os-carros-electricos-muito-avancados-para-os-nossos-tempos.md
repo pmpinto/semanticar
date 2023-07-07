@@ -8,6 +8,8 @@ cover: ./src/photos/zaptec-9166Worfn_Q-unsplash.jpg
 metadata:
   image: https://semanticar.pt/static_assets/images/metadata/post/opengraph-carros-electricos-muito-avancados.jpg
 ---
+@[toc]
+
 No entanto, há algumas questões que rodeiam os eléctricos que não podem ser ignoradas, especialmente por quem procura trocar de carro. Neste artigo vamos olhar para alguns desses pontos. Sendo que por “carro eléctrico” me refiro exclusivamente a carros 100% eléctricos.
 
 ## Autonomia

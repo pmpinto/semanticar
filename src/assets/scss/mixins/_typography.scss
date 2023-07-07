@@ -115,6 +115,8 @@
     &:not(:first-child) {
       margin-top: units(7);
     }
+
+    scroll-margin-top: units(14);
   }
 
   strong {
@@ -192,12 +194,13 @@
       display: block;
       position: absolute;
       top: rem(-20px);
-      left: calc(50% - #{units(1)});
+      left: calc(50% - #{rem(20px)});
       height: units(1);
       width: units(1);
       border-radius: 100%;
       background-color: $color-brand;
       border: units(2) solid $color-white;
+      background-clip: padding-box;
     }
   }
 }

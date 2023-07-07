@@ -30,3 +30,57 @@
 {% endif %}
 
 {% include "_post-grid.njk" %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Project",
+  "name": "Semanticar",
+  "url": "{{ site.url }}",
+  "logo": "{{ site.url }}/static_assets/images/metadata/logo-180.png",
+  "sameAs": [
+    "https://twitter.com/{{ site.social.twitter }}",
+    "https://instagram.com/{{ site.social.instagram }}"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Person",
+  "name": "Pedro Pinto",
+  "url": "https://pedropinto.me",
+  "image": "{{ site.url }}/static_assets/images/pedro-pinto@2x.png",
+  "sameAs": [
+    "https://twitter.com/pmpinto",
+    "https://instagram.com/pmpinto",
+    "https://linkedin.com/in/pedropinto-web/",
+    "https://github.com/pmpinto",
+    "https://pedropinto.me"
+  ],
+  "jobTitle": "Designer and Developer",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Loft 156",
+    "url": "https://loft156.com"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Últimos artigos",
+  "itemListElement": [
+    {% for post in posts %}
+    {
+      "@type": "ListItem",
+      "position": {{ loop.index }},
+      "url": "{{ site.url }}{{ post.url }}",
+      "name": "{{ post.data.title }}"
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+

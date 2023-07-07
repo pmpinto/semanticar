@@ -48,6 +48,7 @@
     "lodash.throttle": "^4.1.1",
     "markdown-it": "^13.0.1",
     "markdown-it-link-attributes": "^4.0.1",
+    "markdown-it-toc-and-anchor": "^4.2.0",
     "normalize.css": "^8.0.1",
     "postcss": "^8.4.19",
     "postcss-cli": "^10.0.0",

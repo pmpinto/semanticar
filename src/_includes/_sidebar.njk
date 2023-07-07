@@ -1,5 +1,7 @@
 <aside class="sidebar">
-  {% include "_score.njk" %}
-
-  {% include "_specs.njk" %}
+    {% include "_toc.njk" %}
+  {% if make %}
+    {% include "_score.njk" %}
+    {% include "_specs.njk" %}
+  {% endif %}
 </aside>
