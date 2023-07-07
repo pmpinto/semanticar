@@ -274,6 +274,17 @@ module.exports = (eleventyConfig) => {
     return tagMap;
   });
 
+  // Register `with` filter
+  // Returns an array
+  eleventyConfig.addFilter('with', (collection, field) => {
+    if (!field) {
+      return collection
+    }
+
+    return collection.filter((item) => item.data.hasOwnProperty(field))
+  })
+
+
   return {
     dir: {
       input: "src",

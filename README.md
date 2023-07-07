@@ -22,8 +22,8 @@ Run `npm run build`.
 * `/opiniao/`: All posts of category `opinião`
 * `/opiniao/2/`: Page 2 of category `opinião`
 * `/opiniao/serao-os-carros-eletricos-demasiado-avancados/`: A post
-* `/actualidade/`: All posts of category `actualidade`
-* `/actualidade/2/`: Page 2 of category `actualidade`
-* `/actualidade/o-governo-vai-acabar-com-os-incentivos-aos-eletricos/`: A post
+* `/atualidade/`: All posts of category `atualidade`
+* `/atualidade/2/`: Page 2 of category `atualidade`
+* `/atualidade/o-governo-vai-acabar-com-os-incentivos-aos-eletricos/`: A post
 * `/privacidade/`: Privacy policy page
 * `/termos/`: Terms of service page

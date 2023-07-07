@@ -6,6 +6,10 @@
 
     {% include "_metadata.njk" %}
 
+    {% if noindex %}
+      <meta name="robots" content="noindex">
+    {% endif %}
+
     {% if build_data.env == 'production' %}
       {% include "_analytics.njk" %}
     {% endif %}
