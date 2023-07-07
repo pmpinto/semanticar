@@ -17,6 +17,7 @@ export default class AppController extends Controller {
     this.isError = this.element.classList.contains('error')
 
     this.setupTocEvents()
+    this.observePostSections()
   }
 
   toggleNav(entry) {
@@ -128,5 +129,37 @@ export default class AppController extends Controller {
         sibling.remove()
       }
     })
+  }
+
+  observePostSections() {
+    const tocLinks = this.tocTarget.querySelectorAll('a')
+    const observer = new IntersectionObserver(([entry]) => {
+      if (this.isError || !this.isPost) return
+
+      this.setSectionActiveInTOC(entry)
+    }, {
+      rootMargin: '0px',
+      threshold: 1,
+    })
+
+    tocLinks.forEach((link) => {
+      const sectionID = link.getAttribute('href')
+      const section = document.querySelector(sectionID)
+
+      if (section) {
+        observer.observe(section)
+      }
+    })
+  }
+
+  setSectionActiveInTOC(section) {
+    const sectionID = `#${section.target.getAttribute('id')}`
+    const link = this.tocTarget.querySelector(`a[href="${sectionID}"]`)
+    const activeLink = this.tocTarget.querySelector('.is-active')
+
+    if (section.isIntersecting) {
+      activeLink?.classList.remove('is-active')
+      link.classList.toggle('is-active', section.isIntersecting)
+    }
   }
 }

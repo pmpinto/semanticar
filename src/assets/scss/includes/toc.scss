@@ -1,4 +1,14 @@
 .toc {
+  position: sticky;
+  background-color: $color-frosted;
+  backdrop-filter: blur(16px);
+  top: rem(80px);
+  padding: units(3) units(3) units(2) units(3);
+  margin-top: units(-3);
+  margin-right: units(-3);
+  margin-left: units(-3);
+  z-index: 1;
+
   &:not(.is-visible) {
     display: none;
   }
@@ -26,6 +36,28 @@
 
     &:not(:last-child) {
       margin-bottom: units(1);
+    }
+
+    a {
+      position: relative;
+      color: $color-text;
+
+      &.is-active {
+        font-weight: $font-weight-bold;
+
+        // Bullet
+        &::before {
+          content: '';
+          width: rem(6px);
+          height: rem(6px);
+          border-radius: 100%;
+          background-color: $color-brand;
+          margin-right: 0;
+          position: absolute;
+          top: 0.3em;
+          left: units(-2);
+        }
+      }
     }
   }
 
