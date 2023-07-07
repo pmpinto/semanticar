@@ -99,6 +99,8 @@ export default class AppController extends Controller {
   }
 
   setAnalyticsEvents() {
+    if (!window.gtag) return
+
     const elements = document.querySelectorAll('[data-event-category]')
 
     elements.forEach((element) => {
