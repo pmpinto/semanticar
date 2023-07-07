@@ -32,13 +32,16 @@
   list-style: none;
 
   li {
-    @include text-markdown;
-
     &:not(:last-child) {
       margin-bottom: units(1);
     }
 
     a {
+      @include text-link;
+
+      display: inline-block;
+      line-height: 1;
+      text-decoration: none;
       position: relative;
       color: $color-text;
 
@@ -64,7 +67,7 @@
   ul {
     margin: 0;
     padding: 0;
-    border-left: 2px solid $color-detail;
+    padding-left: units(2);
     margin-top: units(1);
     list-style: none;
   }
