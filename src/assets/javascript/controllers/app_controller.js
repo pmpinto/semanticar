@@ -89,7 +89,12 @@ export default class AppController extends Controller {
 
   updateScrollPercentage() {
     const post = document.querySelector('.post__main')
-    const scrollPercentage = Math.min(window.pageYOffset / (post.scrollHeight - window.innerHeight), 1)
+    const relatedHeight = document.querySelector('.related')?.offsetHeight || 0
+    const subscribeBannerHeight = document.querySelector('.subscribe-banner')?.offsetHeight || 0
+    const shareHeight = document.querySelector('.share')?.offsetHeight || 0
+    const offset = relatedHeight - subscribeBannerHeight - shareHeight + window.innerHeight / 2
+
+    const scrollPercentage = Math.min(window.pageYOffset / (post.scrollHeight - window.innerHeight - offset), 1)
     document.body.style.setProperty('--scroll-percentage', scrollPercentage)
   }
 
