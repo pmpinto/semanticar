@@ -2,7 +2,7 @@
 title: Começa hoje a comercialização do Citroën Ami Buggy
 date: 2023-06-21T18:00:00.000+01:00
 tags:
-  - actualidade
+  - atualidade
 excerpt: A Citroën planeia abrir novamente as vendas da edição especial do Ami Buggy, desta vez em 9 países, incluindo Portugal, e limitado a 50 unidades para o nosso país, 1000 no total.
 cover: ./src/photos/citroen-ami-buggy.jpg
 metadata:

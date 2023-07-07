@@ -31,7 +31,7 @@
               <a class="navigation__link {% if page.url.includes('/opiniao/') %}is-active{% endif %}" href="/opiniao/" data-event-category="navigation" data-event-label="opiniao">Opinião</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link {% if page.url.includes('/actualidade/') %}is-active{% endif %}" href="/actualidade/" data-event-category="navigation" data-event-label="actualidade">Actualidade</a>
+              <a class="navigation__link {% if page.url.includes('/atualidade/') %}is-active{% endif %}" href="/atualidade/" data-event-category="navigation" data-event-label="atualidade">Atualidade</a>
             </li>
           </ol>
         </li>
@@ -89,8 +89,8 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Actualidade",
-      "item": "{{ site.url }}/actualidade/"
+      "name": "Atualidade",
+      "item": "{{ site.url }}/atualidade/"
     }{% if makes.length %},
     {% for make in makes %}
     {

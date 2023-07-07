@@ -2,7 +2,7 @@
 title: A FIAT fez algo que nenhuma outra marca fez até agora
 date: 2023-07-04T18:00:00.000+01:00
 tags:
-  - actualidade
+  - atualidade
 excerpt: A marca italiana FIAT marcou no passado dia 26 de Junho a linha temporal a partir da qual deixa de fabricar carros cinzentos e passa a adotar as cores.
 cover: ./src/photos/fiat-colors-2198820-4pboah40cw.jpg
 metadata:

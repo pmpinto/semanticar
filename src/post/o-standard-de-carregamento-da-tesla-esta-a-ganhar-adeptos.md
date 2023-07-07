@@ -2,7 +2,7 @@
 title: O standard de carregamento da Tesla está a ganhar adeptos
 date: 2023-06-23T18:00:00.000+01:00
 tags:
-  - actualidade
+  - atualidade
 excerpt: NACS é o standard de carregamento de carros elétricos da América do Norte desenvolvido pela Tesla. Depois da Ford e da GM terem adotado este standard, há mais quem o queira fazer.
 cover: ./src/photos/photo-1572375180666-c23ef8bef639.avif
 metadata:
