@@ -1,0 +1,21 @@
+---
+permalink: '/_redirects'
+sitemap: false
+noindex: true
+---
+{#-
+Documentation: https://developers.cloudflare.com/pages/platform/redirects/
+HTTP status codes: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+
+Note: Cloudflare applies code 302 on all redirects by default
+-#}
+
+{#- Blog posts with redirects #}
+{%- for post in collections.post | with('redirects') -%}
+{%- for url in post.data.redirects -%}
+{{ url }} {{ post.url }} 301
+{% endfor -%}
+{%- endfor -%}
+
+{#- Actualidade -> Atualidade -#}
+/actualidade/* /atualidade/:splat 301
