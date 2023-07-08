@@ -1,4 +1,4 @@
-<aside class="sidebar">
+<aside class="sidebar {% if not make %}sidebar--no-make{% endif %}">
     {% include "_toc.njk" %}
   {% if make %}
     {% include "_score.njk" %}
