@@ -1,6 +1,6 @@
 ---
 permalink: /termos/index.html
-date: 2023-07-01
+date: 2023-06-01
 title: Termos e Condições
 metadata:
   image: https://semanticar.pt/static_assets/images/metadata/opengraph-termos.jpg

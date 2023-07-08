@@ -27,3 +27,8 @@ Run `npm run build`.
 * `/atualidade/o-governo-vai-acabar-com-os-incentivos-aos-eletricos/`: A post
 * `/privacidade/`: Privacy policy page
 * `/termos/`: Terms of service page
+
+## When to publish
+* Tuesday at 18:00
+* Thursday at 18:00
+* Saturday at 13:00

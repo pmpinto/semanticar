@@ -5,9 +5,9 @@
   pageCss: "category",
   permalink: "/{{ tagPage.tagName | slugify }}/{% if tagPage.pageNumber %}{{ tagPage.pageNumber + 1 }}/{% endif %}index.html",
   eleventyComputed: {
-    title: "Artigos da categoria '{{ tagPage.tagName }}'",
+    title: "Artigos da categoria “{{ tagPage.tagName }}”",
     metadata: {
-      description: "Todos os artigos da categoria '{{ tagPage.tagName }}' na Semanticar."
+      description: "Todos os artigos da categoria “{{ tagPage.tagName }}” na Semanticar."
     },
   },
   pagination: {
@@ -49,6 +49,20 @@
       "name": "{{ post.data.title }}"
     }{% if not loop.last %},{% endif %}
     {% endfor %}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "{{ category | titleCase }}",
+      "item": "{{ site.url }}/{{ category | slugify }}/"
+    }
   ]
 }
 </script>
