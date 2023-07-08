@@ -52,7 +52,7 @@ Recentemente, a Tesla lembrou-se de revolucionar o volante, introduzindo o “yo
   false
 %}
 
-Para além dos botões capacitivos, a Tesla trouxe-nos ainda o famoso ecrã gigante no centro do carro. É uma excelente forma de consumir vários conteúdos multimédia, mas é um forma horrível de interagir com funções básicas de apoio à condução como por exemplo o ar condicionado. Especialmente enquanto se conduz.
+Para além dos botões capacitivos, a Tesla trouxe-nos ainda o famoso ecrã gigante no centro do carro. É uma excelente forma de consumir vários conteúdos multimédia, mas é uma forma horrível de interagir com funções básicas de apoio à condução como por exemplo o ar condicionado. Especialmente enquanto se conduz.
 
 {% image
   "./src/photos/jonas-leupe-pDOM_D1GEwk-unsplash.jpg",
@@ -86,7 +86,7 @@ Pessoalmente, há duas coisas que gostava de ver a acontecer nos próximos anos 
 
 ### Controlos por voz
 
-Uma alternativa podem ser os controlos por voz. Alguns fabricantes, como a Mercedes-Benz, já tiram partido de sistemas de voz para controlar algumas funções. No entanto, ainda não é algo que se tenha espalhado tão rapidamente por toda a gama de um fabricante como os ecrãs. Numa altura em que praticamente tudo é digital e passivo de ser controlado por um ecrã, confesso que preferia ter alternativas de comandos de voz que fossem capazes de interagir com as funções básicas. Não estou a sugerir eliminar a possibilidade de interagir com o ecrã, mas sim de proporcionar uma alternativa para quem não o quer/pode fazer.
+Uma alternativa podem ser os controlos por voz. Alguns fabricantes, como a Mercedes-Benz, já tiram partido de sistemas de voz para controlar algumas funções. No entanto, ainda não é algo que se tenha espalhado tão rapidamente por toda a gama de um fabricante como os ecrãs. Numa altura em que praticamente tudo é digital e passivo de ser controlado por um ecrã, confesso que preferia ter alternativas de comandos de voz que fossem capazes de interagir com as funções básicas. Não estou a sugerir eliminar a possibilidade de interagir com o ecrã, mas sim de proporcionar uma alternativa para quem não o quer ou pode fazer.
 
 * “Liga o ar condicionado nos 20º”
 * “Desembacia o vidro da frente”
@@ -102,7 +102,7 @@ Portanto, a primeira: controlos por voz em qualquer carro.
 
 ### Sistemas de infoentretenimento nativos
 
-A segunda, e  por falar em software, há 2 gigantes tecnológicos que sabem bem o que fazem no que toca a software: Apple e Google. Curiosamente, são também as conexões mais comuns de telemóvel presente nos carros de hoje. Quão difícil seria uma parceria entre estas empresas e os fabricantes da indústria automóvel no sentido de conseguirem uma integração de baixo nível com os seus carros?
+A segunda, e  por falar em software, há 2 gigantes tecnológicos que sabem bem o que fazem no que toca a software: Apple e Google. Curiosamente, são também as conexões mais comuns de telemóvel presente nos carros dos nossos dias. Quão difícil seria uma parceria entre estas empresas e os fabricantes da indústria automóvel no sentido de conseguirem uma integração de baixo nível com os seus carros?
 
 Tanto o Android Auto como o Apple CarPlay são bem capazes no que toca à reprodução de música ou mesmo à navegação. E eu que pouca experiência tenho com estes sistemas acredito ainda que sejam capazes de conseguir outras proezas de que eu não tenho conhecimento. Parece-me um pouco desnecessário que os fabricantes continuem a gastar recursos para desenvolver funções para os seus próprios sistemas que a maior parte das pessoas irá eventualmente usar apenas pelo seu próprio telemóvel.
 
@@ -115,4 +115,4 @@ Quantas pessoas usarão o sistema nativo de navegação de um carro?
 
 ***
 
-Em jeito de conclusão, há modas que aparecem com o propósito de romper com tradições. São algumas dessas modas que nos forçam a avançar enquanto sociedade. Esta moda da digitalização na indústria automóvel parece-me estar a ir para além daquilo que seria aceitável. Regra geral, se vai mexer com a segurança de quem conduz e dos seus passageiros, requer um pouco mais de deliberação do que “se os outros fazem nós também podemos”.
+Em jeito de conclusão, há modas que aparecem com o propósito de romper com tradições. São algumas dessas modas que nos forçam a avançar enquanto sociedade. Esta moda da digitalização na indústria automóvel parece-me estar a ir para além daquilo que seria aceitável. Gostaria de acreditar que, regra geral, se vai mexer com a segurança de quem conduz e dos seus passageiros, requer um pouco mais de deliberação do que “se os outros fazem nós também podemos”.
