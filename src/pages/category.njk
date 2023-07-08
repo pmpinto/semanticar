@@ -5,9 +5,9 @@
   pageCss: "category",
   permalink: "/{{ tagPage.tagName | slugify }}/{% if tagPage.pageNumber %}{{ tagPage.pageNumber + 1 }}/{% endif %}index.html",
   eleventyComputed: {
-    title: "Artigos da categoria '{{ tagPage.tagName }}'",
+    title: "Artigos da categoria “{{ tagPage.tagName }}”",
     metadata: {
-      description: "Todos os artigos da categoria '{{ tagPage.tagName }}' na Semanticar."
+      description: "Todos os artigos da categoria “{{ tagPage.tagName }}” na Semanticar."
     },
   },
   pagination: {
