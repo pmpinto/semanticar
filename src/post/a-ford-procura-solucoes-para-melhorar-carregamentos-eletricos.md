@@ -2,7 +2,7 @@
 title: A Ford procura soluções para melhorar carregamentos elétricos
 date: 2023-07-08T09:00:00.000+01:00
 tags:
-  - actualidade
+  - atualidade
 excerpt: O carregamento dos carros elétricos pode-se tornar bastante inconveniente. A Ford sabe disso, e está à procura de formas alternativas de o fazer.
 cover: ./src/photos/andrew-miller-iV0QdsN2bVk-unsplash.jpg
 metadata:
