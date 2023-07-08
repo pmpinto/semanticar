@@ -284,6 +284,10 @@ module.exports = (eleventyConfig) => {
     return collection.filter((item) => item.data.hasOwnProperty(field))
   })
 
+  // Register `titleCase` filter
+  // Returns a string with the first letter of each word in caps
+  eleventyConfig.addFilter('titleCase', (string) => string.replace(/^(\w)/, (match) => match.toUpperCase()))
+
 
   return {
     dir: {

@@ -52,3 +52,17 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "{{ category | titleCase }}",
+      "item": "{{ site.url }}/{{ category | slugify }}/"
+    }
+  ]
+}
+</script>
