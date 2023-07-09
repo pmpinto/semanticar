@@ -73,6 +73,7 @@
 .hero__heading {
   @include text-title;
 
+  text-transform: lowercase;
   text-align: center;
 
   @include breakpoint-above-tablet {

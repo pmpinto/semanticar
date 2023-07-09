@@ -1,6 +1,6 @@
 ---
 permalink: /privacidade/index.html
-date: 2023-07-01
+date: 2023-06-01
 title: Política de Privacidade
 metadata:
   image: https://semanticar.pt/static_assets/images/metadata/opengraph-privacidade.jpg
