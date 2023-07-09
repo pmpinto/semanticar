@@ -155,6 +155,10 @@
   }
 }
 
+.post__body-figure {
+  margin: 0;
+}
+
 .post__body-image {
   display: block;
   width: 100%;
@@ -166,4 +170,12 @@
   pointer-events: none;
   box-shadow: 0 0 0 2px $color-detail;
   background-color: $color-detail;
+}
+
+.post__body-caption {
+  @include text-caption;
+
+  color: $color-blue;
+  padding-top: rem(4px);
+  text-align: center;
 }
