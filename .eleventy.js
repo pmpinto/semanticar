@@ -87,8 +87,20 @@ module.exports = (eleventyConfig) => {
 
     // You bet we throw an error on a missing alt (alt="" works okay)
     const imageHTML = Image.generateHTML(metadata, imageAttributes)
+    const imageHTMLEscaped = wantsAbsoluteURL ? he.escape(imageHTML).replaceAll('https:/semanticar.pt', 'https://semanticar.pt') : imageHTML
 
-    return wantsAbsoluteURL ? he.escape(imageHTML).replaceAll('https:/semanticar.pt', 'https://semanticar.pt') : imageHTML;
+    if (classname === 'post__body-image') {
+      const baseClassname = classname.replace('-image', '')
+      const figureHTML = `
+        <figure class="${baseClassname}-figure">
+          ${imageHTMLEscaped}
+          <figcaption class="${baseClassname}-caption">${alt}</figcaption>
+        </figure>
+      `
+      return figureHTML;
+    }
+
+    return imageHTMLEscaped
   });
 
   // Register `image_url` filter
