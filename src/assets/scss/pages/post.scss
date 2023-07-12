@@ -157,6 +157,7 @@
 
 .post__body-figure {
   margin: 0;
+  margin-bottom: units(2);
 }
 
 .post__body-image {
@@ -170,7 +171,6 @@
   pointer-events: none;
   box-shadow: 0 0 0 2px $color-detail;
   background-color: $color-detail;
-  margin-bottom: units(2);
 }
 
 .post__body-caption {
