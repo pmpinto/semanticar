@@ -5,10 +5,14 @@
       <span class="visually-hidden">Ir para a página inicial</span>
     </a>
 
-    <button class="navigation__toggle" data-action="click->navigation#toggle" data-event-category="navigation" data-event-label="open">
-      <img src="/static_assets/icons/list.svg" alt="navigation icon">
-      <span class="visually-hidden">Alternar navegação</span>
-    </button>
+    <div class="navigation__buttons">
+      {% include "_search.njk" %}
+
+      <button class="navigation__toggle" data-action="click->navigation#toggle" data-event-category="navigation" data-event-label="open">
+        <img src="/static_assets/icons/list.svg" alt="navigation icon">
+        <span class="visually-hidden">Alternar navegação</span>
+      </button>
+    </div>
 
     <div class="navigation__panel">
       <button class="navigation__toggle" data-action="click->navigation#toggle" data-event-category="navigation" data-event-label="close">

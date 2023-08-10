@@ -9,6 +9,10 @@ body {
   font-weight: $font-weight-regular;
 }
 
+body.is-scroll-locked {
+  overflow: hidden;
+}
+
 html,
 body {
   height: 100%;
