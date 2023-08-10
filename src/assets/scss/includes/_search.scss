@@ -177,17 +177,7 @@
   display: flex;
   gap: units(1);
   flex-direction: column;
-
-  @include breakpoint-above-tablet {
-    // max-height: units(32);
-  }
 }
-
-// .search__post {
-//   &:not(:last-child) {
-//     border-bottom: 1px solid $color-detail;
-//   }
-// }
 
 .search__link {
   display: block;

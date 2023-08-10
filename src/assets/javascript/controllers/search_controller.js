@@ -124,7 +124,6 @@ export default class SearchController extends Controller {
     }
 
     if (key === 'f' && !event.metaKey && !event.shiftKey && !event.altKey) {
-      console.log('> event', event)
       this.inputTarget.focus()
       if (!this.element.classList.contains('is-open')) {
         this.toggle()
