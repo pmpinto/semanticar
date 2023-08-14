@@ -1,5 +1,6 @@
 dist
 node_modules
+src/assets/data/knowledge_base.json
 src/static_assets/css
 src/static_assets/javascript
 .DS_Store
