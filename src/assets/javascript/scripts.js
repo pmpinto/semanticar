@@ -6,6 +6,7 @@ import AppController from './controllers/app_controller'
 import StatsController from './controllers/stats_controller'
 import ShareController from './controllers/share_controller'
 import GalleryController from './controllers/gallery_controller'
+import SearchController from './controllers/search_controller'
 
 window.Stimulus = Application.start()
 
@@ -15,3 +16,4 @@ window.Stimulus.register('app', AppController)
 window.Stimulus.register('stats', StatsController)
 window.Stimulus.register('share', ShareController)
 window.Stimulus.register('gallery', GalleryController)
+window.Stimulus.register('search', SearchController)

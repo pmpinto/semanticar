@@ -1,0 +1,18 @@
+---
+permalink: '../src/assets/data/knowledge_base.json'
+---
+{
+  "posts": [
+  {%- for post in collections.post | reverse %}
+    {
+      "title": "{{ post.data.title }}",
+      "excerpt": "{{ post.data.excerpt }}",
+      "date": "{{ post.data.date }}",
+      "tags": ["{{ post.data.tags[1] }}"],
+      "cover": "{{ post.data.cover }}",
+      "body": "{{ post.template.frontMatter.content | plainText }}",
+      "url": "{{ post.url }}"
+    }{% if not loop.last %},{% endif %}
+  {%- endfor %}
+  ]
+}

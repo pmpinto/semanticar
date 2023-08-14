@@ -10,7 +10,7 @@ export default class StatsController extends Controller {
   }
 
   async getSubscribesCount() {
-    const { value } = await API.call('/get-subscribers-count')
+    let { value } = process.env.ENV === 'production' ? await API.call('/get-subscribers-count') : { value: 7 }
     return value
   }
 }

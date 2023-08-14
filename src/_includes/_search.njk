@@ -1,0 +1,36 @@
+<div class="search" data-controller="search">
+  <button class="search__open" data-action="click->search#toggleSearch" data-event-category="search" data-event-label="open" title="Atalho: f">
+    <img src="/static_assets/icons/search.svg" alt="search icon">
+    <span class="visually-hidden">Abrir pesquisa</span>
+  </button>
+
+  <div class="search__backdrop"></div>
+
+  <div class="search__panel">
+    <form class="search__form" data-action="submit->search#submit">
+      <img src="/static_assets/icons/search.svg" alt="search icon" class="search__icon">
+      <input type="text" class="search__input" placeholder="Procura por um artigo…" data-search-target="input">
+    </form>
+
+    <div class="search__results">
+      <p class="search__stats">Dos 0 aos <span data-search-target="total">0</span> resultados em <span data-search-target="duration">0</span> s</p>
+
+      <template data-search-target="listItem">
+        <li class="search__post">
+          <a href="" class="search__link">
+            <time datetime="" class="search__date"></time>
+            <p class="search__title"></p>
+          </a>
+        </li>
+      </template>
+
+      <template data-search-target="notFound">
+        <li class="search__post search__post--error">
+          <p class="search__error">Não há resultados para '%query%'.</p>
+        </li>
+      </template>
+
+      <ol class="search__posts" data-search-target="list"></ol>
+    </div>
+  </div>
+</div>

@@ -6,6 +6,7 @@ module.exports = (eleventyConfig) => {
   });
   const mdAttrs = require("markdown-it-link-attributes");
   const mdTocAndAnchor = require('markdown-it-toc-and-anchor').default;
+  const mdPlainText = require('markdown-it-plain-text');
   const siteData = require("./src/_data/site.json")
   const Image = require("@11ty/eleventy-img");
   const path = require("path");
@@ -35,10 +36,16 @@ module.exports = (eleventyConfig) => {
       rel: "noopener noreferrer",
     },
   });
+  md.use(mdPlainText)
 
   eleventyConfig.setLibrary("md", md);
   eleventyConfig.addFilter("markdownify", (string) => {
     return md.renderInline(string);
+  });
+  eleventyConfig.addFilter("plainText", (string) => {
+    md.render(string);
+    const plainText = md.plainText.replace(/{%([^%}])*%}/g, '')
+    return plainText
   });
 
   // Register `unique` filter
@@ -52,7 +59,7 @@ module.exports = (eleventyConfig) => {
   // Register `local_date` filter
   eleventyConfig.addFilter("local_date", (input) => {
     const date = new Date(input)
-    return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+    return date.toLocaleDateString('pt-PT', { year: 'numeric', month: 'long', day: 'numeric' })
   });
 
   // Register `absolute_url` filter

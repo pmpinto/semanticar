@@ -1,0 +1,216 @@
+@use 'sass:math';
+
+.search {
+  &.is-visible {
+    .search__backdrop {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .search__panel {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all;
+    }
+  }
+
+  &.is-open {
+    .search__results {
+      pointer-events: all;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.search__open {
+  @include button-reset;
+
+  transition: scale $timings-fast $ease-out-expo;
+
+  @include hover-and-focus {
+    scale: 1.1;
+  }
+
+  &:active {
+    scale: 0.9;
+  }
+}
+
+.search__backdrop {
+  width: 100dvw;
+  height: 100dvh;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: $color-frosted;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity $timings-slowest $ease-out-expo;
+  backdrop-filter: blur(16px);
+  overscroll-behavior: contain;
+}
+
+.search__panel {
+  position: fixed;
+  top: units(16);
+  left: calc(5vw);
+  width: 90vw;
+  z-index: $layers-above-body;
+  opacity: 0;
+  transform: translateY(units(-2));
+  pointer-events: none;
+  transition: opacity $timings-fast $ease-out-expo,
+    transform $timings-slow $ease-out-expo;
+
+  @include breakpoint-above-tablet {
+    left: calc(50vw - #{math.div(units(64), 2)});
+    width: units(64);
+  }
+}
+
+.search__form {
+  position: relative;
+}
+
+.search__icon {
+  position: absolute;
+  left: rem(6px);
+  top: rem(6px);
+  pointer-events: none;
+
+  @include breakpoint-above-tablet {
+    left: rem(8px);
+    top: rem(8px);
+  }
+
+  @include breakpoint-above-desktop-small {
+    left: rem(9px);
+    top: rem(9px);
+  }
+
+  @include breakpoint-above-desktop-medium {
+    left: units(2);
+    top: rem(12px);
+  }
+}
+
+.search__input {
+  @include text-lead;
+
+  width: 100%;
+  border: 0;
+  padding: units(1) units(3);
+  padding-left: units(6);
+  box-shadow: 0 0 0 1px $color-text;
+  transition: box-shadow $timings-normal $ease-out-expo;
+  border-radius: units(1);
+  outline: none;
+  background-color: $color-white;
+  appearance: none;
+
+  &::placeholder {
+    color: $color-muted;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px $color-action;
+  }
+
+  @include breakpoint-above-tablet {
+    padding-left: units(6);
+  }
+
+  @include breakpoint-above-desktop-small {
+    padding-left: units(7);
+  }
+
+  @include breakpoint-above-desktop-medium {
+    padding-left: units(8);
+  }
+}
+
+.search__results {
+  margin-top: units(1);
+  margin-bottom: units(5);
+  box-shadow: $shadow-floating-high;
+  border-radius: units(1);
+  background-color: $color-frosted-high;
+  backdrop-filter: blur(32px);
+  padding-left: units(1);
+  padding-right: units(1);
+  padding-bottom: rem(27px);
+  transform: translateY(units(-2));
+  transition: opacity $timings-fast $ease-out-expo,
+    transform $timings-slow $ease-out-expo;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.search__stats {
+  @include text-label;
+
+  padding-top: units(1);
+  padding-bottom: units(1);
+  padding-right: units(1);
+  color: $color-muted;
+  text-align: right;
+  border-top: 1px solid $color-detail;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: $color-frosted;
+  backdrop-filter: blur(32px);
+  border-radius: 0 0 units(1) units(1);
+}
+
+.search__posts {
+  margin: 0;
+  padding: 0;
+  padding-top: units(1);
+  padding-bottom: units(1);
+  list-style: none;
+  max-height: calc(60dvh - 6rem);
+  overflow-y: scroll;
+  overscroll-behavior: contain;
+  display: flex;
+  gap: units(1);
+  flex-direction: column;
+}
+
+.search__link {
+  display: block;
+  padding: units(1) units(2);
+  text-decoration: none;
+  color: $color-text;
+  border-radius: units(1);
+  outline: none;
+
+  &:hover {
+    background-color: $color-detail;
+  }
+
+  &:focus {
+    box-shadow: inset 0 0 0 2px $color-action;
+  }
+}
+
+.search__title {
+  @include text-body;
+
+  font-weight: $font-weight-bold;
+}
+
+.search__date {
+  @include text-label;
+}
+
+.search__error {
+  @include text-caption;
+
+  font-weight: $font-weight-bold;
+  padding: units(1) units(2);
+  color: $color-text;
+  text-align: center;
+}
