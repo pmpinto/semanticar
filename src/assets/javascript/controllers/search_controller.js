@@ -114,10 +114,15 @@ export default class SearchController extends Controller {
     this.inputTarget.value = ''
   }
 
+  toggleSearch() {
+    this.inputTarget.focus()
+    this.toggle()
+  }
+
   listenForKeyboardShortcuts(event) {
     const { key } = event
 
-    if (key === 'Escape') {
+    if (key === 'Escape' && this.element.classList.contains('is-visible')) {
       this.toggle()
       this.inputTarget.blur()
       return
