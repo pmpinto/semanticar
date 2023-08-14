@@ -15,6 +15,7 @@ export default class SearchController extends Controller {
 
     this.element.addEventListener('click', (event) => {
       if (event.target.classList.contains('search__backdrop')) {
+        this.trackEvent('click', 'close via backdrop')
         this.toggle()
         this.inputTarget.blur()
       }
@@ -22,12 +23,12 @@ export default class SearchController extends Controller {
   }
 
   prepareSearch() {
-    this.search = new JsSearch.Search('url')
-    this.search.addIndex('title')
-    this.search.addIndex('excerpt')
-    this.search.addIndex('body')
+    this.engine = new JsSearch.Search('url')
+    this.engine.addIndex('title')
+    this.engine.addIndex('excerpt')
+    this.engine.addIndex('body')
 
-    this.search.addDocuments(KnowledgeBase.posts)
+    this.engine.addDocuments(KnowledgeBase.posts)
   }
 
   async doSearch(event) {
@@ -48,6 +49,7 @@ export default class SearchController extends Controller {
 
       if (!firstPost) return
       firstPost.querySelector('.search__link').focus()
+      this.trackEvent('keypress', key)
 
       return
     }
@@ -55,10 +57,12 @@ export default class SearchController extends Controller {
     this.element.classList.add('is-open')
     this.clearResults()
 
-    const results = this.search.search(searchString)
+    const results = this.engine.search(searchString)
     if (results.length) {
+      this.trackEvent('success', `found ${results.length} for ${searchString}`)
       await this.injectResults(results)
     } else {
+      this.trackEvent('error', `not found: ${searchString}`)
       this.showNotFound(searchString)
     }
 
@@ -123,6 +127,7 @@ export default class SearchController extends Controller {
     const { key } = event
 
     if (key === 'Escape' && this.element.classList.contains('is-visible')) {
+      this.trackEvent('keypress', 'esc')
       this.toggle()
       this.inputTarget.blur()
       return
@@ -131,8 +136,18 @@ export default class SearchController extends Controller {
     if (key === 'f' && !event.metaKey && !event.shiftKey && !event.altKey) {
       this.inputTarget.focus()
       if (!this.element.classList.contains('is-open')) {
+        this.trackEvent('keypress', 'open with f')
         this.toggle()
       }
     }
+  }
+
+  trackEvent(event, label) {
+    if (!event || !label || !window.gtag) return
+
+    window.gtag('event', event, {
+      'event_category': 'search',
+      'event_label': label
+    })
   }
 }
